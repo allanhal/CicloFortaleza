@@ -397,6 +397,10 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
                                        qualifiedName:(NSString *)qName
                                           attributes:(NSDictionary *)attributeDict
 {
+    NSLog(@"elementName     %@", elementName);
+//    NSLog(@"namespaceURI    %@", namespaceURI);
+//    NSLog(@"qName           %@", qName);
+//    NSLog(@"attributeDict   %@", attributeDict);
     NSString *ident = [attributeDict objectForKey:@"id"];
     
     KMLStyle *style = [_placemark style] ? [_placemark style] : _style;
@@ -950,7 +954,7 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
         mkShape.title = name;
         // Skip setting the subtitle for now because they're frequently
         // too verbose for viewing on in a callout in most kml files.
-//        mkShape.subtitle = placemarkDescription;
+        mkShape.subtitle = placemarkDescription;
     }
 }
 

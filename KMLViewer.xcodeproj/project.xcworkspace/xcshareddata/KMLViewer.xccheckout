@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A02F7A32-4CC6-47A6-B9B8-8A9BF9CB684C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>KMLViewer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E2D4FF8C-61E9-44DE-9A0B-C1F4CD07288E</key>
+		<string>https://github.com/allansagarana/CicloFortaleza.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>KMLViewer.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E2D4FF8C-61E9-44DE-9A0B-C1F4CD07288E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/allansagarana/CicloFortaleza.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E2D4FF8C-61E9-44DE-9A0B-C1F4CD07288E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E2D4FF8C-61E9-44DE-9A0B-C1F4CD07288E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CicloFortaleza</string>
+		</dict>
+	</array>
+</dict>
+</plist>

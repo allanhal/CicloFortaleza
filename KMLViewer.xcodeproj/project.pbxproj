@@ -26,6 +26,7 @@
 		5398E9F111F640E0002BFB95 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EA11F640E0002BFB95 /* Icon.png */; };
 		5398E9F211F640E0002BFB95 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EB11F640E0002BFB95 /* Icon@2x.png */; };
 		5398E9F311F640E0002BFB95 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EC11F640E0002BFB95 /* iTunesArtwork */; };
+		9DCDF83618FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9DCDF83518FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		5398E9EC11F640E0002BFB95 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		53B57E68121C39C0004A1403 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* KMLViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "KMLViewer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		9DCDF83518FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9DCDF83518FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */,
 				5398E9E511F640E0002BFB95 /* images */,
 				533ECC0711F63EA00067A265 /* KMLViewerViewController.xib */,
 				533ECC0911F63EA00067A265 /* MainWindow.xib */,
@@ -213,6 +216,7 @@
 				5398E9EE11F640E0002BFB95 /* Icon-Small-50.png in Resources */,
 				5398E9EF11F640E0002BFB95 /* Icon-Small.png in Resources */,
 				5398E9F011F640E0002BFB95 /* Icon-Small@2x.png in Resources */,
+				9DCDF83618FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */,
 				5398E9F111F640E0002BFB95 /* Icon.png in Resources */,
 				5398E9F211F640E0002BFB95 /* Icon@2x.png in Resources */,
 				5398E9F311F640E0002BFB95 /* iTunesArtwork in Resources */,
