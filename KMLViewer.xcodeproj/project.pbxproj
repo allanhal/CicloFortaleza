@@ -26,6 +26,7 @@
 		5398E9F111F640E0002BFB95 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EA11F640E0002BFB95 /* Icon.png */; };
 		5398E9F211F640E0002BFB95 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EB11F640E0002BFB95 /* Icon@2x.png */; };
 		5398E9F311F640E0002BFB95 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EC11F640E0002BFB95 /* iTunesArtwork */; };
+		9D48EF7518FD9F4800CAAA02 /* Praça Portugal.GPX in Resources */ = {isa = PBXBuildFile; fileRef = 9D48EF7418FD9F4800CAAA02 /* Praça Portugal.GPX */; };
 		9DCDF83618FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9DCDF83518FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		5398E9EC11F640E0002BFB95 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		53B57E68121C39C0004A1403 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* KMLViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "KMLViewer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		9D48EF7418FD9F4800CAAA02 /* Praça Portugal.GPX */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Praça Portugal.GPX"; sourceTree = "<group>"; };
 		9DCDF83518FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 				533ECC0911F63EA00067A265 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* KMLViewer-Info.plist */,
 				535BE74314B7C82C00969FF3 /* KML_Sample.kml */,
+				9D48EF7418FD9F4800CAAA02 /* Praça Portugal.GPX */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				5398E9F011F640E0002BFB95 /* Icon-Small@2x.png in Resources */,
 				9DCDF83618FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */,
 				5398E9F111F640E0002BFB95 /* Icon.png in Resources */,
+				9D48EF7518FD9F4800CAAA02 /* Praça Portugal.GPX in Resources */,
 				5398E9F211F640E0002BFB95 /* Icon@2x.png in Resources */,
 				5398E9F311F640E0002BFB95 /* iTunesArtwork in Resources */,
 				535BE74414B7C82C00969FF3 /* KML_Sample.kml in Resources */,

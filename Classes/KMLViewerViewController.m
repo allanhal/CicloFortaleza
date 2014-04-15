@@ -55,6 +55,8 @@
 {
     [super viewDidLoad];
     
+    
+    
     // Locate the path to the route.kml file in the application's bundle
     // and parse it with the KMLParser.
     NSString *path = [[NSBundle mainBundle] pathForResource:@"KML_Sample" ofType:@"kml"];
@@ -66,7 +68,7 @@
     
     // Add all of the MKOverlay objects parsed from the KML file to the map.
     NSArray *overlays = [kmlParser overlays];
-    //[map addOverlays:overlays];
+    [map addOverlays:overlays];
     
     // Add all of the MKAnnotation objects parsed from the KML file to the map.
     NSArray *annotations = [kmlParser points];
@@ -95,6 +97,7 @@
     
     // Position the map so that all overlays and annotations are visible on screen.
     map.visibleMapRect = flyTo;
+    map.userTrackingMode = MKUserTrackingModeFollowWithHeading;
 }
 
 
