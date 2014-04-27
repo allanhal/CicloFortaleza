@@ -103,7 +103,6 @@
 
 - (void)viewDidUnload
 {
-    [kmlParser release];
     [super viewDidUnload];
 }
 

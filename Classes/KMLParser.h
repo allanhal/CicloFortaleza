@@ -72,8 +72,8 @@
 - (id)initWithURL:(NSURL *)url;
 - (void)parseKML;
 
-@property (nonatomic, readonly) NSArray *overlays;
-@property (nonatomic, readonly) NSArray *points;
+@property (unsafe_unretained, nonatomic, readonly) NSArray *overlays;
+@property (unsafe_unretained, nonatomic, readonly) NSArray *points;
 
 - (MKAnnotationView *)viewForAnnotation:(id <MKAnnotation>)point;
 - (MKOverlayView *)viewForOverlay:(id <MKOverlay>)overlay;

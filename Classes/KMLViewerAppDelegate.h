@@ -56,8 +56,8 @@
     KMLViewerViewController *viewController;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet KMLViewerViewController *viewController;
+@property (nonatomic, strong) IBOutlet UIWindow *window;
+@property (nonatomic, strong) IBOutlet KMLViewerViewController *viewController;
 
 @end
 
