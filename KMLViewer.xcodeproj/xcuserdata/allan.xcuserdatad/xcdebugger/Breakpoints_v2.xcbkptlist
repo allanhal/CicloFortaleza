@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/KMLParser.m"
-            timestampString = "419188002.524913"
+            timestampString = "420326484.739749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "956"
-            endingLineNumber = "956"
-            landmarkName = "-_createShape"
-            landmarkType = "5">
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "polygon"
+            landmarkType = "19">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
