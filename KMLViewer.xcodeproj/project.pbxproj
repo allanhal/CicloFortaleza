@@ -50,6 +50,7 @@
 		9DD1AACE190DB3A8008D7C14 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD1AACD190DB3A8008D7C14 /* CFNetwork.framework */; };
 		9DD1AAD0190DB3B4008D7C14 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD1AACF190DB3B4008D7C14 /* Security.framework */; };
 		9DD1AAD2190DB485008D7C14 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD1AAD1190DB484008D7C14 /* MobileCoreServices.framework */; };
+		9DF73F4B190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9DF73F4A190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		9DD1AACD190DB3A8008D7C14 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9DD1AACF190DB3B4008D7C14 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9DD1AAD1190DB484008D7C14 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9DF73F4A190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Tapioqueiras_até_Guaramiranga.kml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				8D1107310486CEB800E47090 /* KMLViewer-Info.plist */,
 				535BE74314B7C82C00969FF3 /* KML_Sample.kml */,
 				9D48EF7418FD9F4800CAAA02 /* Praça Portugal.GPX */,
+				9DF73F4A190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				9DCDF83618FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */,
 				5398E9F111F640E0002BFB95 /* Icon.png in Resources */,
 				9D48EF7518FD9F4800CAAA02 /* Praça Portugal.GPX in Resources */,
+				9DF73F4B190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml in Resources */,
 				9DD1AA92190DABB3008D7C14 /* Default-568h@2x.png in Resources */,
 				5398E9F211F640E0002BFB95 /* Icon@2x.png in Resources */,
 				5398E9F311F640E0002BFB95 /* iTunesArtwork in Resources */,

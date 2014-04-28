@@ -61,6 +61,8 @@
     // and parse it with the KMLParser.
     NSString *path = [[NSBundle mainBundle] pathForResource:@"KML_Sample" ofType:@"kml"];
     path = [[NSBundle mainBundle] pathForResource:@"Mapa Cicloviário e de Rotas Alternativas de Fortaleza" ofType:@"kml"];
+    
+    path = [[NSBundle mainBundle] pathForResource:@"Tapioqueiras_até_Guaramiranga" ofType:@"kml"];
 
     NSURL *url = [NSURL fileURLWithPath:path];
     kmlParser = [[KMLParser alloc] initWithURL:url];
