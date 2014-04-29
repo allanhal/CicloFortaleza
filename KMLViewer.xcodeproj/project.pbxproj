@@ -50,6 +50,10 @@
 		9DD1AACE190DB3A8008D7C14 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD1AACD190DB3A8008D7C14 /* CFNetwork.framework */; };
 		9DD1AAD0190DB3B4008D7C14 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD1AACF190DB3B4008D7C14 /* Security.framework */; };
 		9DD1AAD2190DB485008D7C14 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD1AAD1190DB484008D7C14 /* MobileCoreServices.framework */; };
+		9DE86A4A19103F8A002429B4 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE86A4919103F8A002429B4 /* RequestManager.m */; };
+		9DE86A4D191040DE002429B4 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE86A4C191040DE002429B4 /* Manager.m */; };
+		9DE86A54191051F7002429B4 /* KMLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE86A53191051F7002429B4 /* KMLManager.m */; };
+		9DE86A57191055B8002429B4 /* BasicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE86A56191055B8002429B4 /* BasicManager.m */; };
 		9DF73F4B190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9DF73F4A190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +127,14 @@
 		9DD1AACD190DB3A8008D7C14 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9DD1AACF190DB3B4008D7C14 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9DD1AAD1190DB484008D7C14 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9DE86A4819103F8A002429B4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		9DE86A4919103F8A002429B4 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		9DE86A4B191040DE002429B4 /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		9DE86A4C191040DE002429B4 /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		9DE86A52191051F7002429B4 /* KMLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMLManager.h; sourceTree = "<group>"; };
+		9DE86A53191051F7002429B4 /* KMLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMLManager.m; sourceTree = "<group>"; };
+		9DE86A55191055B8002429B4 /* BasicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicManager.h; sourceTree = "<group>"; };
+		9DE86A56191055B8002429B4 /* BasicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicManager.m; sourceTree = "<group>"; };
 		9DF73F4A190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Tapioqueiras_até_Guaramiranga.kml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,12 +161,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1D3623240D0F684500981E51 /* KMLViewerAppDelegate.h */,
-				1D3623250D0F684500981E51 /* KMLViewerAppDelegate.m */,
-				28D7ACF60DDB3853001CB0EB /* KMLViewerViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* KMLViewerViewController.m */,
-				1A4B770811907E0300940A50 /* KMLParser.h */,
-				1A4B770911907E0300940A50 /* KMLParser.m */,
+				9DE86A5119104108002429B4 /* AppDelegate */,
+				9DE86A50191040FB002429B4 /* ViewControllers */,
+				9DE86A4F191040EF002429B4 /* Parser */,
+				9DE86A4E191040E5002429B4 /* Manager */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -295,6 +305,48 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		9DE86A4E191040E5002429B4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9DE86A4B191040DE002429B4 /* Manager.h */,
+				9DE86A4C191040DE002429B4 /* Manager.m */,
+				9DE86A55191055B8002429B4 /* BasicManager.h */,
+				9DE86A56191055B8002429B4 /* BasicManager.m */,
+				9DE86A4819103F8A002429B4 /* RequestManager.h */,
+				9DE86A4919103F8A002429B4 /* RequestManager.m */,
+				9DE86A52191051F7002429B4 /* KMLManager.h */,
+				9DE86A53191051F7002429B4 /* KMLManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		9DE86A4F191040EF002429B4 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				1A4B770811907E0300940A50 /* KMLParser.h */,
+				1A4B770911907E0300940A50 /* KMLParser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		9DE86A50191040FB002429B4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				28D7ACF60DDB3853001CB0EB /* KMLViewerViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* KMLViewerViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9DE86A5119104108002429B4 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* KMLViewerAppDelegate.h */,
+				1D3623250D0F684500981E51 /* KMLViewerAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -379,18 +431,22 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				9DD1AABE190DADFF008D7C14 /* AFSecurityPolicy.m in Sources */,
 				1D3623260D0F684500981E51 /* KMLViewerAppDelegate.m in Sources */,
+				9DE86A4A19103F8A002429B4 /* RequestManager.m in Sources */,
 				9DD1AABB190DADFF008D7C14 /* AFHTTPRequestOperationManager.m in Sources */,
 				9DD1AABF190DADFF008D7C14 /* AFURLConnectionOperation.m in Sources */,
 				9DD1AAC7190DADFF008D7C14 /* UIImageView+AFNetworking.m in Sources */,
+				9DE86A54191051F7002429B4 /* KMLManager.m in Sources */,
 				9DD1AABA190DADFF008D7C14 /* AFHTTPRequestOperation.m in Sources */,
 				9DD1AAC4190DADFF008D7C14 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* KMLViewerViewController.m in Sources */,
 				9DD1AAC0190DADFF008D7C14 /* AFURLRequestSerialization.m in Sources */,
+				9DE86A4D191040DE002429B4 /* Manager.m in Sources */,
 				9DD1AABC190DADFF008D7C14 /* AFHTTPSessionManager.m in Sources */,
 				9DD1AABD190DADFF008D7C14 /* AFNetworkReachabilityManager.m in Sources */,
 				9DD1AAC1190DADFF008D7C14 /* AFURLResponseSerialization.m in Sources */,
 				9DD1AACA190DADFF008D7C14 /* UIWebView+AFNetworking.m in Sources */,
 				9DD1AAC2190DADFF008D7C14 /* AFURLSessionManager.m in Sources */,
+				9DE86A57191055B8002429B4 /* BasicManager.m in Sources */,
 				9DD1AAC3190DADFF008D7C14 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				1A4B770A11907E0300940A50 /* KMLParser.m in Sources */,
 			);

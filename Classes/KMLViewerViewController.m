@@ -55,18 +55,15 @@
 {
     [super viewDidLoad];
     
-    
-    
-    // Locate the path to the route.kml file in the application's bundle
-    // and parse it with the KMLParser.
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"KML_Sample" ofType:@"kml"];
-    path = [[NSBundle mainBundle] pathForResource:@"Mapa Cicloviário e de Rotas Alternativas de Fortaleza" ofType:@"kml"];
-    
-    path = [[NSBundle mainBundle] pathForResource:@"Tapioqueiras_até_Guaramiranga" ofType:@"kml"];
+    [[Manager kmlManager] updateKmlWithCompletionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        NSLog(@"Log %@", filePath);
+        [self loadKml];
+    }];
+}
 
-    NSURL *url = [NSURL fileURLWithPath:path];
-    kmlParser = [[KMLParser alloc] initWithURL:url];
-    [kmlParser parseKML];
+- (void)loadKml
+{
+    kmlParser = [[Manager kmlManager] retrieveKmlParsed];
     
     // Add all of the MKOverlay objects parsed from the KML file to the map.
     NSArray *overlays = [kmlParser overlays];
@@ -101,7 +98,6 @@
     map.visibleMapRect = flyTo;
     map.userTrackingMode = MKUserTrackingModeFollowWithHeading;
 }
-
 
 - (void)viewDidUnload
 {
