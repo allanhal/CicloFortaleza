@@ -25,7 +25,6 @@
 		5398E9F011F640E0002BFB95 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9E911F640E0002BFB95 /* Icon-Small@2x.png */; };
 		5398E9F111F640E0002BFB95 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EA11F640E0002BFB95 /* Icon.png */; };
 		5398E9F211F640E0002BFB95 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EB11F640E0002BFB95 /* Icon@2x.png */; };
-		5398E9F311F640E0002BFB95 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 5398E9EC11F640E0002BFB95 /* iTunesArtwork */; };
 		9D48EF7518FD9F4800CAAA02 /* Praça Portugal.GPX in Resources */ = {isa = PBXBuildFile; fileRef = 9D48EF7418FD9F4800CAAA02 /* Praça Portugal.GPX */; };
 		9DCDF83618FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9DCDF83518FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */; };
 		9DD1AA92190DABB3008D7C14 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD1AA91190DABB3008D7C14 /* Default-568h@2x.png */; };
@@ -50,6 +49,8 @@
 		9DD1AACE190DB3A8008D7C14 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD1AACD190DB3A8008D7C14 /* CFNetwork.framework */; };
 		9DD1AAD0190DB3B4008D7C14 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD1AACF190DB3B4008D7C14 /* Security.framework */; };
 		9DD1AAD2190DB485008D7C14 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD1AAD1190DB484008D7C14 /* MobileCoreServices.framework */; };
+		9DE533921911324B00B5CAF6 /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE533911911324B00B5CAF6 /* bike.png */; };
+		9DE533941911325D00B5CAF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DE533931911325D00B5CAF6 /* Images.xcassets */; };
 		9DE86A4A19103F8A002429B4 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE86A4919103F8A002429B4 /* RequestManager.m */; };
 		9DE86A4D191040DE002429B4 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE86A4C191040DE002429B4 /* Manager.m */; };
 		9DE86A54191051F7002429B4 /* KMLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE86A53191051F7002429B4 /* KMLManager.m */; };
@@ -85,12 +86,11 @@
 		5398E9E911F640E0002BFB95 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		5398E9EA11F640E0002BFB95 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		5398E9EB11F640E0002BFB95 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		5398E9EC11F640E0002BFB95 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		53B57E68121C39C0004A1403 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* KMLViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "KMLViewer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		9D48EF7418FD9F4800CAAA02 /* Praça Portugal.GPX */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Praça Portugal.GPX"; sourceTree = "<group>"; };
 		9DCDF83518FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml"; sourceTree = "<group>"; };
-		9DD1AA91190DABB3008D7C14 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9DD1AA91190DABB3008D7C14 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		9DD1AA95190DADFF008D7C14 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		9DD1AA96190DADFF008D7C14 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		9DD1AA97190DADFF008D7C14 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -131,6 +131,8 @@
 		9DD1AACD190DB3A8008D7C14 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9DD1AACF190DB3B4008D7C14 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9DD1AAD1190DB484008D7C14 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9DE533911911324B00B5CAF6 /* bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bike.png; sourceTree = "<group>"; };
+		9DE533931911325D00B5CAF6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = KMLViewer/Images.xcassets; sourceTree = "<group>"; };
 		9DE86A4819103F8A002429B4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
 		9DE86A4919103F8A002429B4 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
 		9DE86A4B191040DE002429B4 /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
@@ -192,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				9DD1AA93190DADDA008D7C14 /* Libs */,
-				9DD1AA91190DABB3008D7C14 /* Default-568h@2x.png */,
 				53B57E68121C39C0004A1403 /* ReadMe.txt */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -215,6 +216,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9DE533931911325D00B5CAF6 /* Images.xcassets */,
 				9DCDF83518FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */,
 				5398E9E511F640E0002BFB95 /* images */,
 				533ECC0711F63EA00067A265 /* KMLViewerViewController.xib */,
@@ -253,7 +255,8 @@
 				5398E9E911F640E0002BFB95 /* Icon-Small@2x.png */,
 				5398E9EA11F640E0002BFB95 /* Icon.png */,
 				5398E9EB11F640E0002BFB95 /* Icon@2x.png */,
-				5398E9EC11F640E0002BFB95 /* iTunesArtwork */,
+				9DD1AA91190DABB3008D7C14 /* Default-568h@2x.png */,
+				9DE533911911324B00B5CAF6 /* bike.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -398,7 +401,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "KMLViewer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -429,16 +432,17 @@
 				533ECC0B11F63EA00067A265 /* KMLViewerViewController.xib in Resources */,
 				533ECC0C11F63EA00067A265 /* MainWindow.xib in Resources */,
 				5398E9ED11F640E0002BFB95 /* Icon-72.png in Resources */,
+				9DE533921911324B00B5CAF6 /* bike.png in Resources */,
 				5398E9EE11F640E0002BFB95 /* Icon-Small-50.png in Resources */,
 				5398E9EF11F640E0002BFB95 /* Icon-Small.png in Resources */,
 				5398E9F011F640E0002BFB95 /* Icon-Small@2x.png in Resources */,
 				9DCDF83618FC03340073E063 /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */,
 				5398E9F111F640E0002BFB95 /* Icon.png in Resources */,
 				9D48EF7518FD9F4800CAAA02 /* Praça Portugal.GPX in Resources */,
+				9DE533941911325D00B5CAF6 /* Images.xcassets in Resources */,
 				9DF73F4B190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml in Resources */,
 				9DD1AA92190DABB3008D7C14 /* Default-568h@2x.png in Resources */,
 				5398E9F211F640E0002BFB95 /* Icon@2x.png in Resources */,
-				5398E9F311F640E0002BFB95 /* iTunesArtwork in Resources */,
 				535BE74414B7C82C00969FF3 /* KML_Sample.kml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,16 +510,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = KMLViewer_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "KMLViewer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = KMLViewer;
@@ -526,14 +529,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = KMLViewer_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "KMLViewer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = KMLViewer;
@@ -544,12 +546,12 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -557,12 +559,11 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
