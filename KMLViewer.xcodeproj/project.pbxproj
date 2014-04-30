@@ -55,6 +55,10 @@
 		9DE86A54191051F7002429B4 /* KMLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE86A53191051F7002429B4 /* KMLManager.m */; };
 		9DE86A57191055B8002429B4 /* BasicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE86A56191055B8002429B4 /* BasicManager.m */; };
 		9DF73F4B190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9DF73F4A190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml */; };
+		9DFB529119110E0F0021BC6B /* SKBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB529019110E0F0021BC6B /* SKBounceAnimation.m */; };
+		9DFB529619110E1E0021BC6B /* ZAActivityBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DFB529319110E1E0021BC6B /* ZAActivityBar.bundle */; };
+		9DFB529719110E1E0021BC6B /* ZAActivityBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB529519110E1E0021BC6B /* ZAActivityBar.m */; };
+		9DFB529919110E670021BC6B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFB529819110E670021BC6B /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +140,12 @@
 		9DE86A55191055B8002429B4 /* BasicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicManager.h; sourceTree = "<group>"; };
 		9DE86A56191055B8002429B4 /* BasicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicManager.m; sourceTree = "<group>"; };
 		9DF73F4A190DE2AA00C4CEEA /* Tapioqueiras_até_Guaramiranga.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Tapioqueiras_até_Guaramiranga.kml"; sourceTree = "<group>"; };
+		9DFB528F19110E0F0021BC6B /* SKBounceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKBounceAnimation.h; path = ../SKBounceAnimation.h; sourceTree = "<group>"; };
+		9DFB529019110E0F0021BC6B /* SKBounceAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKBounceAnimation.m; path = ../SKBounceAnimation.m; sourceTree = "<group>"; };
+		9DFB529319110E1E0021BC6B /* ZAActivityBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZAActivityBar.bundle; sourceTree = "<group>"; };
+		9DFB529419110E1E0021BC6B /* ZAActivityBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAActivityBar.h; sourceTree = "<group>"; };
+		9DFB529519110E1E0021BC6B /* ZAActivityBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAActivityBar.m; sourceTree = "<group>"; };
+		9DFB529819110E670021BC6B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DFB529919110E670021BC6B /* QuartzCore.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				9DD1AAD2190DB485008D7C14 /* MobileCoreServices.framework in Frameworks */,
 				9DD1AAD0190DB3B4008D7C14 /* Security.framework in Frameworks */,
@@ -219,6 +230,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9DFB529819110E670021BC6B /* QuartzCore.framework */,
 				9DD1AAD1190DB484008D7C14 /* MobileCoreServices.framework */,
 				9DD1AACF190DB3B4008D7C14 /* Security.framework */,
 				9DD1AACD190DB3A8008D7C14 /* CFNetwork.framework */,
@@ -249,6 +261,7 @@
 		9DD1AA93190DADDA008D7C14 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				9DFB529219110E1E0021BC6B /* ZAActivityBar */,
 				9DD1AA94190DADFF008D7C14 /* AFNetworking */,
 				9DD1AAA8190DADFF008D7C14 /* UIKit+AFNetworking */,
 			);
@@ -347,6 +360,18 @@
 			name = AppDelegate;
 			sourceTree = "<group>";
 		};
+		9DFB529219110E1E0021BC6B /* ZAActivityBar */ = {
+			isa = PBXGroup;
+			children = (
+				9DFB528F19110E0F0021BC6B /* SKBounceAnimation.h */,
+				9DFB529019110E0F0021BC6B /* SKBounceAnimation.m */,
+				9DFB529319110E1E0021BC6B /* ZAActivityBar.bundle */,
+				9DFB529419110E1E0021BC6B /* ZAActivityBar.h */,
+				9DFB529519110E1E0021BC6B /* ZAActivityBar.m */,
+			);
+			path = ZAActivityBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -400,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DFB529619110E1E0021BC6B /* ZAActivityBar.bundle in Resources */,
 				533ECC0B11F63EA00067A265 /* KMLViewerViewController.xib in Resources */,
 				533ECC0C11F63EA00067A265 /* MainWindow.xib in Resources */,
 				5398E9ED11F640E0002BFB95 /* Icon-72.png in Resources */,
@@ -442,6 +468,8 @@
 				9DD1AAC0190DADFF008D7C14 /* AFURLRequestSerialization.m in Sources */,
 				9DE86A4D191040DE002429B4 /* Manager.m in Sources */,
 				9DD1AABC190DADFF008D7C14 /* AFHTTPSessionManager.m in Sources */,
+				9DFB529719110E1E0021BC6B /* ZAActivityBar.m in Sources */,
+				9DFB529119110E0F0021BC6B /* SKBounceAnimation.m in Sources */,
 				9DD1AABD190DADFF008D7C14 /* AFNetworkReachabilityManager.m in Sources */,
 				9DD1AAC1190DADFF008D7C14 /* AFURLResponseSerialization.m in Sources */,
 				9DD1AACA190DADFF008D7C14 /* UIWebView+AFNetworking.m in Sources */,

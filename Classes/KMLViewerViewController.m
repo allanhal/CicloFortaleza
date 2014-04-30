@@ -48,16 +48,18 @@
  */
 
 #import "KMLViewerViewController.h"
+#import "ZAActivityBar.h"
 
 @implementation KMLViewerViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [ZAActivityBar showWithStatus:@"Loading..."];
     
     [[Manager kmlManager] updateKmlWithCompletionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-        NSLog(@"Log %@", filePath);
         [self loadKml];
+        [ZAActivityBar showSuccessWithStatus:@"Success!"];
     }];
 }
 

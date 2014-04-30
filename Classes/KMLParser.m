@@ -388,11 +388,6 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
                                        qualifiedName:(NSString *)qName
                                           attributes:(NSDictionary *)attributeDict
 {
-//    NSLog(@"elementName     %@\n\n", elementName);
-//    NSLog(@"namespaceURI    %@", namespaceURI);
-//    NSLog(@"qName           %@", qName);
-//    NSLog(@"attributeDict   %@", attributeDict);
-    
     NSString *ident = [attributeDict objectForKey:@"id"];
     
     KMLStyle *style = [_placemark style] ? [_placemark style] : _style;
@@ -419,19 +414,14 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     }
     // Placemark and sub-elements
     else if (ELTYPE(Placemark)) {
-        NSLog(@"elementName     %@", elementName);
         _placemark = [[KMLPlacemark alloc] initWithIdentifier:ident];
     } else if (ELTYPE(Name)) {
-        NSLog(@"elementName     %@", elementName);
         [_placemark beginName];
     } else if (ELTYPE(Description)) {
-        NSLog(@"elementName     %@", elementName);
         [_placemark beginDescription];
     } else if (ELTYPE(styleUrl)) {
-        NSLog(@"elementName     %@", elementName);
         [_placemark beginStyleUrl];
     } else if (ELTYPE(Polygon) || ELTYPE(Point) || ELTYPE(LineString)) {
-        NSLog(@"elementName     %@", elementName);
         [_placemark beginGeometryOfType:elementName withIdentifier:ident];
     }
     // Geometry sub-elements
