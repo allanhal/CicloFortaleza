@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D1D4FF71913FBA20074D849 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D4FEF1913FBA20074D849 /* MMDrawerBarButtonItem.m */; };
+		9D1D4FF81913FBA20074D849 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D4FEF1913FBA20074D849 /* MMDrawerBarButtonItem.m */; };
+		9D1D4FF91913FBA20074D849 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D4FF21913FBA20074D849 /* MMDrawerController.m */; };
+		9D1D4FFA1913FBA20074D849 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D4FF21913FBA20074D849 /* MMDrawerController.m */; };
+		9D1D4FFB1913FBA20074D849 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D4FF41913FBA20074D849 /* MMDrawerVisualState.m */; };
+		9D1D4FFC1913FBA20074D849 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D4FF41913FBA20074D849 /* MMDrawerVisualState.m */; };
+		9D1D4FFD1913FBA20074D849 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D4FF61913FBA20074D849 /* UIViewController+MMDrawerController.m */; };
+		9D1D4FFE1913FBA20074D849 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D4FF61913FBA20074D849 /* UIViewController+MMDrawerController.m */; };
+		9D1D5004191404CF0074D849 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D5003191404CF0074D849 /* MainViewController.m */; };
+		9D1D5005191404CF0074D849 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D5003191404CF0074D849 /* MainViewController.m */; };
+		9D1D502C191406190074D849 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D5019191406190074D849 /* JASidePanelController.m */; };
+		9D1D502D191406190074D849 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D5019191406190074D849 /* JASidePanelController.m */; };
+		9D1D502E191406190074D849 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D501B191406190074D849 /* UIViewController+JASidePanel.m */; };
+		9D1D502F191406190074D849 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D501B191406190074D849 /* UIViewController+JASidePanel.m */; };
+		9D1D503219140A6E0074D849 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D503119140A6E0074D849 /* LeftViewController.m */; };
+		9D1D503319140A6E0074D849 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D503119140A6E0074D849 /* LeftViewController.m */; };
 		9D4878671913EAD10076C44A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4878661913EAD10076C44A /* Foundation.framework */; };
 		9D4878691913EAD10076C44A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4878681913EAD10076C44A /* CoreGraphics.framework */; };
 		9D48786B1913EAD10076C44A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48786A1913EAD10076C44A /* UIKit.framework */; };
@@ -15,7 +31,7 @@
 		9D4878771913EAD20076C44A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4878761913EAD20076C44A /* AppDelegate.m */; };
 		9D48787A1913EAD20076C44A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4878781913EAD20076C44A /* Main_iPhone.storyboard */; };
 		9D48787D1913EAD20076C44A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D48787B1913EAD20076C44A /* Main_iPad.storyboard */; };
-		9D4878801913EAD20076C44A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D48787F1913EAD20076C44A /* ViewController.m */; };
+		9D4878801913EAD20076C44A /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D48787F1913EAD20076C44A /* CenterViewController.m */; };
 		9D4878821913EAD20076C44A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4878811913EAD20076C44A /* Images.xcassets */; };
 		9D4878891913EAD20076C44A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4878881913EAD20076C44A /* XCTest.framework */; };
 		9D48788A1913EAD20076C44A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4878661913EAD10076C44A /* Foundation.framework */; };
@@ -99,6 +115,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D1D4FEE1913FBA20074D849 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		9D1D4FEF1913FBA20074D849 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		9D1D4FF01913FBA20074D849 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		9D1D4FF11913FBA20074D849 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		9D1D4FF21913FBA20074D849 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		9D1D4FF31913FBA20074D849 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		9D1D4FF41913FBA20074D849 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		9D1D4FF51913FBA20074D849 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		9D1D4FF61913FBA20074D849 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		9D1D5002191404CF0074D849 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9D1D5003191404CF0074D849 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9D1D5018191406190074D849 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JASidePanelController.h; path = Source/JASidePanelController.h; sourceTree = "<group>"; };
+		9D1D5019191406190074D849 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JASidePanelController.m; path = Source/JASidePanelController.m; sourceTree = "<group>"; };
+		9D1D501A191406190074D849 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+JASidePanel.h"; path = "Source/UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
+		9D1D501B191406190074D849 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JASidePanel.m"; path = "Source/UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
+		9D1D503019140A6E0074D849 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		9D1D503119140A6E0074D849 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		9D4878631913EAD10076C44A /* CicloFortaleza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CicloFortaleza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4878661913EAD10076C44A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9D4878681913EAD10076C44A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,8 +144,8 @@
 		9D4878761913EAD20076C44A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9D4878791913EAD20076C44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		9D48787C1913EAD20076C44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		9D48787E1913EAD20076C44A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9D48787F1913EAD20076C44A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9D48787E1913EAD20076C44A /* CenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
+		9D48787F1913EAD20076C44A /* CenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
 		9D4878811913EAD20076C44A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9D4878871913EAD20076C44A /* CicloFortalezaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CicloFortalezaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4878881913EAD20076C44A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -203,6 +236,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D1D4FED1913FBA20074D849 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				9D1D4FEE1913FBA20074D849 /* MMDrawerBarButtonItem.h */,
+				9D1D4FEF1913FBA20074D849 /* MMDrawerBarButtonItem.m */,
+				9D1D4FF01913FBA20074D849 /* MMDrawerController+Subclass.h */,
+				9D1D4FF11913FBA20074D849 /* MMDrawerController.h */,
+				9D1D4FF21913FBA20074D849 /* MMDrawerController.m */,
+				9D1D4FF31913FBA20074D849 /* MMDrawerVisualState.h */,
+				9D1D4FF41913FBA20074D849 /* MMDrawerVisualState.m */,
+				9D1D4FF51913FBA20074D849 /* UIViewController+MMDrawerController.h */,
+				9D1D4FF61913FBA20074D849 /* UIViewController+MMDrawerController.m */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		9D1D4FFF1913FC450074D849 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9D1D5002191404CF0074D849 /* MainViewController.h */,
+				9D1D5003191404CF0074D849 /* MainViewController.m */,
+				9D48787E1913EAD20076C44A /* CenterViewController.h */,
+				9D48787F1913EAD20076C44A /* CenterViewController.m */,
+				9D1D503019140A6E0074D849 /* LeftViewController.h */,
+				9D1D503119140A6E0074D849 /* LeftViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9D1D50001913FC500074D849 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9D4878751913EAD20076C44A /* AppDelegate.h */,
+				9D4878761913EAD20076C44A /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		9D1D50011913FC5A0074D849 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9D4878781913EAD20076C44A /* Main_iPhone.storyboard */,
+				9D48787B1913EAD20076C44A /* Main_iPad.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		9D1D5006191406190074D849 /* JASidePanels */ = {
+			isa = PBXGroup;
+			children = (
+				9D1D5018191406190074D849 /* JASidePanelController.h */,
+				9D1D5019191406190074D849 /* JASidePanelController.m */,
+				9D1D501A191406190074D849 /* UIViewController+JASidePanel.h */,
+				9D1D501B191406190074D849 /* UIViewController+JASidePanel.m */,
+			);
+			path = JASidePanels;
+			sourceTree = "<group>";
+		};
 		9D48785A1913EAD10076C44A = {
 			isa = PBXGroup;
 			children = (
@@ -241,14 +332,11 @@
 		9D48786C1913EAD10076C44A /* CicloFortaleza */ = {
 			isa = PBXGroup;
 			children = (
+				9D1D50011913FC5A0074D849 /* Storyboard */,
+				9D1D50001913FC500074D849 /* Delegate */,
+				9D1D4FFF1913FC450074D849 /* Controller */,
 				9D4879081913EE8F0076C44A /* Manager */,
 				9D4879031913EE520076C44A /* Parser */,
-				9D4878751913EAD20076C44A /* AppDelegate.h */,
-				9D4878761913EAD20076C44A /* AppDelegate.m */,
-				9D4878781913EAD20076C44A /* Main_iPhone.storyboard */,
-				9D48787B1913EAD20076C44A /* Main_iPad.storyboard */,
-				9D48787E1913EAD20076C44A /* ViewController.h */,
-				9D48787F1913EAD20076C44A /* ViewController.m */,
 				9D4878811913EAD20076C44A /* Images.xcassets */,
 				9D48786D1913EAD10076C44A /* Supporting Files */,
 			);
@@ -298,6 +386,8 @@
 		9D4878AB1913ED6A0076C44A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				9D1D5006191406190074D849 /* JASidePanels */,
+				9D1D4FED1913FBA20074D849 /* MMDrawerController */,
 				9D4878D61913ED8B0076C44A /* AFNetworking */,
 				9D4878B41913ED850076C44A /* UIKit+AFNetworking */,
 				9D4878AC1913ED7C0076C44A /* ZAActivityBar */,
@@ -521,21 +611,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1D4FFB1913FBA20074D849 /* MMDrawerVisualState.m in Sources */,
 				9D4878EA1913ED8B0076C44A /* AFHTTPRequestOperation.m in Sources */,
 				9D4879151913EE9E0076C44A /* Manager.m in Sources */,
 				9D4878C81913ED850076C44A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				9D4879171913EE9E0076C44A /* RequestManager.m in Sources */,
-				9D4878801913EAD20076C44A /* ViewController.m in Sources */,
+				9D4878801913EAD20076C44A /* CenterViewController.m in Sources */,
 				9D4878FA1913ED8B0076C44A /* AFURLSessionManager.m in Sources */,
 				9D4879061913EE580076C44A /* KMLParser.m in Sources */,
 				9D4878CA1913ED850076C44A /* UIAlertView+AFNetworking.m in Sources */,
 				9D4878F41913ED8B0076C44A /* AFURLConnectionOperation.m in Sources */,
 				9D4878FE1913EDA30076C44A /* SKBounceAnimation.m in Sources */,
+				9D1D503219140A6E0074D849 /* LeftViewController.m in Sources */,
+				9D1D4FF91913FBA20074D849 /* MMDrawerController.m in Sources */,
 				9D4878EC1913ED8B0076C44A /* AFHTTPRequestOperationManager.m in Sources */,
 				9D4878771913EAD20076C44A /* AppDelegate.m in Sources */,
 				9D4878F01913ED8B0076C44A /* AFNetworkReachabilityManager.m in Sources */,
+				9D1D502C191406190074D849 /* JASidePanelController.m in Sources */,
+				9D1D4FFD1913FBA20074D849 /* UIViewController+MMDrawerController.m in Sources */,
+				9D1D4FF71913FBA20074D849 /* MMDrawerBarButtonItem.m in Sources */,
 				9D4878D01913ED850076C44A /* UIProgressView+AFNetworking.m in Sources */,
 				9D4878731913EAD10076C44A /* main.m in Sources */,
+				9D1D502E191406190074D849 /* UIViewController+JASidePanel.m in Sources */,
+				9D1D5004191404CF0074D849 /* MainViewController.m in Sources */,
 				9D4878F21913ED8B0076C44A /* AFSecurityPolicy.m in Sources */,
 				9D4879111913EE9E0076C44A /* BasicManager.m in Sources */,
 				9D4879131913EE9E0076C44A /* KMLManager.m in Sources */,
@@ -560,12 +658,17 @@
 				9D4878F31913ED8B0076C44A /* AFSecurityPolicy.m in Sources */,
 				9D4878951913EAD20076C44A /* CicloFortalezaTests.m in Sources */,
 				9D4879071913EE580076C44A /* KMLParser.m in Sources */,
+				9D1D502F191406190074D849 /* UIViewController+JASidePanel.m in Sources */,
 				9D4878ED1913ED8B0076C44A /* AFHTTPRequestOperationManager.m in Sources */,
 				9D4878D51913ED850076C44A /* UIWebView+AFNetworking.m in Sources */,
 				9D4879161913EE9E0076C44A /* Manager.m in Sources */,
+				9D1D4FFE1913FBA20074D849 /* UIViewController+MMDrawerController.m in Sources */,
 				9D4878B31913ED7C0076C44A /* ZAActivityBar.m in Sources */,
+				9D1D502D191406190074D849 /* JASidePanelController.m in Sources */,
 				9D4878CD1913ED850076C44A /* UIButton+AFNetworking.m in Sources */,
 				9D4878FF1913EDA30076C44A /* SKBounceAnimation.m in Sources */,
+				9D1D4FF81913FBA20074D849 /* MMDrawerBarButtonItem.m in Sources */,
+				9D1D5005191404CF0074D849 /* MainViewController.m in Sources */,
 				9D4878C91913ED850076C44A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				9D4878D31913ED850076C44A /* UIRefreshControl+AFNetworking.m in Sources */,
 				9D4879121913EE9E0076C44A /* BasicManager.m in Sources */,
@@ -574,11 +677,14 @@
 				9D4878F91913ED8B0076C44A /* AFURLResponseSerialization.m in Sources */,
 				9D4878C71913ED850076C44A /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9D4878CF1913ED850076C44A /* UIImageView+AFNetworking.m in Sources */,
+				9D1D4FFC1913FBA20074D849 /* MMDrawerVisualState.m in Sources */,
 				9D4878F71913ED8B0076C44A /* AFURLRequestSerialization.m in Sources */,
 				9D4879181913EE9E0076C44A /* RequestManager.m in Sources */,
 				9D4878F11913ED8B0076C44A /* AFNetworkReachabilityManager.m in Sources */,
 				9D4878CB1913ED850076C44A /* UIAlertView+AFNetworking.m in Sources */,
 				9D4878EB1913ED8B0076C44A /* AFHTTPRequestOperation.m in Sources */,
+				9D1D503319140A6E0074D849 /* LeftViewController.m in Sources */,
+				9D1D4FFA1913FBA20074D849 /* MMDrawerController.m in Sources */,
 				9D4878EF1913ED8B0076C44A /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,6 +896,7 @@
 				9D48789A1913EAD20076C44A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D48789B1913EAD20076C44A /* Build configuration list for PBXNativeTarget "CicloFortalezaTests" */ = {
 			isa = XCConfigurationList;
@@ -798,6 +905,7 @@
 				9D48789D1913EAD20076C44A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

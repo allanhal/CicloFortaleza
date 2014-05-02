@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CenterViewController.h
 //  CicloFortaleza
 //
 //  Created by Allan Araujo on 02/05/14.
@@ -10,8 +10,9 @@
 #import <MapKit/MapKit.h>
 #import "KMLParser.h"
 #import "Manager.h"
+#import "MMDrawerController.h"
 
-@interface ViewController : UIViewController <MKMapViewDelegate>
+@interface CenterViewController : MMDrawerController <MKMapViewDelegate>
 
 @property (strong, nonatomic) MKMapView *mapView;
 @property (strong, nonatomic) KMLParser *kmlParser;

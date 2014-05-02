@@ -1,15 +1,15 @@
 //
-//  ViewController.m
+//  CenterViewController.m
 //  CicloFortaleza
 //
 //  Created by Allan Araujo on 02/05/14.
 //  Copyright (c) 2014 Allan Araujo. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CenterViewController.h"
 #import "ZAActivityBar.h"
 
-@implementation ViewController
+@implementation CenterViewController
 
 @synthesize mapView;
 @synthesize kmlParser;
@@ -17,13 +17,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
+    [self mountMap];
+    [self mountNavBar];
+    
+    [self loadInfo];
+}
+
+- (void)mountMap
+{
     self.mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
     self.mapView.delegate = self;
     self.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
     [self.view addSubview:self.mapView];
+}
+
+- (void)mountNavBar
+{
+    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(10, 20, 300, 30)];
+    topView.backgroundColor = [UIColor yellowColor];
     
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+    titleLabel.text = @"Title";
+    titleLabel.backgroundColor = [UIColor grayColor];
+    titleLabel.tintColor = [UIColor blackColor];
+    
+    [topView addSubview:titleLabel];
+    
+    [self.view addSubview:topView];
+}
+
+- (void)loadInfo
+{
     [ZAActivityBar showWithStatus:@"Loading..."];
     
     [[Manager kmlManager] updateKmlWithCompletionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
