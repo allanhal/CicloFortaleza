@@ -15,5 +15,6 @@
 + (KMLManager *)instance;
 - (KMLParser *)retrieveKmlParsed;
 - (void)updateKmlWithCompletionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))completionHandler;
+- (NSURL *)kmlAddress;
 
 @end

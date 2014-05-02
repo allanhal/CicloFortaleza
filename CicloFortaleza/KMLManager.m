@@ -63,4 +63,9 @@ static NSURL *lastUrl = nil;
     return URL;
 }
 
+- (NSURL *)kmlAddress
+{
+    return [self kmlFelipeAlves];
+}
+
 @end

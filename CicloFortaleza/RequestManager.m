@@ -9,6 +9,7 @@
 #import "RequestManager.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "AFURLSessionManager.h"
+#import "Manager.h"
 
 @implementation RequestManager
 
@@ -27,12 +28,7 @@
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
-    NSURL *URL;
-//    Felipe Alves
-//    URL = [NSURL URLWithString:@"http://mapsengine.google.com/map/u/0/kml?mid=z8Q5SBXmCaP8.kSnFgQIIZDcU"];
-//    Golbery
-    URL = [NSURL URLWithString:@"https://maps.google.com/maps/ms?dg=feature&ie=UTF8&authuser=0&msa=0&output=kml&msid=204779182148563529295.0004c1d9f57a7cb85f31d"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[[Manager kmlManager] kmlAddress]];
     
     NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
