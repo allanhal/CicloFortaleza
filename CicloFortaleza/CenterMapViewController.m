@@ -19,41 +19,28 @@
     [super viewDidLoad];
     
     [self mountMap];
-    [self mountNavBar];
-    
     [self loadInfo];
 }
 
 - (void)mountMap
 {
-    self.mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
-    self.mapView.delegate = self;
-    self.mapView.userTrackingMode = MKUserTrackingModeFollowWithHeading;
-    [self.view addSubview:self.mapView];
-}
-
-- (void)mountNavBar
-{
-    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(10, 20, 300, 30)];
-    topView.backgroundColor = [UIColor yellowColor];
+    RMMapboxSource *tileSource = [[RMMapboxSource alloc] initWithMapID:@"allanhal.i50boh1n"];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-    titleLabel.text = @"Title";
-    titleLabel.backgroundColor = [UIColor grayColor];
-    titleLabel.tintColor = [UIColor blackColor];
+    mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:tileSource];
+    mapView.delegate = self;
+    mapView.userTrackingMode = MKUserTrackingModeNone;
+    mapView.showsUserLocation = YES;
     
-    [topView addSubview:titleLabel];
-    
-    [self.view addSubview:topView];
+    [self.view addSubview:mapView];
 }
 
 - (void)loadInfo
 {
-    [ZAActivityBar showWithStatus:@"Loading..."];
+    NSLog(@"Baixando mapa...");
+    [ZAActivityBar showWithStatus:@"Baixando mapa..."];
     
     [[Manager kmlManager] updateKmlWithCompletionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         [self loadKml];
-        [ZAActivityBar showSuccessWithStatus:@"Success!"];
     }];
 }
 
@@ -63,11 +50,17 @@
     
     // Add all of the MKOverlay objects parsed from the KML file to the map.
     NSArray *overlays = [kmlParser overlays];
-    [self.mapView addOverlays:overlays];
     
     // Add all of the MKAnnotation objects parsed from the KML file to the map.
     NSArray *annotations = [kmlParser points];
-    [self.mapView addAnnotations:annotations];
+    for(MKPointAnnotation *point in annotations)
+    {
+        RMPointAnnotation *annotation = [[RMPointAnnotation alloc] initWithMapView:mapView
+                                                                        coordinate:point.coordinate
+                                                                          andTitle:point.title];
+        
+        [self.mapView addAnnotation:annotation];
+    }
     
     // Walk the list of overlays and annotations and create a MKMapRect that
     // bounds all of them and store it into flyTo.
@@ -90,20 +83,9 @@
         }
     }
     
-//    Position the map so that all overlays and annotations are visible on screen.
-    self.mapView.visibleMapRect = flyTo;
+    [ZAActivityBar showSuccessWithStatus:@"Mapa carregado." duration:0.1f];
 }
 
 #pragma mark MKMapViewDelegate
-
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
-{
-    return [kmlParser viewForOverlay:overlay];
-}
-
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
-{
-    return [kmlParser viewForAnnotation:annotation];
-}
 
 @end

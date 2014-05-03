@@ -26,12 +26,12 @@
     CGFloat x = 10;
     CGFloat y = 300;
     CGFloat width = 300;
-    CGFloat height = 215;
+    CGFloat height = 269;
     CGRect tableFrame = CGRectMake(x, y, width, height);
     
     tableView = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
     
-//    tableView.layer.borderWidth = 2.0;
+//    tableView.layer.borderWidth = 1.0;
     tableView.backgroundColor = [UIColor clearColor];
     tableView.sectionFooterHeight = 0;
     tableView.sectionHeaderHeight = 0;
@@ -62,7 +62,7 @@
         cell.backgroundColor = [UIColor clearColor];
     }
 
-    cell.cellLabel.text = [NSString stringWithFormat:@"%@ %d", @"Row", (int)indexPath.section];
+    cell.cellLabel.text = [NSString stringWithFormat:@"%@ %d", @"Bicicletário ", (int)indexPath.section];
     
     return cell;
 }

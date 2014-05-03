@@ -102,6 +102,22 @@
 		9D48791B1913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9D4879191913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */; };
 		9D48791F1913F3EF0076C44A /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D48791E1913F3EF0076C44A /* bike.png */; };
 		9D4879201913F3EF0076C44A /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D48791E1913F3EF0076C44A /* bike.png */; };
+		9D4F234119148FD000A55D78 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F234019148FD000A55D78 /* Mapbox.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		9D4F23431914910400A55D78 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F23421914910400A55D78 /* CoreLocation.framework */; };
+		9D4F23451914910B00A55D78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F23441914910B00A55D78 /* QuartzCore.framework */; };
+		9D4F23471914911600A55D78 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F23461914911600A55D78 /* libsqlite3.0.dylib */; };
+		9D4F23491914911E00A55D78 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F23481914911E00A55D78 /* libz.dylib */; };
+		9D4F234C1914919300A55D78 /* Mapbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D4F234B1914919300A55D78 /* Mapbox.bundle */; };
+		9D4F234D1914919300A55D78 /* Mapbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D4F234B1914919300A55D78 /* Mapbox.bundle */; };
+		9D4F23531914B42300A55D78 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F23521914B42300A55D78 /* MessageUI.framework */; };
+		9D4F23861914B93700A55D78 /* ALActionBlockWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F237F1914B93700A55D78 /* ALActionBlockWrapper.m */; };
+		9D4F23871914B93700A55D78 /* ALActionBlockWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F237F1914B93700A55D78 /* ALActionBlockWrapper.m */; };
+		9D4F23881914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23811914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m */; };
+		9D4F23891914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23811914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m */; };
+		9D4F238A1914B93700A55D78 /* UIControl+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23831914B93700A55D78 /* UIControl+ALActionBlocks.m */; };
+		9D4F238B1914B93700A55D78 /* UIControl+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23831914B93700A55D78 /* UIControl+ALActionBlocks.m */; };
+		9D4F238C1914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */; };
+		9D4F238D1914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */; };
 		9D69C8EF191449A1000B8A30 /* CenterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C8EE191449A1000B8A30 /* CenterListViewController.m */; };
 		9D69C8F0191449A1000B8A30 /* CenterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C8EE191449A1000B8A30 /* CenterListViewController.m */; };
 		9D69C8F519144CD3000B8A30 /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C8F419144CD3000B8A30 /* CenterViewController.m */; };
@@ -218,6 +234,23 @@
 		9D4879101913EE9E0076C44A /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
 		9D4879191913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml"; sourceTree = "<group>"; };
 		9D48791E1913F3EF0076C44A /* bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bike.png; sourceTree = "<group>"; };
+		9D4F234019148FD000A55D78 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Downloads/Mapbox.framework; sourceTree = "<group>"; };
+		9D4F23421914910400A55D78 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9D4F23441914910B00A55D78 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9D4F23461914911600A55D78 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		9D4F23481914911E00A55D78 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9D4F234B1914919300A55D78 /* Mapbox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Mapbox.bundle; sourceTree = "<group>"; };
+		9D4F23521914B42300A55D78 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9D4F237C1914B93700A55D78 /* ALActionBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALActionBlock.h; sourceTree = "<group>"; };
+		9D4F237D1914B93700A55D78 /* ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALActionBlocks.h; sourceTree = "<group>"; };
+		9D4F237E1914B93700A55D78 /* ALActionBlockWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALActionBlockWrapper.h; sourceTree = "<group>"; };
+		9D4F237F1914B93700A55D78 /* ALActionBlockWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALActionBlockWrapper.m; sourceTree = "<group>"; };
+		9D4F23801914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ALActionBlocks.h"; sourceTree = "<group>"; };
+		9D4F23811914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ALActionBlocks.m"; sourceTree = "<group>"; };
+		9D4F23821914B93700A55D78 /* UIControl+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ALActionBlocks.h"; sourceTree = "<group>"; };
+		9D4F23831914B93700A55D78 /* UIControl+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ALActionBlocks.m"; sourceTree = "<group>"; };
+		9D4F23841914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+ALActionBlocks.h"; sourceTree = "<group>"; };
+		9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+ALActionBlocks.m"; sourceTree = "<group>"; };
 		9D69C8ED191449A1000B8A30 /* CenterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterListViewController.h; sourceTree = "<group>"; };
 		9D69C8EE191449A1000B8A30 /* CenterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterListViewController.m; sourceTree = "<group>"; };
 		9D69C8F319144CD3000B8A30 /* CenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
@@ -233,6 +266,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4F23531914B42300A55D78 /* MessageUI.framework in Frameworks */,
+				9D4F23491914911E00A55D78 /* libz.dylib in Frameworks */,
+				9D4F23471914911600A55D78 /* libsqlite3.0.dylib in Frameworks */,
+				9D4F23451914910B00A55D78 /* QuartzCore.framework in Frameworks */,
+				9D4F23431914910400A55D78 /* CoreLocation.framework in Frameworks */,
+				9D4F234119148FD000A55D78 /* Mapbox.framework in Frameworks */,
 				9D4878691913EAD10076C44A /* CoreGraphics.framework in Frameworks */,
 				9D48786B1913EAD10076C44A /* UIKit.framework in Frameworks */,
 				9D4878671913EAD10076C44A /* Foundation.framework in Frameworks */,
@@ -335,6 +374,12 @@
 		9D4878651913EAD10076C44A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D4F23521914B42300A55D78 /* MessageUI.framework */,
+				9D4F23481914911E00A55D78 /* libz.dylib */,
+				9D4F23461914911600A55D78 /* libsqlite3.0.dylib */,
+				9D4F23441914910B00A55D78 /* QuartzCore.framework */,
+				9D4F23421914910400A55D78 /* CoreLocation.framework */,
+				9D4F234019148FD000A55D78 /* Mapbox.framework */,
 				9D4878661913EAD10076C44A /* Foundation.framework */,
 				9D4878681913EAD10076C44A /* CoreGraphics.framework */,
 				9D48786A1913EAD10076C44A /* UIKit.framework */,
@@ -401,6 +446,8 @@
 		9D4878AB1913ED6A0076C44A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				9D4F237B1914B93700A55D78 /* ALActionBlocks */,
+				9D4F234A1914918800A55D78 /* MapBox */,
 				9D69C8F719145441000B8A30 /* ILTranslucentView */,
 				9D1D5006191406190074D849 /* JASidePanels */,
 				9D1D4FED1913FBA20074D849 /* MMDrawerController */,
@@ -511,6 +558,31 @@
 				9D48791E1913F3EF0076C44A /* bike.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		9D4F234A1914918800A55D78 /* MapBox */ = {
+			isa = PBXGroup;
+			children = (
+				9D4F234B1914919300A55D78 /* Mapbox.bundle */,
+			);
+			name = MapBox;
+			sourceTree = "<group>";
+		};
+		9D4F237B1914B93700A55D78 /* ALActionBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				9D4F237C1914B93700A55D78 /* ALActionBlock.h */,
+				9D4F237D1914B93700A55D78 /* ALActionBlocks.h */,
+				9D4F237E1914B93700A55D78 /* ALActionBlockWrapper.h */,
+				9D4F237F1914B93700A55D78 /* ALActionBlockWrapper.m */,
+				9D4F23801914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.h */,
+				9D4F23811914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m */,
+				9D4F23821914B93700A55D78 /* UIControl+ALActionBlocks.h */,
+				9D4F23831914B93700A55D78 /* UIControl+ALActionBlocks.m */,
+				9D4F23841914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.h */,
+				9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */,
+			);
+			path = ALActionBlocks;
 			sourceTree = "<group>";
 		};
 		9D69C8F1191449A4000B8A30 /* LeftViewController */ = {
@@ -630,6 +702,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4878A71913ECE20076C44A /* Sagarana.gpx in Resources */,
+				9D4F234C1914919300A55D78 /* Mapbox.bundle in Resources */,
 				9D4878A31913ECE20076C44A /* Academia Dunas.gpx in Resources */,
 				9D48791F1913F3EF0076C44A /* bike.png in Resources */,
 				9D48787D1913EAD20076C44A /* Main_iPad.storyboard in Resources */,
@@ -650,6 +723,7 @@
 			files = (
 				9D4878AA1913ECE20076C44A /* São Luiz.gpx in Resources */,
 				9D4878931913EAD20076C44A /* InfoPlist.strings in Resources */,
+				9D4F234D1914919300A55D78 /* Mapbox.bundle in Resources */,
 				9D4879201913F3EF0076C44A /* bike.png in Resources */,
 				9D4878A41913ECE20076C44A /* Academia Dunas.gpx in Resources */,
 				9D4878B11913ED7C0076C44A /* ZAActivityBar.bundle in Resources */,
@@ -675,11 +749,13 @@
 				9D4878801913EAD20076C44A /* CenterMapViewController.m in Sources */,
 				9D4878FA1913ED8B0076C44A /* AFURLSessionManager.m in Sources */,
 				9D4879061913EE580076C44A /* KMLParser.m in Sources */,
+				9D4F23861914B93700A55D78 /* ALActionBlockWrapper.m in Sources */,
 				9D4878CA1913ED850076C44A /* UIAlertView+AFNetworking.m in Sources */,
 				9D69C90919147B1C000B8A30 /* CustomCell.m in Sources */,
 				9D4878F41913ED8B0076C44A /* AFURLConnectionOperation.m in Sources */,
 				9D4878FE1913EDA30076C44A /* SKBounceAnimation.m in Sources */,
 				9D69C8FA1914544B000B8A30 /* ILTranslucentView.m in Sources */,
+				9D4F238A1914B93700A55D78 /* UIControl+ALActionBlocks.m in Sources */,
 				9D1D503219140A6E0074D849 /* LeftViewController.m in Sources */,
 				9D1D4FF91913FBA20074D849 /* MMDrawerController.m in Sources */,
 				9D4878EC1913ED8B0076C44A /* AFHTTPRequestOperationManager.m in Sources */,
@@ -693,8 +769,10 @@
 				9D69C8F519144CD3000B8A30 /* CenterViewController.m in Sources */,
 				9D1D502E191406190074D849 /* UIViewController+JASidePanel.m in Sources */,
 				9D1D5004191404CF0074D849 /* MainViewController.m in Sources */,
+				9D4F23881914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m in Sources */,
 				9D4878F21913ED8B0076C44A /* AFSecurityPolicy.m in Sources */,
 				9D4879111913EE9E0076C44A /* BasicManager.m in Sources */,
+				9D4F238C1914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m in Sources */,
 				9D69C8EF191449A1000B8A30 /* CenterListViewController.m in Sources */,
 				9D4879131913EE9E0076C44A /* KMLManager.m in Sources */,
 				9D4878B21913ED7C0076C44A /* ZAActivityBar.m in Sources */,
@@ -716,11 +794,13 @@
 				9D4878F51913ED8B0076C44A /* AFURLConnectionOperation.m in Sources */,
 				9D4878D11913ED850076C44A /* UIProgressView+AFNetworking.m in Sources */,
 				9D4878F31913ED8B0076C44A /* AFSecurityPolicy.m in Sources */,
+				9D4F238D1914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m in Sources */,
 				9D4878951913EAD20076C44A /* CicloFortalezaTests.m in Sources */,
 				9D4879071913EE580076C44A /* KMLParser.m in Sources */,
 				9D1D502F191406190074D849 /* UIViewController+JASidePanel.m in Sources */,
 				9D4878ED1913ED8B0076C44A /* AFHTTPRequestOperationManager.m in Sources */,
 				9D4878D51913ED850076C44A /* UIWebView+AFNetworking.m in Sources */,
+				9D4F23891914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m in Sources */,
 				9D4879161913EE9E0076C44A /* Manager.m in Sources */,
 				9D1D4FFE1913FBA20074D849 /* UIViewController+MMDrawerController.m in Sources */,
 				9D4878B31913ED7C0076C44A /* ZAActivityBar.m in Sources */,
@@ -739,10 +819,12 @@
 				9D4878C71913ED850076C44A /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9D69C8F619144CD3000B8A30 /* CenterViewController.m in Sources */,
 				9D4878CF1913ED850076C44A /* UIImageView+AFNetworking.m in Sources */,
+				9D4F23871914B93700A55D78 /* ALActionBlockWrapper.m in Sources */,
 				9D1D4FFC1913FBA20074D849 /* MMDrawerVisualState.m in Sources */,
 				9D4878F71913ED8B0076C44A /* AFURLRequestSerialization.m in Sources */,
 				9D4879181913EE9E0076C44A /* RequestManager.m in Sources */,
 				9D69C8FB1914544B000B8A30 /* ILTranslucentView.m in Sources */,
+				9D4F238B1914B93700A55D78 /* UIControl+ALActionBlocks.m in Sources */,
 				9D4878F11913ED8B0076C44A /* AFNetworkReachabilityManager.m in Sources */,
 				9D4878CB1913ED850076C44A /* UIAlertView+AFNetworking.m in Sources */,
 				9D4878EB1913ED8B0076C44A /* AFHTTPRequestOperation.m in Sources */,
@@ -878,9 +960,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/allan/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CicloFortaleza/CicloFortaleza-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode\\ 5.0.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SRCROOT)/Libs/BlocksKit",
+				);
 				INFOPLIST_FILE = "CicloFortaleza/CicloFortaleza-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/allan/CicloFortaleza,
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -891,9 +987,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/allan/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CicloFortaleza/CicloFortaleza-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode\\ 5.0.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SRCROOT)/Libs/BlocksKit",
+				);
 				INFOPLIST_FILE = "CicloFortaleza/CicloFortaleza-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/allan/CicloFortaleza,
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -916,6 +1026,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "CicloFortalezaTests/CicloFortalezaTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/allan/CicloFortaleza,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -935,6 +1049,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CicloFortaleza/CicloFortaleza-Prefix.pch";
 				INFOPLIST_FILE = "CicloFortalezaTests/CicloFortalezaTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/allan/CicloFortaleza,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

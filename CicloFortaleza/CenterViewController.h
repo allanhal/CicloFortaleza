@@ -10,4 +10,9 @@
 
 @interface CenterViewController : CenterListViewController
 
+@property (strong, nonatomic) UIView *topView;
+@property (strong, nonatomic) UILabel *topLabel;
+@property (strong, nonatomic) UIButton *userLocationButton;
+@property (strong, nonatomic) UIButton *menuButton;
+
 @end

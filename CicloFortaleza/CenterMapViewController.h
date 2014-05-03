@@ -11,10 +11,11 @@
 #import "KMLParser.h"
 #import "Manager.h"
 #import "MMDrawerController.h"
+#import <Mapbox/Mapbox.h>
 
-@interface CenterMapViewController : MMDrawerController <MKMapViewDelegate>
+@interface CenterMapViewController : MMDrawerController <RMMapViewDelegate>
 
-@property (strong, nonatomic) MKMapView *mapView;
+@property (strong, nonatomic) RMMapView *mapView;
 @property (strong, nonatomic) KMLParser *kmlParser;
 
 @end
