@@ -31,7 +31,7 @@
 		9D4878771913EAD20076C44A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4878761913EAD20076C44A /* AppDelegate.m */; };
 		9D48787A1913EAD20076C44A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4878781913EAD20076C44A /* Main_iPhone.storyboard */; };
 		9D48787D1913EAD20076C44A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D48787B1913EAD20076C44A /* Main_iPad.storyboard */; };
-		9D4878801913EAD20076C44A /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D48787F1913EAD20076C44A /* CenterViewController.m */; };
+		9D4878801913EAD20076C44A /* CenterMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D48787F1913EAD20076C44A /* CenterMapViewController.m */; };
 		9D4878821913EAD20076C44A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4878811913EAD20076C44A /* Images.xcassets */; };
 		9D4878891913EAD20076C44A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4878881913EAD20076C44A /* XCTest.framework */; };
 		9D48788A1913EAD20076C44A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4878661913EAD10076C44A /* Foundation.framework */; };
@@ -102,6 +102,14 @@
 		9D48791B1913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9D4879191913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */; };
 		9D48791F1913F3EF0076C44A /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D48791E1913F3EF0076C44A /* bike.png */; };
 		9D4879201913F3EF0076C44A /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D48791E1913F3EF0076C44A /* bike.png */; };
+		9D69C8EF191449A1000B8A30 /* CenterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C8EE191449A1000B8A30 /* CenterListViewController.m */; };
+		9D69C8F0191449A1000B8A30 /* CenterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C8EE191449A1000B8A30 /* CenterListViewController.m */; };
+		9D69C8F519144CD3000B8A30 /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C8F419144CD3000B8A30 /* CenterViewController.m */; };
+		9D69C8F619144CD3000B8A30 /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C8F419144CD3000B8A30 /* CenterViewController.m */; };
+		9D69C8FA1914544B000B8A30 /* ILTranslucentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C8F91914544B000B8A30 /* ILTranslucentView.m */; };
+		9D69C8FB1914544B000B8A30 /* ILTranslucentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C8F91914544B000B8A30 /* ILTranslucentView.m */; };
+		9D69C90919147B1C000B8A30 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C90819147B1C000B8A30 /* CustomCell.m */; };
+		9D69C90A19147B1C000B8A30 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C90819147B1C000B8A30 /* CustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,8 +152,8 @@
 		9D4878761913EAD20076C44A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9D4878791913EAD20076C44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		9D48787C1913EAD20076C44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		9D48787E1913EAD20076C44A /* CenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
-		9D48787F1913EAD20076C44A /* CenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
+		9D48787E1913EAD20076C44A /* CenterMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterMapViewController.h; sourceTree = "<group>"; };
+		9D48787F1913EAD20076C44A /* CenterMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterMapViewController.m; sourceTree = "<group>"; };
 		9D4878811913EAD20076C44A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9D4878871913EAD20076C44A /* CicloFortalezaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CicloFortalezaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4878881913EAD20076C44A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -210,6 +218,14 @@
 		9D4879101913EE9E0076C44A /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
 		9D4879191913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml"; sourceTree = "<group>"; };
 		9D48791E1913F3EF0076C44A /* bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bike.png; sourceTree = "<group>"; };
+		9D69C8ED191449A1000B8A30 /* CenterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterListViewController.h; sourceTree = "<group>"; };
+		9D69C8EE191449A1000B8A30 /* CenterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterListViewController.m; sourceTree = "<group>"; };
+		9D69C8F319144CD3000B8A30 /* CenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
+		9D69C8F419144CD3000B8A30 /* CenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
+		9D69C8F81914544B000B8A30 /* ILTranslucentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILTranslucentView.h; sourceTree = "<group>"; };
+		9D69C8F91914544B000B8A30 /* ILTranslucentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILTranslucentView.m; sourceTree = "<group>"; };
+		9D69C90719147B1C000B8A30 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		9D69C90819147B1C000B8A30 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,10 +273,8 @@
 			children = (
 				9D1D5002191404CF0074D849 /* MainViewController.h */,
 				9D1D5003191404CF0074D849 /* MainViewController.m */,
-				9D48787E1913EAD20076C44A /* CenterViewController.h */,
-				9D48787F1913EAD20076C44A /* CenterViewController.m */,
-				9D1D503019140A6E0074D849 /* LeftViewController.h */,
-				9D1D503119140A6E0074D849 /* LeftViewController.m */,
+				9D69C8F2191449B9000B8A30 /* CenterViewController */,
+				9D69C8F1191449A4000B8A30 /* LeftViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -335,6 +349,7 @@
 				9D1D50011913FC5A0074D849 /* Storyboard */,
 				9D1D50001913FC500074D849 /* Delegate */,
 				9D1D4FFF1913FC450074D849 /* Controller */,
+				9D69C90619147B03000B8A30 /* Cell */,
 				9D4879081913EE8F0076C44A /* Manager */,
 				9D4879031913EE520076C44A /* Parser */,
 				9D4878811913EAD20076C44A /* Images.xcassets */,
@@ -386,6 +401,7 @@
 		9D4878AB1913ED6A0076C44A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				9D69C8F719145441000B8A30 /* ILTranslucentView */,
 				9D1D5006191406190074D849 /* JASidePanels */,
 				9D1D4FED1913FBA20074D849 /* MMDrawerController */,
 				9D4878D61913ED8B0076C44A /* AFNetworking */,
@@ -495,6 +511,46 @@
 				9D48791E1913F3EF0076C44A /* bike.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		9D69C8F1191449A4000B8A30 /* LeftViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D1D503019140A6E0074D849 /* LeftViewController.h */,
+				9D1D503119140A6E0074D849 /* LeftViewController.m */,
+			);
+			name = LeftViewController;
+			sourceTree = "<group>";
+		};
+		9D69C8F2191449B9000B8A30 /* CenterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D48787E1913EAD20076C44A /* CenterMapViewController.h */,
+				9D48787F1913EAD20076C44A /* CenterMapViewController.m */,
+				9D69C8ED191449A1000B8A30 /* CenterListViewController.h */,
+				9D69C8EE191449A1000B8A30 /* CenterListViewController.m */,
+				9D69C8F319144CD3000B8A30 /* CenterViewController.h */,
+				9D69C8F419144CD3000B8A30 /* CenterViewController.m */,
+			);
+			name = CenterViewController;
+			sourceTree = "<group>";
+		};
+		9D69C8F719145441000B8A30 /* ILTranslucentView */ = {
+			isa = PBXGroup;
+			children = (
+				9D69C8F81914544B000B8A30 /* ILTranslucentView.h */,
+				9D69C8F91914544B000B8A30 /* ILTranslucentView.m */,
+			);
+			name = ILTranslucentView;
+			sourceTree = "<group>";
+		};
+		9D69C90619147B03000B8A30 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9D69C90719147B1C000B8A30 /* CustomCell.h */,
+				9D69C90819147B1C000B8A30 /* CustomCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,12 +672,14 @@
 				9D4879151913EE9E0076C44A /* Manager.m in Sources */,
 				9D4878C81913ED850076C44A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				9D4879171913EE9E0076C44A /* RequestManager.m in Sources */,
-				9D4878801913EAD20076C44A /* CenterViewController.m in Sources */,
+				9D4878801913EAD20076C44A /* CenterMapViewController.m in Sources */,
 				9D4878FA1913ED8B0076C44A /* AFURLSessionManager.m in Sources */,
 				9D4879061913EE580076C44A /* KMLParser.m in Sources */,
 				9D4878CA1913ED850076C44A /* UIAlertView+AFNetworking.m in Sources */,
+				9D69C90919147B1C000B8A30 /* CustomCell.m in Sources */,
 				9D4878F41913ED8B0076C44A /* AFURLConnectionOperation.m in Sources */,
 				9D4878FE1913EDA30076C44A /* SKBounceAnimation.m in Sources */,
+				9D69C8FA1914544B000B8A30 /* ILTranslucentView.m in Sources */,
 				9D1D503219140A6E0074D849 /* LeftViewController.m in Sources */,
 				9D1D4FF91913FBA20074D849 /* MMDrawerController.m in Sources */,
 				9D4878EC1913ED8B0076C44A /* AFHTTPRequestOperationManager.m in Sources */,
@@ -632,10 +690,12 @@
 				9D1D4FF71913FBA20074D849 /* MMDrawerBarButtonItem.m in Sources */,
 				9D4878D01913ED850076C44A /* UIProgressView+AFNetworking.m in Sources */,
 				9D4878731913EAD10076C44A /* main.m in Sources */,
+				9D69C8F519144CD3000B8A30 /* CenterViewController.m in Sources */,
 				9D1D502E191406190074D849 /* UIViewController+JASidePanel.m in Sources */,
 				9D1D5004191404CF0074D849 /* MainViewController.m in Sources */,
 				9D4878F21913ED8B0076C44A /* AFSecurityPolicy.m in Sources */,
 				9D4879111913EE9E0076C44A /* BasicManager.m in Sources */,
+				9D69C8EF191449A1000B8A30 /* CenterListViewController.m in Sources */,
 				9D4879131913EE9E0076C44A /* KMLManager.m in Sources */,
 				9D4878B21913ED7C0076C44A /* ZAActivityBar.m in Sources */,
 				9D4878F61913ED8B0076C44A /* AFURLRequestSerialization.m in Sources */,
@@ -668,6 +728,7 @@
 				9D4878CD1913ED850076C44A /* UIButton+AFNetworking.m in Sources */,
 				9D4878FF1913EDA30076C44A /* SKBounceAnimation.m in Sources */,
 				9D1D4FF81913FBA20074D849 /* MMDrawerBarButtonItem.m in Sources */,
+				9D69C8F0191449A1000B8A30 /* CenterListViewController.m in Sources */,
 				9D1D5005191404CF0074D849 /* MainViewController.m in Sources */,
 				9D4878C91913ED850076C44A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				9D4878D31913ED850076C44A /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -676,16 +737,19 @@
 				9D4878FB1913ED8B0076C44A /* AFURLSessionManager.m in Sources */,
 				9D4878F91913ED8B0076C44A /* AFURLResponseSerialization.m in Sources */,
 				9D4878C71913ED850076C44A /* AFNetworkActivityIndicatorManager.m in Sources */,
+				9D69C8F619144CD3000B8A30 /* CenterViewController.m in Sources */,
 				9D4878CF1913ED850076C44A /* UIImageView+AFNetworking.m in Sources */,
 				9D1D4FFC1913FBA20074D849 /* MMDrawerVisualState.m in Sources */,
 				9D4878F71913ED8B0076C44A /* AFURLRequestSerialization.m in Sources */,
 				9D4879181913EE9E0076C44A /* RequestManager.m in Sources */,
+				9D69C8FB1914544B000B8A30 /* ILTranslucentView.m in Sources */,
 				9D4878F11913ED8B0076C44A /* AFNetworkReachabilityManager.m in Sources */,
 				9D4878CB1913ED850076C44A /* UIAlertView+AFNetworking.m in Sources */,
 				9D4878EB1913ED8B0076C44A /* AFHTTPRequestOperation.m in Sources */,
 				9D1D503319140A6E0074D849 /* LeftViewController.m in Sources */,
 				9D1D4FFA1913FBA20074D849 /* MMDrawerController.m in Sources */,
 				9D4878EF1913ED8B0076C44A /* AFHTTPSessionManager.m in Sources */,
+				9D69C90A19147B1C000B8A30 /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

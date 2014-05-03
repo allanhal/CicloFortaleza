@@ -6,15 +6,8 @@
 //  Copyright (c) 2014 Allan Araujo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
-#import "KMLParser.h"
-#import "Manager.h"
-#import "MMDrawerController.h"
+#import "CenterListViewController.h"
 
-@interface CenterViewController : MMDrawerController <MKMapViewDelegate>
-
-@property (strong, nonatomic) MKMapView *mapView;
-@property (strong, nonatomic) KMLParser *kmlParser;
+@interface CenterViewController : CenterListViewController
 
 @end
