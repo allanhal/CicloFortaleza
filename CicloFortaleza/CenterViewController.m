@@ -43,10 +43,10 @@
 
 - (void)mountTopLabel
 {
-    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-    topLabel.text = @"Title";
+    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 20, 100, 20)];
+    topLabel.text = @"Calanga";
     topLabel.backgroundColor = [UIColor grayColor];
-    topLabel.tintColor = [UIColor blackColor];
+    topLabel.textColor = [UIColor redColor];
     
     [topView addSubview:topLabel];
 }
@@ -74,7 +74,7 @@
     userLocationButton.backgroundColor = [UIColor greenColor];
     
     [userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
-//        [self.sidePanelController setCenterPanelHidden:NO animated:YES duration:0.2f];
+        [self.sidePanelController showLeftPanelAnimated:YES];
     }];
     
     [topView addSubview:userLocationButton];

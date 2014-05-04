@@ -51,15 +51,16 @@
     if (cell == nil)
     {
         cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        
-        [cell addSubview:[self translucentView:cell.frame]];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.cellLabel = [[UILabel alloc] initWithFrame:cell.frame];
-        
-        cell.cellLabel.backgroundColor = [UIColor clearColor];
-        [cell.cellLabel setTextColor:[UIColor whiteColor]];
-        [cell addSubview:cell.cellLabel];
+        cell.frame = CGRectMake(0, 0, aTableView.frame.size.width, 90);
         cell.backgroundColor = [UIColor clearColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        cell.cellLabel = [[UILabel alloc] initWithFrame:cell.frame];
+        cell.cellLabel.backgroundColor = [UIColor clearColor];
+        cell.cellLabel.textColor = [UIColor whiteColor];
+
+        [cell addSubview:[self translucentView:cell.frame]];
+        [cell addSubview:cell.cellLabel];
     }
 
     cell.cellLabel.text = [NSString stringWithFormat:@"%@ %d", @"Bicicletário ", (int)indexPath.section];
@@ -92,19 +93,19 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 100;
 }
 
 #pragma mark - Workaround para remover o Header e o Footer da tabela.
 
--(CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
+- (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 1.0;
+    return 0;
 }
 
 -(CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 1.0;
+    return 0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

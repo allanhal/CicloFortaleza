@@ -10,4 +10,6 @@
 
 @interface LeftViewController : UIViewController
 
+@property (strong, nonatomic) UILabel *topLabel;
+
 @end

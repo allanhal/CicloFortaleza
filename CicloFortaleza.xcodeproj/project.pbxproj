@@ -126,6 +126,8 @@
 		9D69C8FB1914544B000B8A30 /* ILTranslucentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C8F91914544B000B8A30 /* ILTranslucentView.m */; };
 		9D69C90919147B1C000B8A30 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C90819147B1C000B8A30 /* CustomCell.m */; };
 		9D69C90A19147B1C000B8A30 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C90819147B1C000B8A30 /* CustomCell.m */; };
+		9DAD6B671916383500CFF4F0 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD6B661916383500CFF4F0 /* MBSwitch.m */; };
+		9DAD6B681916383500CFF4F0 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD6B661916383500CFF4F0 /* MBSwitch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +261,8 @@
 		9D69C8F91914544B000B8A30 /* ILTranslucentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILTranslucentView.m; sourceTree = "<group>"; };
 		9D69C90719147B1C000B8A30 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		9D69C90819147B1C000B8A30 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		9DAD6B651916383500CFF4F0 /* MBSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSwitch.h; sourceTree = "<group>"; };
+		9DAD6B661916383500CFF4F0 /* MBSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSwitch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -446,6 +450,7 @@
 		9D4878AB1913ED6A0076C44A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				9DAD6B641916382800CFF4F0 /* MBSwitch */,
 				9D4F237B1914B93700A55D78 /* ALActionBlocks */,
 				9D4F234A1914918800A55D78 /* MapBox */,
 				9D69C8F719145441000B8A30 /* ILTranslucentView */,
@@ -625,6 +630,15 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		9DAD6B641916382800CFF4F0 /* MBSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD6B651916383500CFF4F0 /* MBSwitch.h */,
+				9DAD6B661916383500CFF4F0 /* MBSwitch.m */,
+			);
+			name = MBSwitch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -779,6 +793,7 @@
 				9D4878F61913ED8B0076C44A /* AFURLRequestSerialization.m in Sources */,
 				9D4878D21913ED850076C44A /* UIRefreshControl+AFNetworking.m in Sources */,
 				9D4878F81913ED8B0076C44A /* AFURLResponseSerialization.m in Sources */,
+				9DAD6B671916383500CFF4F0 /* MBSwitch.m in Sources */,
 				9D4878D41913ED850076C44A /* UIWebView+AFNetworking.m in Sources */,
 				9D4878CC1913ED850076C44A /* UIButton+AFNetworking.m in Sources */,
 				9D4878EE1913ED8B0076C44A /* AFHTTPSessionManager.m in Sources */,
@@ -797,6 +812,7 @@
 				9D4F238D1914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m in Sources */,
 				9D4878951913EAD20076C44A /* CicloFortalezaTests.m in Sources */,
 				9D4879071913EE580076C44A /* KMLParser.m in Sources */,
+				9DAD6B681916383500CFF4F0 /* MBSwitch.m in Sources */,
 				9D1D502F191406190074D849 /* UIViewController+JASidePanel.m in Sources */,
 				9D4878ED1913ED8B0076C44A /* AFHTTPRequestOperationManager.m in Sources */,
 				9D4878D51913ED850076C44A /* UIWebView+AFNetworking.m in Sources */,
