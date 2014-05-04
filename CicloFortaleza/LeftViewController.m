@@ -18,26 +18,21 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
     
-    [self mountLabel:@"Categoria 1" withPosition:1];
+    [self mountTopic:@"Categoria 1" withPosition:1];
 
-    [self mountLabel:@"Categoria 2" withPosition:2];
-    [self mountBoolWithPosition:2];
+    [self mountOption:@"Opcão 1" withPosition:2 withSwitch:[NSNumber numberWithInt:1]];
     
-    [self mountLabel:@"Categoria 3" withPosition:3];
+    [self mountOption:@"Opção 2" withPosition:3 withSwitch:[NSNumber numberWithInt:0]];
     
-    [self mountLabel:@"Categoria 4" withPosition:4];
-    [self mountBoolWithPosition:4];
+    [self mountTopic:@"Categoria 4" withPosition:4];
     
-    [self mountLabel:@"Categoria 1" withPosition:5];
+    [self mountOption:@"Opcão 1" withPosition:5];
     
-    [self mountLabel:@"Categoria 2" withPosition:6];
-    
-    [self mountLabel:@"Categoria 3" withPosition:7];
-    
-    [self mountLabel:@"Categoria 4" withPosition:8];
+    [self mountOption:@"Opção 2" withPosition:6];
+
 }
 
-- (void)mountLabel:(NSString *)text withPosition:(int)position
+- (void)mountTopic:(NSString *)text withPosition:(int)position
 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, position*50, 100, 20)];
     label.text = text;
@@ -47,15 +42,45 @@
     [self.view addSubview:label];
 }
 
-- (void)mountBoolWithPosition:(int)position
+- (void)mountOption:(NSString *)text withPosition:(int)position
 {
-    MBSwitch *aSwitch = [[MBSwitch alloc] initWithFrame:CGRectMake(205, position*50, 100, 20)];
-    [aSwitch setTintColor:[UIColor colorWithRed:0.58f green:0.65f blue:0.65f alpha:1.00f]];
-    [aSwitch setOnTintColor:[UIColor colorWithRed:0.91f green:0.30f blue:0.24f alpha:1.00f]];
-    [aSwitch setOffTintColor:[UIColor colorWithRed:0.93f green:0.94f blue:0.95f alpha:1.00f]];
-    [aSwitch setThumbTintColor:[UIColor yellowColor]];
+    [self mountOption:text withPosition:position withSwitch:nil];
+}
+
+- (void)mountOption:(NSString *)text withPosition:(int)position withSwitch:(NSNumber *)switchOn
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(40, position*50, 100, 20)];
+    label.text = text;
+    label.backgroundColor = [UIColor whiteColor];
+    label.textColor = [UIColor redColor];
+    
+    [self.view addSubview:label];
+    
+    if(switchOn)
+    {
+        [self mountBoolWithPosition:position On:[switchOn boolValue]];
+    }
+}
+
+- (void)mountBoolWithPosition:(int)position On:(BOOL)on
+{
+    MBSwitch *aSwitch = [[MBSwitch alloc] initWithFrame:CGRectMake(185, position*50, 50, 20)];
+//    aSwitch.tintColor = [UIColor colorWithRed:0.58f green:0.65f blue:0.65f alpha:1.00f];
+//    aSwitch.onTintColor = [UIColor colorWithRed:0.91f green:0.30f blue:0.24f alpha:1.00f];
+//    aSwitch.offTintColor = [UIColor colorWithRed:0.93f green:0.94f blue:0.95f alpha:1.00f];
+//    aSwitch.thumbTintColor = [UIColor yellowColor];
+    aSwitch.tintColor = [UIColor greenColor];
+    aSwitch.onTintColor = [UIColor greenColor];
+    aSwitch.offTintColor = [UIColor whiteColor];
+    aSwitch.thumbTintColor = [UIColor whiteColor];
+    aSwitch.on = on;
     
     [self.view addSubview:aSwitch];
+}
+
+- (CGRect)frameWithPosition:(int)position
+{
+    return CGRectMake(40, position*50, 100, 20);
 }
 
 @end

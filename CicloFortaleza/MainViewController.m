@@ -12,11 +12,11 @@
 
 -(void) awakeFromNib
 {
-    //    [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"leftViewController"]];
-    //    [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"centerViewController"]];
+    [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"leftViewController"]];
+    [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"centerViewController"]];
 
-    [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"centerViewController"]];
-    [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"leftViewController"]];
+//    [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"centerViewController"]];
+//    [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"leftViewController"]];
 }
 
 
