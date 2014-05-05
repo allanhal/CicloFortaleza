@@ -357,6 +357,17 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     return points;
 }
 
+- (NSArray *)placemarks
+{
+    NSMutableArray *places = [[NSMutableArray alloc] init];
+    for (KMLPlacemark *placemark in _placemarks) {
+//        id <MKAnnotation> point = [placemark point];
+//        if (point)
+            [places addObject:placemark];
+    }
+    return places;
+}
+
 - (MKAnnotationView *)viewForAnnotation:(id <MKAnnotation>)point
 {
     // Find the KMLPlacemark object that owns this point and get

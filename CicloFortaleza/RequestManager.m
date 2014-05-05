@@ -38,7 +38,6 @@
         {
             completionHandler(response, filePath, error);
         }
-//        NSLog(@"File downloaded to: %@", filePath);
     }];
     [downloadTask resume];
 }

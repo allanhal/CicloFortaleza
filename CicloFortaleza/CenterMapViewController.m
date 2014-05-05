@@ -36,7 +36,6 @@
 
 - (void)loadInfo
 {
-    NSLog(@"Baixando mapa...");
     [ZAActivityBar showWithStatus:@"Baixando mapa..."];
     
     [[Manager kmlManager] updateKmlWithCompletionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
@@ -55,9 +54,27 @@
     NSArray *annotations = [kmlParser points];
     for(MKPointAnnotation *point in annotations)
     {
-        RMPointAnnotation *annotation = [[RMPointAnnotation alloc] initWithMapView:mapView
-                                                                        coordinate:point.coordinate
-                                                                          andTitle:point.title];
+//        NSLog(@"%@",placemark);
+//        CLLocationCoordinate2D aCoordinate = [[placemark point].coordinate;
+        
+//        KMLStyle *style;
+//        KMLGeometry *geometry;
+//        
+//        NSString *name;
+//        NSString *placemarkDescription;
+//        
+//        NSString *styleUrl;
+//        
+//        MKShape *mkShape;
+//        
+//        MKAnnotationView *annotationView;
+//        MKOverlayPathView *overlayView;
+        
+//        NSString *title = NSString stringWithFormat:@"%@ %@", point.title, point.
+        RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:mapView
+                                                              coordinate:point.coordinate
+                                                                andTitle:point.title];
+
         
         [self.mapView addAnnotation:annotation];
     }
@@ -83,9 +100,21 @@
         }
     }
     
-    [ZAActivityBar showSuccessWithStatus:@"Mapa carregado." duration:0.1f];
+    [ZAActivityBar showSuccessWithStatus:@"Mapa carregado."];
 }
 
-#pragma mark MKMapViewDelegate
+#pragma mark RMMapViewDelegate
+
+- (RMMapLayer *)mapView:(RMMapView *)mapView layerForAnnotation:(RMAnnotation *)annotation
+{
+    if (annotation.isUserLocationAnnotation)
+        return nil;
+    
+    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"bicicletario"]];
+    
+    marker.canShowCallout = YES;
+    
+    return marker;
+}
 
 @end

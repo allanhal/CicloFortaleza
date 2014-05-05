@@ -8,6 +8,7 @@
 
 #import "LeftViewController.h"
 #import "MBSwitch.h"
+#import "ColorUtil.h"
 
 @implementation LeftViewController
 
@@ -16,13 +17,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [ColorUtil r:14 g:46 b:51];
     
     [self mountTopic:@"Categoria 1" withPosition:1];
 
-    [self mountOption:@"Opcão 1" withPosition:2 withSwitch:[NSNumber numberWithInt:1]];
+    [self mountOption:@"Opcão 1" withPosition:2 withSwitch:[NSNumber numberWithInt:0]];
     
-    [self mountOption:@"Opção 2" withPosition:3 withSwitch:[NSNumber numberWithInt:0]];
+//    [self mountOption:@"Opção 2" withPosition:3 withSwitch:[NSNumber numberWithInt:0]];
     
     [self mountTopic:@"Categoria 4" withPosition:4];
     
@@ -65,22 +66,13 @@
 - (void)mountBoolWithPosition:(int)position On:(BOOL)on
 {
     MBSwitch *aSwitch = [[MBSwitch alloc] initWithFrame:CGRectMake(185, position*50, 50, 20)];
-//    aSwitch.tintColor = [UIColor colorWithRed:0.58f green:0.65f blue:0.65f alpha:1.00f];
-//    aSwitch.onTintColor = [UIColor colorWithRed:0.91f green:0.30f blue:0.24f alpha:1.00f];
-//    aSwitch.offTintColor = [UIColor colorWithRed:0.93f green:0.94f blue:0.95f alpha:1.00f];
-//    aSwitch.thumbTintColor = [UIColor yellowColor];
-    aSwitch.tintColor = [UIColor greenColor];
-    aSwitch.onTintColor = [UIColor greenColor];
-    aSwitch.offTintColor = [UIColor whiteColor];
-    aSwitch.thumbTintColor = [UIColor whiteColor];
+    aSwitch.offTintColor = [ColorUtil r:14 g:46 b:51];
+    aSwitch.thumbTintColor = [ColorUtil r:102 g:153 b:153];
+    aSwitch.onTintColor = [ColorUtil r:70 g:114 b:116];
+    aSwitch.tintColor = [ColorUtil r:102 g:153 b:153];
     aSwitch.on = on;
     
     [self.view addSubview:aSwitch];
-}
-
-- (CGRect)frameWithPosition:(int)position
-{
-    return CGRectMake(40, position*50, 100, 20);
 }
 
 @end

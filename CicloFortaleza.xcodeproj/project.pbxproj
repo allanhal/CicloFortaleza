@@ -102,6 +102,32 @@
 		9D48791B1913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9D4879191913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */; };
 		9D48791F1913F3EF0076C44A /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D48791E1913F3EF0076C44A /* bike.png */; };
 		9D4879201913F3EF0076C44A /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D48791E1913F3EF0076C44A /* bike.png */; };
+		9D4996B419171AD600E3A968 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4996B319171AD600E3A968 /* ColorUtil.m */; };
+		9D4996B519171AD600E3A968 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4996B319171AD600E3A968 /* ColorUtil.m */; };
+		9D4996BA1917233C00E3A968 /* topo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996B91917233C00E3A968 /* topo.png */; };
+		9D4996BB1917233C00E3A968 /* topo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996B91917233C00E3A968 /* topo.png */; };
+		9D4996BD191726FA00E3A968 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996BC191726FA00E3A968 /* menu.png */; };
+		9D4996BE191726FA00E3A968 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996BC191726FA00E3A968 /* menu.png */; };
+		9D4996C0191727B800E3A968 /* busca.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996BF191727B800E3A968 /* busca.png */; };
+		9D4996C1191727B800E3A968 /* busca.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996BF191727B800E3A968 /* busca.png */; };
+		9D4996C51917297000E3A968 /* POI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4996C41917297000E3A968 /* POI.m */; };
+		9D4996C61917297000E3A968 /* POI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4996C41917297000E3A968 /* POI.m */; };
+		9D4996C819172E4E00E3A968 /* linha01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996C719172E4E00E3A968 /* linha01.png */; };
+		9D4996C919172E4E00E3A968 /* linha01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996C719172E4E00E3A968 /* linha01.png */; };
+		9D4996CB1917306F00E3A968 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996CA1917306F00E3A968 /* location.png */; };
+		9D4996CC1917306F00E3A968 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996CA1917306F00E3A968 /* location.png */; };
+		9D4996D31917377E00E3A968 /* icon03g.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996CD1917377E00E3A968 /* icon03g.png */; };
+		9D4996D41917377E00E3A968 /* icon03g.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996CD1917377E00E3A968 /* icon03g.png */; };
+		9D4996D51917377E00E3A968 /* icon02g.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996CE1917377E00E3A968 /* icon02g.png */; };
+		9D4996D61917377E00E3A968 /* icon02g.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996CE1917377E00E3A968 /* icon02g.png */; };
+		9D4996D71917377E00E3A968 /* icon01g.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996CF1917377E00E3A968 /* icon01g.png */; };
+		9D4996D81917377E00E3A968 /* icon01g.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996CF1917377E00E3A968 /* icon01g.png */; };
+		9D4996D91917377E00E3A968 /* icon03p.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996D01917377E00E3A968 /* icon03p.png */; };
+		9D4996DA1917377E00E3A968 /* icon03p.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996D01917377E00E3A968 /* icon03p.png */; };
+		9D4996DB1917377E00E3A968 /* icon02p.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996D11917377E00E3A968 /* icon02p.png */; };
+		9D4996DC1917377E00E3A968 /* icon02p.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996D11917377E00E3A968 /* icon02p.png */; };
+		9D4996DD1917377E00E3A968 /* icon01p.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996D21917377E00E3A968 /* icon01p.png */; };
+		9D4996DE1917377E00E3A968 /* icon01p.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D4996D21917377E00E3A968 /* icon01p.png */; };
 		9D4F234119148FD000A55D78 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F234019148FD000A55D78 /* Mapbox.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		9D4F23431914910400A55D78 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F23421914910400A55D78 /* CoreLocation.framework */; };
 		9D4F23451914910B00A55D78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F23441914910B00A55D78 /* QuartzCore.framework */; };
@@ -236,6 +262,21 @@
 		9D4879101913EE9E0076C44A /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
 		9D4879191913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml"; sourceTree = "<group>"; };
 		9D48791E1913F3EF0076C44A /* bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bike.png; sourceTree = "<group>"; };
+		9D4996B219171AD600E3A968 /* ColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
+		9D4996B319171AD600E3A968 /* ColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtil.m; sourceTree = "<group>"; };
+		9D4996B91917233C00E3A968 /* topo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topo.png; sourceTree = "<group>"; };
+		9D4996BC191726FA00E3A968 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		9D4996BF191727B800E3A968 /* busca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = busca.png; sourceTree = "<group>"; };
+		9D4996C31917297000E3A968 /* POI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POI.h; sourceTree = "<group>"; };
+		9D4996C41917297000E3A968 /* POI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POI.m; sourceTree = "<group>"; };
+		9D4996C719172E4E00E3A968 /* linha01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linha01.png; sourceTree = "<group>"; };
+		9D4996CA1917306F00E3A968 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		9D4996CD1917377E00E3A968 /* icon03g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon03g.png; sourceTree = "<group>"; };
+		9D4996CE1917377E00E3A968 /* icon02g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon02g.png; sourceTree = "<group>"; };
+		9D4996CF1917377E00E3A968 /* icon01g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon01g.png; sourceTree = "<group>"; };
+		9D4996D01917377E00E3A968 /* icon03p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon03p.png; sourceTree = "<group>"; };
+		9D4996D11917377E00E3A968 /* icon02p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon02p.png; sourceTree = "<group>"; };
+		9D4996D21917377E00E3A968 /* icon01p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon01p.png; sourceTree = "<group>"; };
 		9D4F234019148FD000A55D78 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = ../Downloads/Mapbox.framework; sourceTree = "<group>"; };
 		9D4F23421914910400A55D78 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9D4F23441914910B00A55D78 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -395,6 +436,8 @@
 		9D48786C1913EAD10076C44A /* CicloFortaleza */ = {
 			isa = PBXGroup;
 			children = (
+				9D4996C21917293600E3A968 /* Domain */,
+				9D4996B119171AC400E3A968 /* Util */,
 				9D1D50011913FC5A0074D849 /* Storyboard */,
 				9D1D50001913FC500074D849 /* Delegate */,
 				9D1D4FFF1913FC450074D849 /* Controller */,
@@ -561,8 +604,37 @@
 			isa = PBXGroup;
 			children = (
 				9D48791E1913F3EF0076C44A /* bike.png */,
+				9D4996B91917233C00E3A968 /* topo.png */,
+				9D4996BC191726FA00E3A968 /* menu.png */,
+				9D4996BF191727B800E3A968 /* busca.png */,
+				9D4996C719172E4E00E3A968 /* linha01.png */,
+				9D4996CA1917306F00E3A968 /* location.png */,
+				9D4996CD1917377E00E3A968 /* icon03g.png */,
+				9D4996CE1917377E00E3A968 /* icon02g.png */,
+				9D4996CF1917377E00E3A968 /* icon01g.png */,
+				9D4996D01917377E00E3A968 /* icon03p.png */,
+				9D4996D11917377E00E3A968 /* icon02p.png */,
+				9D4996D21917377E00E3A968 /* icon01p.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		9D4996B119171AC400E3A968 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9D4996B219171AD600E3A968 /* ColorUtil.h */,
+				9D4996B319171AD600E3A968 /* ColorUtil.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		9D4996C21917293600E3A968 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				9D4996C31917297000E3A968 /* POI.h */,
+				9D4996C41917297000E3A968 /* POI.m */,
+			);
+			name = Domain;
 			sourceTree = "<group>";
 		};
 		9D4F234A1914918800A55D78 /* MapBox */ = {
@@ -715,19 +787,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4996BD191726FA00E3A968 /* menu.png in Resources */,
 				9D4878A71913ECE20076C44A /* Sagarana.gpx in Resources */,
+				9D4996D51917377E00E3A968 /* icon02g.png in Resources */,
+				9D4996D71917377E00E3A968 /* icon01g.png in Resources */,
 				9D4F234C1914919300A55D78 /* Mapbox.bundle in Resources */,
 				9D4878A31913ECE20076C44A /* Academia Dunas.gpx in Resources */,
 				9D48791F1913F3EF0076C44A /* bike.png in Resources */,
 				9D48787D1913EAD20076C44A /* Main_iPad.storyboard in Resources */,
 				9D4878A51913ECE20076C44A /* Praça Portugal.gpx in Resources */,
+				9D4996CB1917306F00E3A968 /* location.png in Resources */,
 				9D4878A91913ECE20076C44A /* São Luiz.gpx in Resources */,
 				9D4878821913EAD20076C44A /* Images.xcassets in Resources */,
+				9D4996C819172E4E00E3A968 /* linha01.png in Resources */,
+				9D4996D91917377E00E3A968 /* icon03p.png in Resources */,
 				9D48791A1913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */,
+				9D4996D31917377E00E3A968 /* icon03g.png in Resources */,
+				9D4996DB1917377E00E3A968 /* icon02p.png in Resources */,
 				9D4878B01913ED7C0076C44A /* ZAActivityBar.bundle in Resources */,
+				9D4996BA1917233C00E3A968 /* topo.png in Resources */,
 				9D48787A1913EAD20076C44A /* Main_iPhone.storyboard in Resources */,
 				9D4879011913EDC30076C44A /* ReadMe.txt in Resources */,
 				9D4878711913EAD10076C44A /* InfoPlist.strings in Resources */,
+				9D4996DD1917377E00E3A968 /* icon01p.png in Resources */,
+				9D4996C0191727B800E3A968 /* busca.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,14 +818,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4996D41917377E00E3A968 /* icon03g.png in Resources */,
 				9D4878AA1913ECE20076C44A /* São Luiz.gpx in Resources */,
 				9D4878931913EAD20076C44A /* InfoPlist.strings in Resources */,
 				9D4F234D1914919300A55D78 /* Mapbox.bundle in Resources */,
+				9D4996C919172E4E00E3A968 /* linha01.png in Resources */,
+				9D4996BE191726FA00E3A968 /* menu.png in Resources */,
 				9D4879201913F3EF0076C44A /* bike.png in Resources */,
 				9D4878A41913ECE20076C44A /* Academia Dunas.gpx in Resources */,
+				9D4996DC1917377E00E3A968 /* icon02p.png in Resources */,
+				9D4996D61917377E00E3A968 /* icon02g.png in Resources */,
+				9D4996BB1917233C00E3A968 /* topo.png in Resources */,
+				9D4996CC1917306F00E3A968 /* location.png in Resources */,
 				9D4878B11913ED7C0076C44A /* ZAActivityBar.bundle in Resources */,
 				9D4878A61913ECE20076C44A /* Praça Portugal.gpx in Resources */,
 				9D4879021913EDC30076C44A /* ReadMe.txt in Resources */,
+				9D4996DA1917377E00E3A968 /* icon03p.png in Resources */,
+				9D4996C1191727B800E3A968 /* busca.png in Resources */,
+				9D4996DE1917377E00E3A968 /* icon01p.png in Resources */,
+				9D4996D81917377E00E3A968 /* icon01g.png in Resources */,
 				9D48791B1913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */,
 				9D4878A81913ECE20076C44A /* Sagarana.gpx in Resources */,
 			);
@@ -778,6 +872,7 @@
 				9D1D502C191406190074D849 /* JASidePanelController.m in Sources */,
 				9D1D4FFD1913FBA20074D849 /* UIViewController+MMDrawerController.m in Sources */,
 				9D1D4FF71913FBA20074D849 /* MMDrawerBarButtonItem.m in Sources */,
+				9D4996B419171AD600E3A968 /* ColorUtil.m in Sources */,
 				9D4878D01913ED850076C44A /* UIProgressView+AFNetworking.m in Sources */,
 				9D4878731913EAD10076C44A /* main.m in Sources */,
 				9D69C8F519144CD3000B8A30 /* CenterViewController.m in Sources */,
@@ -790,6 +885,7 @@
 				9D69C8EF191449A1000B8A30 /* CenterListViewController.m in Sources */,
 				9D4879131913EE9E0076C44A /* KMLManager.m in Sources */,
 				9D4878B21913ED7C0076C44A /* ZAActivityBar.m in Sources */,
+				9D4996C51917297000E3A968 /* POI.m in Sources */,
 				9D4878F61913ED8B0076C44A /* AFURLRequestSerialization.m in Sources */,
 				9D4878D21913ED850076C44A /* UIRefreshControl+AFNetworking.m in Sources */,
 				9D4878F81913ED8B0076C44A /* AFURLResponseSerialization.m in Sources */,
@@ -806,6 +902,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4996C61917297000E3A968 /* POI.m in Sources */,
 				9D4878F51913ED8B0076C44A /* AFURLConnectionOperation.m in Sources */,
 				9D4878D11913ED850076C44A /* UIProgressView+AFNetworking.m in Sources */,
 				9D4878F31913ED8B0076C44A /* AFSecurityPolicy.m in Sources */,
@@ -843,6 +940,7 @@
 				9D4F238B1914B93700A55D78 /* UIControl+ALActionBlocks.m in Sources */,
 				9D4878F11913ED8B0076C44A /* AFNetworkReachabilityManager.m in Sources */,
 				9D4878CB1913ED850076C44A /* UIAlertView+AFNetworking.m in Sources */,
+				9D4996B519171AD600E3A968 /* ColorUtil.m in Sources */,
 				9D4878EB1913ED8B0076C44A /* AFHTTPRequestOperation.m in Sources */,
 				9D1D503319140A6E0074D849 /* LeftViewController.m in Sources */,
 				9D1D4FFA1913FBA20074D849 /* MMDrawerController.m in Sources */,

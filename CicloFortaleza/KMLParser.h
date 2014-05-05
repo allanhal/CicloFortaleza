@@ -74,6 +74,7 @@
 
 @property (unsafe_unretained, nonatomic, readonly) NSArray *overlays;
 @property (unsafe_unretained, nonatomic, readonly) NSArray *points;
+@property (unsafe_unretained, nonatomic, readonly) NSArray *placemarks;
 
 - (MKAnnotationView *)viewForAnnotation:(id <MKAnnotation>)point;
 - (MKOverlayView *)viewForOverlay:(id <MKOverlay>)overlay;
