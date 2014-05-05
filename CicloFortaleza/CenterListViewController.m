@@ -24,9 +24,11 @@
 -(void)makeTableView
 {
     CGFloat x = 10;
-    CGFloat y = 300;
+//    CGFloat y = 300;
+    CGFloat y = 70;
     CGFloat width = 300;
-    CGFloat height = 269;
+//    CGFloat height = 269;
+    CGFloat height = 499;
     CGRect tableFrame = CGRectMake(x, y, width, height);
     
     tableView = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
@@ -40,7 +42,7 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     
-    [self.view addSubview:tableView];
+//    [self.view addSubview:tableView];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -95,7 +95,7 @@
 
 - (void)mountUserLocationButton
 {
-    userLocationButton = [[UIButton alloc] initWithFrame:CGRectMake(265, 22, 65, 30)];
+    userLocationButton = [[UIButton alloc] initWithFrame:CGRectMake(265, 21, 65, 30)];
     [userLocationButton setImage:[UIImage imageNamed:@"location"] forState:UIControlStateNormal];
     
     [userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
