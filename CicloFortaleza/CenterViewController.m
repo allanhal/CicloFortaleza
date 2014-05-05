@@ -88,6 +88,18 @@
     [userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
         self.topLabel.hidden = !self.topLabel.hidden;
         self.topTextField.hidden = !self.topTextField.hidden;
+        
+        if(self.topTextField.hidden)
+        {
+            [self changeToDefaultTablePosition];
+            [self.topTextField resignFirstResponder];
+            self.topTextField.text = @"";
+        }
+        else
+        {
+            [self changeTablePosition:TablePositionTop];
+            [self.topTextField becomeFirstResponder];
+        }
     }];
     
     [self.view addSubview:userLocationButton];

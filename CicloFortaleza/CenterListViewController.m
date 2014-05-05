@@ -19,6 +19,7 @@
 {
     [super viewDidLoad];
     
+    
     [self makeTableView];
 }
 
@@ -26,11 +27,15 @@
 {
     CGFloat x = 10;
     CGFloat y = 300;
-    CGFloat width = 300;
-    CGFloat height = 269;
+    CGFloat width = 0;
+    CGFloat height = 0;
     CGRect tableFrame = CGRectMake(x, y, width, height);
     
     tableView = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
+    
+    self.tablePosition = TablePositionBottom;
+    
+    [self changeToDefaultTablePosition];
     
     tableView.backgroundColor = [UIColor clearColor];
     tableView.sectionFooterHeight = 0;
@@ -41,6 +46,11 @@
     tableView.dataSource = self;
     
     [self.view addSubview:tableView];
+}
+
+- (void)changeToDefaultTablePosition
+{
+    [self changeTablePosition:self.tablePosition];
 }
 
 - (void)changeTablePosition:(TablePosition)aTablePosition
@@ -76,7 +86,7 @@
         x = 10;
         y = 70;
         width = 300;
-        height = 269;
+        height = 250;
     }
     else
     {
@@ -86,11 +96,9 @@
         height = 269;
     }
     
-    self.tablePosition = aTablePosition;
-    
     CGRect tableFrame = CGRectMake(x, y, width, height);
     
-    [UIView animateWithDuration:1 animations:^{
+    [UIView animateWithDuration:0.4 animations:^{
         self.tableView.frame = tableFrame;
         [self.tableView setNeedsDisplay];
     }];

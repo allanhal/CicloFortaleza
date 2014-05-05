@@ -32,25 +32,33 @@
     [self mountOption:@"Completo" withPosition:4 action:^{
         MainViewController *main = (MainViewController *)self.sidePanelController;
         CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
-        [centerViewController changeTablePosition:TablePositionFull];
+        
+        centerViewController.tablePosition = TablePositionFull;
+        [centerViewController changeToDefaultTablePosition];
     }];
     
     [self mountOption:@"Compacto" withPosition:5 action:^{
         MainViewController *main = (MainViewController *)self.sidePanelController;
         CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
-        [centerViewController changeTablePosition:TablePositionBottom];
+        
+        centerViewController.tablePosition = TablePositionBottom;
+        [centerViewController changeToDefaultTablePosition];
     }];
     
     [self mountOption:@"Topo" withPosition:6 action:^{
         MainViewController *main = (MainViewController *)self.sidePanelController;
         CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
-        [centerViewController changeTablePosition:TablePositionTop];
+        
+        centerViewController.tablePosition = TablePositionTop;
+        [centerViewController changeToDefaultTablePosition];
     }];
     
     [self mountOption:@"Nenhum" withPosition:7 action:^{
         MainViewController *main = (MainViewController *)self.sidePanelController;
         CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
-        [centerViewController changeTablePosition:TablePositionNone];
+        
+        centerViewController.tablePosition = TablePositionNone;
+        [centerViewController changeToDefaultTablePosition];
     }];
     
 //    [self mountOption:@"Opção 3" withPosition:5];

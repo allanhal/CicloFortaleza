@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, TablePosition) {
 @property (strong, nonatomic) UITableView *tableView;
 @property (nonatomic) TablePosition tablePosition;
 
-
+- (void)changeToDefaultTablePosition;
 - (void)changeTablePosition:(TablePosition)aTablePosition;
 
 @end
