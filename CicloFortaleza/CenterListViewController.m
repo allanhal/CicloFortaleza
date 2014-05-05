@@ -13,6 +13,7 @@
 @implementation CenterListViewController
 
 @synthesize tableView;
+@synthesize tablePosition;
 
 - (void)viewDidLoad
 {
@@ -24,16 +25,13 @@
 -(void)makeTableView
 {
     CGFloat x = 10;
-//    CGFloat y = 300;
-    CGFloat y = 70;
+    CGFloat y = 300;
     CGFloat width = 300;
-//    CGFloat height = 269;
-    CGFloat height = 499;
+    CGFloat height = 269;
     CGRect tableFrame = CGRectMake(x, y, width, height);
     
     tableView = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
     
-//    tableView.layer.borderWidth = 1.0;
     tableView.backgroundColor = [UIColor clearColor];
     tableView.sectionFooterHeight = 0;
     tableView.sectionHeaderHeight = 0;
@@ -43,6 +41,59 @@
     tableView.dataSource = self;
     
     [self.view addSubview:tableView];
+}
+
+- (void)changeTablePosition:(TablePosition)aTablePosition
+{
+    CGFloat x;
+    CGFloat y;
+    CGFloat width;
+    CGFloat height;
+    
+    if(aTablePosition == TablePositionFull)
+    {
+        x = 10;
+        y = 70;
+        width = 300;
+        height = 499;
+    }
+    else if(aTablePosition == TablePositionNone)
+    {
+        x = 10;
+        y = 70;
+        width = 0;
+        height = 0;
+    }
+    else if(aTablePosition == TablePositionBottom)
+    {
+        x = 10;
+        y = 300;
+        width = 300;
+        height = 269;
+    }
+    else if(aTablePosition == TablePositionTop)
+    {
+        x = 10;
+        y = 70;
+        width = 300;
+        height = 269;
+    }
+    else
+    {
+        x = 10;
+        y = 300;
+        width = 300;
+        height = 269;
+    }
+    
+    self.tablePosition = aTablePosition;
+    
+    CGRect tableFrame = CGRectMake(x, y, width, height);
+    
+    [UIView animateWithDuration:1 animations:^{
+        self.tableView.frame = tableFrame;
+        [self.tableView setNeedsDisplay];
+    }];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

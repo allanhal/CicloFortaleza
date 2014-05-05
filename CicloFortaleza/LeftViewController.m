@@ -9,6 +9,10 @@
 #import "LeftViewController.h"
 #import "MBSwitch.h"
 #import "ColorUtil.h"
+#import "ALActionBlocks.h"
+#import "UIViewController+JASidePanel.h"
+#import "CenterViewController.h"
+#import "MainViewController.h"
 
 @implementation LeftViewController
 
@@ -25,9 +29,31 @@
     
     [self mountTopic:@"Categoria 3" withPosition:3];
     
-    [self mountOption:@"Opcão 2" withPosition:4];
+    [self mountOption:@"Completo" withPosition:4 action:^{
+        MainViewController *main = (MainViewController *)self.sidePanelController;
+        CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
+        [centerViewController changeTablePosition:TablePositionFull];
+    }];
     
-    [self mountOption:@"Opção 3" withPosition:5];
+    [self mountOption:@"Compacto" withPosition:5 action:^{
+        MainViewController *main = (MainViewController *)self.sidePanelController;
+        CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
+        [centerViewController changeTablePosition:TablePositionBottom];
+    }];
+    
+    [self mountOption:@"Topo" withPosition:6 action:^{
+        MainViewController *main = (MainViewController *)self.sidePanelController;
+        CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
+        [centerViewController changeTablePosition:TablePositionTop];
+    }];
+    
+    [self mountOption:@"Nenhum" withPosition:7 action:^{
+        MainViewController *main = (MainViewController *)self.sidePanelController;
+        CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
+        [centerViewController changeTablePosition:TablePositionNone];
+    }];
+    
+//    [self mountOption:@"Opção 3" withPosition:5];
 
 }
 
@@ -44,6 +70,21 @@
 - (void)mountOption:(NSString *)text withPosition:(int)position
 {
     [self mountOption:text withPosition:position withSwitch:nil];
+}
+
+- (void)mountOption:(NSString *)text withPosition:(int)position action:(void (^)(void))action
+{
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(40, position*50, 100, 20)];
+    button.titleLabel.text = text;
+    [button setTitle:text forState:UIControlStateNormal];
+    
+    [button handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
+        if(action){
+            action();
+        }
+    }];
+    
+    [self.view addSubview:button];
 }
 
 - (void)mountOption:(NSString *)text withPosition:(int)position withSwitch:(NSNumber *)switchOn

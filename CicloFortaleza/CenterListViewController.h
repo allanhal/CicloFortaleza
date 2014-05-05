@@ -10,6 +10,17 @@
 
 @interface CenterListViewController : CenterMapViewController <UITableViewDataSource, UITableViewDelegate>
 
+typedef NS_ENUM(NSInteger, TablePosition) {
+    TablePositionTop,
+    TablePositionBottom,
+    TablePositionFull,
+    TablePositionNone
+};
+
 @property (strong, nonatomic) UITableView *tableView;
+@property (nonatomic) TablePosition tablePosition;
+
+
+- (void)changeTablePosition:(TablePosition)aTablePosition;
 
 @end
