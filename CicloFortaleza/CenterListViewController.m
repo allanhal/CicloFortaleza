@@ -42,7 +42,7 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     
-//    [self.view addSubview:tableView];
+    [self.view addSubview:tableView];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
