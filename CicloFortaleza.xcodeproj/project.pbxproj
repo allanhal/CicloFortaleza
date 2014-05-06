@@ -158,6 +158,8 @@
 		9D7BF24E1917ADF200C85FDC /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7BF24C1917ADF200C85FDC /* Mapbox.framework */; };
 		9DAD6B671916383500CFF4F0 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD6B661916383500CFF4F0 /* MBSwitch.m */; };
 		9DAD6B681916383500CFF4F0 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD6B661916383500CFF4F0 /* MBSwitch.m */; };
+		9DE60415191948CB008CCEEA /* base.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE60414191948CB008CCEEA /* base.png */; };
+		9DE60416191948CB008CCEEA /* base.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DE60414191948CB008CCEEA /* base.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,6 +313,7 @@
 		9D7BF24C1917ADF200C85FDC /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		9DAD6B651916383500CFF4F0 /* MBSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSwitch.h; sourceTree = "<group>"; };
 		9DAD6B661916383500CFF4F0 /* MBSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSwitch.m; sourceTree = "<group>"; };
+		9DE60414191948CB008CCEEA /* base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -618,6 +621,7 @@
 				9D48791E1913F3EF0076C44A /* bike.png */,
 				9D4996B91917233C00E3A968 /* topo.png */,
 				9D4996BC191726FA00E3A968 /* menu.png */,
+				9DE60414191948CB008CCEEA /* base.png */,
 				9D4996BF191727B800E3A968 /* busca.png */,
 				9D4996C719172E4E00E3A968 /* linha01.png */,
 				9D4996CA1917306F00E3A968 /* location.png */,
@@ -686,10 +690,8 @@
 		9D69C8F2191449B9000B8A30 /* CenterViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9D48787E1913EAD20076C44A /* CenterMapViewController.h */,
-				9D48787F1913EAD20076C44A /* CenterMapViewController.m */,
-				9D69C8ED191449A1000B8A30 /* CenterListViewController.h */,
-				9D69C8EE191449A1000B8A30 /* CenterListViewController.m */,
+				9DE6041319194759008CCEEA /* List */,
+				9DE6041219194755008CCEEA /* Map */,
 				9D69C8F319144CD3000B8A30 /* CenterViewController.h */,
 				9D69C8F419144CD3000B8A30 /* CenterViewController.m */,
 			);
@@ -729,6 +731,24 @@
 				9DAD6B661916383500CFF4F0 /* MBSwitch.m */,
 			);
 			name = MBSwitch;
+			sourceTree = "<group>";
+		};
+		9DE6041219194755008CCEEA /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9D48787E1913EAD20076C44A /* CenterMapViewController.h */,
+				9D48787F1913EAD20076C44A /* CenterMapViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		9DE6041319194759008CCEEA /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9D69C8ED191449A1000B8A30 /* CenterListViewController.h */,
+				9D69C8EE191449A1000B8A30 /* CenterListViewController.m */,
+			);
+			name = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -831,6 +851,7 @@
 				9D4996BA1917233C00E3A968 /* topo.png in Resources */,
 				9D48787A1913EAD20076C44A /* Main_iPhone.storyboard in Resources */,
 				9D4879011913EDC30076C44A /* ReadMe.txt in Resources */,
+				9DE60415191948CB008CCEEA /* base.png in Resources */,
 				9D4878711913EAD10076C44A /* InfoPlist.strings in Resources */,
 				9D4996DD1917377E00E3A968 /* icon01p.png in Resources */,
 				9D4996C0191727B800E3A968 /* busca.png in Resources */,
@@ -847,6 +868,7 @@
 				9D4F234D1914919300A55D78 /* Mapbox.bundle in Resources */,
 				9D4996C919172E4E00E3A968 /* linha01.png in Resources */,
 				9D4996BE191726FA00E3A968 /* menu.png in Resources */,
+				9DE60416191948CB008CCEEA /* base.png in Resources */,
 				9D4879201913F3EF0076C44A /* bike.png in Resources */,
 				9D4878A41913ECE20076C44A /* Academia Dunas.gpx in Resources */,
 				9D4996DC1917377E00E3A968 /* icon02p.png in Resources */,

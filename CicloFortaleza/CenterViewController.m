@@ -20,6 +20,7 @@
 @synthesize searchButton;
 @synthesize userLocationButton;
 @synthesize lineView;
+@synthesize bottomView;
 
 - (void)viewDidLoad
 {
@@ -37,6 +38,7 @@
     [self mountSearchButton];
     [self mountUserLocationButton];
     [self mountLineView];
+    [self mountBottomView];
 }
 
 - (void)mountTopView
@@ -118,13 +120,8 @@
         else
         {
             self.mapView.userTrackingMode = RMUserTrackingModeFollow;
-            if([Manager tableManager].tablePosition == TablePositionBottom)
-            {
-                [self.mapView moveBy:CGSizeMake(0, 100)];
-            }
+            [self moveMapToCorrectPlace];
         }
-        
-//        [self moveMapToUserLocation];
     }];
     
     [self.view addSubview:userLocationButton];
@@ -139,6 +136,15 @@
                                 img.size.width,
                                 img.size.height);
     [self.view addSubview:lineView];
+}
+
+- (void)mountBottomView
+{
+    topView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"base"]];
+    CGRect mainScreen = [[UIScreen mainScreen] bounds];
+    
+    topView.frame = CGRectMake(0, (mainScreen.size.height - topView.frame.size.height), topView.frame.size.width, topView.frame.size.height);
+    [self.view addSubview:topView];
 }
 
 @end

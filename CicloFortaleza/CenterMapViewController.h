@@ -20,5 +20,6 @@
 
 - (void)moveMapToUserLocation;
 - (void)moveMapToCoordinate:(CLLocationCoordinate2D)coordinate;
+- (void)moveMapToCorrectPlace;
 
 @end

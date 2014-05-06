@@ -113,6 +113,11 @@
 {
     [self.mapView setCenterCoordinate:coordinate animated:YES];
     
+    [self moveMapToCorrectPlace];
+}
+
+- (void)moveMapToCorrectPlace
+{
     if([Manager tableManager].tablePosition == TablePositionBottom)
     {
         [self.mapView moveBy:CGSizeMake(0, 100)];
@@ -139,17 +144,13 @@
     {
         self.mapView.userTrackingMode = RMUserTrackingModeNone;
     }
-    
 }
 
 - (void)mapView:(RMMapView *)mapView didUpdateUserLocation:(RMUserLocation *)userLocation
 {
     if(self.mapView.userTrackingMode == RMUserTrackingModeFollow)
     {
-        if([Manager tableManager].tablePosition == TablePositionBottom)
-        {
-            [self.mapView moveBy:CGSizeMake(0, 100)];
-        }
+        [self moveMapToCorrectPlace];
     }
 }
 

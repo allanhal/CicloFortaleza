@@ -59,12 +59,18 @@
     CGFloat width;
     CGFloat height;
     
+    CGRect mainScreen = [[UIScreen mainScreen] bounds];
+    int mainScreenHeight = mainScreen.size.height;
+    UIImage *baseImage = [UIImage imageNamed:@"base"];
+    int baseHeight = baseImage.size.height;
+    
     if(aTablePosition == TablePositionFull)
     {
         x = 10;
         y = 70;
         width = 300;
         height = 499;
+//        height = mainScreen;
     }
     else if(aTablePosition == TablePositionNone)
     {

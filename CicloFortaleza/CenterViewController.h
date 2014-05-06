@@ -17,4 +17,5 @@
 @property (strong, nonatomic) UIButton *searchButton;
 @property (strong, nonatomic) UIButton *userLocationButton;
 @property (strong, nonatomic) UIImageView *lineView;
+@property (strong, nonatomic) UIImageView *bottomView;
 @end
