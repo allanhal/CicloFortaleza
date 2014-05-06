@@ -13,7 +13,6 @@
 @implementation CenterListViewController
 
 @synthesize tableView;
-@synthesize tablePosition;
 
 - (void)viewDidLoad
 {
@@ -33,7 +32,7 @@
     
     tableView = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
     
-    self.tablePosition = TablePositionBottom;
+//    [Manager tableManager] tablePosition = TablePositionBottom;
     
     [self changeToDefaultTablePosition];
     
@@ -50,7 +49,7 @@
 
 - (void)changeToDefaultTablePosition
 {
-    [self changeTablePosition:self.tablePosition];
+    [self changeTablePosition:[Manager tableManager].tablePosition];
 }
 
 - (void)changeTablePosition:(TablePosition)aTablePosition
@@ -69,9 +68,10 @@
     }
     else if(aTablePosition == TablePositionNone)
     {
-        x = 10;
-        y = 70;
-        width = 0;
+        
+        x = self.tableView.frame.origin.x;
+        y = self.tableView.frame.origin.y;
+        width = 300;
         height = 0;
     }
     else if(aTablePosition == TablePositionBottom)
@@ -90,6 +90,7 @@
     }
     else
     {
+        //TablePositionBottom
         x = 10;
         y = 300;
         width = 300;

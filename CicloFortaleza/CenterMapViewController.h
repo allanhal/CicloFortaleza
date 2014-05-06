@@ -18,4 +18,7 @@
 @property (strong, nonatomic) RMMapView *mapView;
 @property (strong, nonatomic) KMLParser *kmlParser;
 
+- (void)moveMapToUserLocation;
+- (void)moveMapToCoordinate:(CLLocationCoordinate2D)coordinate;
+
 @end

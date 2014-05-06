@@ -23,6 +23,8 @@
 		9D1D502F191406190074D849 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D501B191406190074D849 /* UIViewController+JASidePanel.m */; };
 		9D1D503219140A6E0074D849 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D503119140A6E0074D849 /* LeftViewController.m */; };
 		9D1D503319140A6E0074D849 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D503119140A6E0074D849 /* LeftViewController.m */; };
+		9D36326219184C83001A3E9F /* TableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D36326119184C83001A3E9F /* TableManager.m */; };
+		9D36326319184C83001A3E9F /* TableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D36326119184C83001A3E9F /* TableManager.m */; };
 		9D4878671913EAD10076C44A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4878661913EAD10076C44A /* Foundation.framework */; };
 		9D4878691913EAD10076C44A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4878681913EAD10076C44A /* CoreGraphics.framework */; };
 		9D48786B1913EAD10076C44A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48786A1913EAD10076C44A /* UIKit.framework */; };
@@ -186,6 +188,8 @@
 		9D1D501B191406190074D849 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JASidePanel.m"; path = "Source/UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
 		9D1D503019140A6E0074D849 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		9D1D503119140A6E0074D849 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		9D36326019184C83001A3E9F /* TableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableManager.h; sourceTree = "<group>"; };
+		9D36326119184C83001A3E9F /* TableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableManager.m; sourceTree = "<group>"; };
 		9D4878631913EAD10076C44A /* CicloFortaleza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CicloFortaleza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4878661913EAD10076C44A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9D4878681913EAD10076C44A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -586,14 +590,16 @@
 		9D4879081913EE8F0076C44A /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				9D48790D1913EE9E0076C44A /* Manager.h */,
+				9D48790E1913EE9E0076C44A /* Manager.m */,
 				9D4879091913EE9E0076C44A /* BasicManager.h */,
 				9D48790A1913EE9E0076C44A /* BasicManager.m */,
 				9D48790B1913EE9E0076C44A /* KMLManager.h */,
 				9D48790C1913EE9E0076C44A /* KMLManager.m */,
-				9D48790D1913EE9E0076C44A /* Manager.h */,
-				9D48790E1913EE9E0076C44A /* Manager.m */,
 				9D48790F1913EE9E0076C44A /* RequestManager.h */,
 				9D4879101913EE9E0076C44A /* RequestManager.m */,
+				9D36326019184C83001A3E9F /* TableManager.h */,
+				9D36326119184C83001A3E9F /* TableManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -772,6 +778,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Allan Araujo";
 				TargetAttributes = {
+					9D4878621913EAD10076C44A = {
+						DevelopmentTeam = XM246YGRQ3;
+					};
 					9D4878861913EAD20076C44A = {
 						TestTargetID = 9D4878621913EAD10076C44A;
 					};
@@ -905,6 +914,7 @@
 				9D4878F81913ED8B0076C44A /* AFURLResponseSerialization.m in Sources */,
 				9DAD6B671916383500CFF4F0 /* MBSwitch.m in Sources */,
 				9D4878D41913ED850076C44A /* UIWebView+AFNetworking.m in Sources */,
+				9D36326219184C83001A3E9F /* TableManager.m in Sources */,
 				9D4878CC1913ED850076C44A /* UIButton+AFNetworking.m in Sources */,
 				9D4878EE1913ED8B0076C44A /* AFHTTPSessionManager.m in Sources */,
 				9D4878CE1913ED850076C44A /* UIImageView+AFNetworking.m in Sources */,
@@ -925,6 +935,7 @@
 				9D4879071913EE580076C44A /* KMLParser.m in Sources */,
 				9DAD6B681916383500CFF4F0 /* MBSwitch.m in Sources */,
 				9D1D502F191406190074D849 /* UIViewController+JASidePanel.m in Sources */,
+				9D36326319184C83001A3E9F /* TableManager.m in Sources */,
 				9D4878ED1913ED8B0076C44A /* AFHTTPRequestOperationManager.m in Sources */,
 				9D4878D51913ED850076C44A /* UIWebView+AFNetworking.m in Sources */,
 				9D4F23891914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m in Sources */,
@@ -1086,6 +1097,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/allan/Downloads,
@@ -1105,6 +1118,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1115,6 +1129,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/allan/Downloads,
@@ -1134,6 +1150,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

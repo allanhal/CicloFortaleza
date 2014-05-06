@@ -111,8 +111,20 @@
     [userLocationButton setImage:[UIImage imageNamed:@"location"] forState:UIControlStateNormal];
     
     [userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
-        self.mapView.centerCoordinate = self.mapView.userLocation.coordinate;
-        [self.mapView moveBy:CGSizeMake(0, 100)];
+        if(self.mapView.userTrackingMode == RMUserTrackingModeFollow)
+        {
+            self.mapView.userTrackingMode = RMUserTrackingModeNone;
+        }
+        else
+        {
+            self.mapView.userTrackingMode = RMUserTrackingModeFollow;
+            if([Manager tableManager].tablePosition == TablePositionBottom)
+            {
+                [self.mapView moveBy:CGSizeMake(0, 100)];
+            }
+        }
+        
+//        [self moveMapToUserLocation];
     }];
     
     [self.view addSubview:userLocationButton];

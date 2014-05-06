@@ -33,7 +33,7 @@
         MainViewController *main = (MainViewController *)self.sidePanelController;
         CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
         
-        centerViewController.tablePosition = TablePositionFull;
+        [Manager tableManager].tablePosition = TablePositionFull;
         [centerViewController changeToDefaultTablePosition];
     }];
     
@@ -41,7 +41,7 @@
         MainViewController *main = (MainViewController *)self.sidePanelController;
         CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
         
-        centerViewController.tablePosition = TablePositionBottom;
+        [Manager tableManager].tablePosition = TablePositionBottom;
         [centerViewController changeToDefaultTablePosition];
     }];
     
@@ -49,7 +49,7 @@
         MainViewController *main = (MainViewController *)self.sidePanelController;
         CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
         
-        centerViewController.tablePosition = TablePositionTop;
+        [Manager tableManager].tablePosition = TablePositionTop;
         [centerViewController changeToDefaultTablePosition];
     }];
     
@@ -57,12 +57,9 @@
         MainViewController *main = (MainViewController *)self.sidePanelController;
         CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
         
-        centerViewController.tablePosition = TablePositionNone;
+        [Manager tableManager].tablePosition = TablePositionNone;
         [centerViewController changeToDefaultTablePosition];
     }];
-    
-//    [self mountOption:@"Opção 3" withPosition:5];
-
 }
 
 - (void)mountTopic:(NSString *)text withPosition:(int)position

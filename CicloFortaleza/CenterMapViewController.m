@@ -19,6 +19,7 @@
     [super viewDidLoad];
     
     [self mountMap];
+    [self moveMapToUserLocation];
     [self loadInfo];
 }
 
@@ -103,6 +104,21 @@
     [ZAActivityBar showSuccessWithStatus:@"Mapa carregado."];
 }
 
+- (void)moveMapToUserLocation
+{
+    [self moveMapToCoordinate:self.mapView.userLocation.coordinate];
+}
+
+- (void)moveMapToCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    [self.mapView setCenterCoordinate:coordinate animated:YES];
+    
+    if([Manager tableManager].tablePosition == TablePositionBottom)
+    {
+        [self.mapView moveBy:CGSizeMake(0, 100)];
+    }
+}
+
 #pragma mark RMMapViewDelegate
 
 - (RMMapLayer *)mapView:(RMMapView *)mapView layerForAnnotation:(RMAnnotation *)annotation
@@ -115,6 +131,26 @@
     marker.canShowCallout = YES;
     
     return marker;
+}
+
+- (void)afterMapMove:(RMMapView *)map byUser:(BOOL)wasUserAction
+{
+    if(wasUserAction)
+    {
+        self.mapView.userTrackingMode = RMUserTrackingModeNone;
+    }
+    
+}
+
+- (void)mapView:(RMMapView *)mapView didUpdateUserLocation:(RMUserLocation *)userLocation
+{
+    if(self.mapView.userTrackingMode == RMUserTrackingModeFollow)
+    {
+        if([Manager tableManager].tablePosition == TablePositionBottom)
+        {
+            [self.mapView moveBy:CGSizeMake(0, 100)];
+        }
+    }
 }
 
 @end

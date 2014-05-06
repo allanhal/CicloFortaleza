@@ -20,4 +20,9 @@
     return [KMLManager instance];
 }
 
++(TableManager *)tableManager;
+{
+    return [TableManager instance];
+}
+
 @end
