@@ -107,6 +107,26 @@
     [self.view addSubview:userLocationButton];
 }
 
+- (void)mountLineView
+{
+    UIImage *img = [UIImage imageNamed:@"linha01"];
+    lineView = [[UIImageView alloc] initWithImage:img];
+    lineView.frame = CGRectMake((self.view.frame.size.width/2) - (img.size.width/2),
+                                60,
+                                img.size.width,
+                                img.size.height);
+    [self.view addSubview:lineView];
+}
+
+- (void)mountBottomView
+{
+    bottomView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"base"]];
+    CGRect mainScreen = [[UIScreen mainScreen] bounds];
+    
+    bottomView.frame = CGRectMake(0, (mainScreen.size.height - bottomView.frame.size.height), bottomView.frame.size.width, bottomView.frame.size.height);
+    [self.view addSubview:bottomView];
+}
+
 - (void)mountUserLocationButton
 {
     userLocationButton = [[UIButton alloc] initWithFrame:CGRectMake(265, 21, 65, 30)];
@@ -127,24 +147,5 @@
     [self.view addSubview:userLocationButton];
 }
 
-- (void)mountLineView
-{
-    UIImage *img = [UIImage imageNamed:@"linha01"];
-    lineView = [[UIImageView alloc] initWithImage:img];
-    lineView.frame = CGRectMake((self.view.frame.size.width/2) - (img.size.width/2),
-                                60,
-                                img.size.width,
-                                img.size.height);
-    [self.view addSubview:lineView];
-}
-
-- (void)mountBottomView
-{
-    topView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"base"]];
-    CGRect mainScreen = [[UIScreen mainScreen] bounds];
-    
-    topView.frame = CGRectMake(0, (mainScreen.size.height - topView.frame.size.height), topView.frame.size.width, topView.frame.size.height);
-    [self.view addSubview:topView];
-}
 
 @end

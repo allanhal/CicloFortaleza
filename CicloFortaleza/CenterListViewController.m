@@ -61,6 +61,7 @@
     
     CGRect mainScreen = [[UIScreen mainScreen] bounds];
     int mainScreenHeight = mainScreen.size.height;
+
     UIImage *baseImage = [UIImage imageNamed:@"base"];
     int baseHeight = baseImage.size.height;
     
@@ -69,7 +70,9 @@
         x = 10;
         y = 70;
         width = 300;
-        height = 499;
+        
+        height = (mainScreenHeight) - baseHeight;
+//        height = 499;
 //        height = mainScreen;
     }
     else if(aTablePosition == TablePositionNone)
@@ -85,7 +88,8 @@
         x = 10;
         y = 300;
         width = 300;
-        height = 269;
+        height = (mainScreenHeight/2) - baseHeight;
+//        height = 269;
     }
     else if(aTablePosition == TablePositionTop)
     {
