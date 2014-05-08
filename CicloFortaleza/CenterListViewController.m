@@ -59,8 +59,7 @@
     CGFloat width;
     CGFloat height;
     
-    CGRect mainScreen = [[UIScreen mainScreen] bounds];
-    int mainScreenHeight = mainScreen.size.height;
+    int mainScreenHeight = self.mainScreen.size.height;
 
     UIImage *baseImage = [UIImage imageNamed:@"base"];
     int baseHeight = baseImage.size.height;
@@ -70,14 +69,10 @@
         x = 10;
         y = 70;
         width = 300;
-        
-        height = (mainScreenHeight) - baseHeight;
-//        height = 499;
-//        height = mainScreen;
+        height = (mainScreenHeight - y) - baseHeight;
     }
     else if(aTablePosition == TablePositionNone)
     {
-        
         x = self.tableView.frame.origin.x;
         y = self.tableView.frame.origin.y;
         width = 300;
@@ -88,8 +83,7 @@
         x = 10;
         y = 300;
         width = 300;
-        height = (mainScreenHeight/2) - baseHeight;
-//        height = 269;
+        height = (mainScreenHeight - y) - baseHeight;
     }
     else if(aTablePosition == TablePositionTop)
     {
@@ -104,7 +98,7 @@
         x = 10;
         y = 300;
         width = 300;
-        height = 269;
+        height = (mainScreenHeight - y) - baseHeight;
     }
     
     CGRect tableFrame = CGRectMake(x, y, width, height);

@@ -36,9 +36,9 @@
     [self mountTopLabel];
     [self mountTopTextField];
     [self mountSearchButton];
-    [self mountUserLocationButton];
     [self mountLineView];
     [self mountBottomView];
+    [self mountUserLocationButton];
 }
 
 - (void)mountTopView
@@ -49,14 +49,14 @@
 
 - (void)mountMenuButton
 {
-    userLocationButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 65, 30)];
+    menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 65, 30)];
     
-    [userLocationButton setImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
-    [userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
+    [menuButton setImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
+    [menuButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
         [self.sidePanelController showLeftPanelAnimated:YES];
     }];
     
-    [self.view addSubview:userLocationButton];
+    [self.view addSubview:menuButton];
 }
 
 - (void)mountTopLabel
@@ -111,7 +111,7 @@
 {
     UIImage *img = [UIImage imageNamed:@"linha01"];
     lineView = [[UIImageView alloc] initWithImage:img];
-    lineView.frame = CGRectMake((self.view.frame.size.width/2) - (img.size.width/2),
+    lineView.frame = CGRectMake((self.mainScreen.size.width/2) - (img.size.width/2),
                                 60,
                                 img.size.width,
                                 img.size.height);
@@ -129,8 +129,15 @@
 
 - (void)mountUserLocationButton
 {
-    userLocationButton = [[UIButton alloc] initWithFrame:CGRectMake(265, 21, 65, 30)];
-    [userLocationButton setImage:[UIImage imageNamed:@"location"] forState:UIControlStateNormal];
+    UIImage *locationImage = [UIImage imageNamed:@"location"];
+    
+    CGFloat x = self.defaultPadding;
+    CGFloat y = (self.mainScreen.size.height - locationImage.size.height - self.defaultPadding);
+    CGFloat width = locationImage.size.width;
+    CGFloat height = locationImage.size.height;
+    
+    userLocationButton = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    [userLocationButton setImage:locationImage forState:UIControlStateNormal];
     
     [userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
         if(self.mapView.userTrackingMode == RMUserTrackingModeFollow)

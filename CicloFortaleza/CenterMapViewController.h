@@ -17,6 +17,8 @@
 
 @property (strong, nonatomic) RMMapView *mapView;
 @property (strong, nonatomic) KMLParser *kmlParser;
+@property (nonatomic) CGRect mainScreen;
+@property (nonatomic) CGFloat defaultPadding;
 
 - (void)moveMapToUserLocation;
 - (void)moveMapToCoordinate:(CLLocationCoordinate2D)coordinate;

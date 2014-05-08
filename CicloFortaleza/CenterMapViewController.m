@@ -13,10 +13,15 @@
 
 @synthesize mapView;
 @synthesize kmlParser;
+@synthesize mainScreen;
+@synthesize defaultPadding;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    mainScreen = [[UIScreen mainScreen] bounds];
+    defaultPadding = 10;
     
     [self mountMap];
     [self moveMapToUserLocation];
