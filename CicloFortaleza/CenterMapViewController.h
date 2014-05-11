@@ -12,6 +12,7 @@
 #import "Manager.h"
 #import "MMDrawerController.h"
 #import <Mapbox/Mapbox.h>
+#import "ImagesUtil.h"
 
 @interface CenterMapViewController : MMDrawerController <RMMapViewDelegate>
 
@@ -22,6 +23,5 @@
 
 - (void)moveMapToUserLocation;
 - (void)moveMapToCoordinate:(CLLocationCoordinate2D)coordinate;
-- (void)moveMapToCorrectPlace;
 
 @end

@@ -19,6 +19,7 @@ typedef NS_ENUM(NSInteger, TablePosition) {
 };
 
 @property (nonatomic) TablePosition tablePosition;
+@property (strong, nonatomic) NSArray *tableList;
 
 + (TableManager *)instance;
 

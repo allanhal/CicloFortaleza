@@ -8,6 +8,7 @@
 
 #import "CenterMapViewController.h"
 #import "ZAActivityBar.h"
+#import "CoordinateUtil.h"
 
 @implementation CenterMapViewController
 
@@ -34,8 +35,9 @@
     
     mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:tileSource];
     mapView.delegate = self;
-    mapView.userTrackingMode = MKUserTrackingModeNone;
+//    mapView.userTrackingMode = MKUserTrackingModeFollow;
     mapView.showsUserLocation = YES;
+    mapView.zoom = 16;
     
     [self.view addSubview:mapView];
 }
@@ -45,11 +47,11 @@
     [ZAActivityBar showWithStatus:@"Baixando mapa..."];
     
     [[Manager kmlManager] updateKmlWithCompletionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-        [self loadKml];
+        [self loadKml:error];
     }];
 }
 
-- (void)loadKml
+- (void)loadKml:(NSError *)error
 {
     kmlParser = [[Manager kmlManager] retrieveKmlParsed];
     
@@ -106,7 +108,14 @@
         }
     }
     
-    [ZAActivityBar showSuccessWithStatus:@"Mapa carregado."];
+    if(error)
+    {
+        [ZAActivityBar showErrorWithStatus:@"Mapa desatualizado."];
+    }
+    else
+    {
+        [ZAActivityBar showSuccessWithStatus:@"Mapa carregado."];
+    }
 }
 
 - (void)moveMapToUserLocation
@@ -116,17 +125,11 @@
 
 - (void)moveMapToCoordinate:(CLLocationCoordinate2D)coordinate
 {
-    [self.mapView setCenterCoordinate:coordinate animated:YES];
-    
-    [self moveMapToCorrectPlace];
-}
-
-- (void)moveMapToCorrectPlace
-{
     if([Manager tableManager].tablePosition == TablePositionBottom)
     {
-        [self.mapView moveBy:CGSizeMake(0, 100)];
+        coordinate = [CoordinateUtil translateCoord:coordinate MetersLat:-200 MetersLong:0];
     }
+    self.mapView.centerCoordinate = coordinate;
 }
 
 #pragma mark RMMapViewDelegate
@@ -136,7 +139,7 @@
     if (annotation.isUserLocationAnnotation)
         return nil;
     
-    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"bicicletario"]];
+    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[ImagesUtil bicicletarioPequeno]];
     
     marker.canShowCallout = YES;
     
@@ -153,10 +156,12 @@
 
 - (void)mapView:(RMMapView *)mapView didUpdateUserLocation:(RMUserLocation *)userLocation
 {
-    if(self.mapView.userTrackingMode == RMUserTrackingModeFollow)
-    {
-        [self moveMapToCorrectPlace];
-    }
+    [self moveMapToCoordinate:userLocation.coordinate];
 }
+
+//- (void)mapView:(RMMapView *)mapView didChangeUserTrackingMode:(RMUserTrackingMode)mode animated:(BOOL)animated
+//{
+//    [self moveMapToCoordinate:self.mapView.userLocation.coordinate];
+//}
 
 @end

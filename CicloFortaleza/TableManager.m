@@ -11,6 +11,7 @@
 @implementation TableManager
 
 @synthesize tablePosition;
+@synthesize tableList;
 
 + (TableManager *)instance
 {

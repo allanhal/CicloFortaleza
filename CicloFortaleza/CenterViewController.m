@@ -43,7 +43,7 @@
 
 - (void)mountTopView
 {
-    topView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"topo"]];
+    topView = [[UIImageView alloc] initWithImage:[ImagesUtil topo]];
     [self.view addSubview:topView];
 }
 
@@ -51,7 +51,7 @@
 {
     menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 65, 30)];
     
-    [menuButton setImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
+    [menuButton setImage:[ImagesUtil menu] forState:UIControlStateNormal];
     [menuButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
         [self.sidePanelController showLeftPanelAnimated:YES];
     }];
@@ -85,7 +85,7 @@
 - (void)mountSearchButton
 {
     userLocationButton = [[UIButton alloc] initWithFrame:CGRectMake(230, 22, 65, 30)];
-    [userLocationButton setImage:[UIImage imageNamed:@"busca"] forState:UIControlStateNormal];
+    [userLocationButton setImage:[ImagesUtil busca] forState:UIControlStateNormal];
     
     [userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
         self.topLabel.hidden = !self.topLabel.hidden;
@@ -109,7 +109,7 @@
 
 - (void)mountLineView
 {
-    UIImage *img = [UIImage imageNamed:@"linha01"];
+    UIImage *img = [ImagesUtil linha];
     lineView = [[UIImageView alloc] initWithImage:img];
     lineView.frame = CGRectMake((self.mainScreen.size.width/2) - (img.size.width/2),
                                 60,
@@ -120,7 +120,7 @@
 
 - (void)mountBottomView
 {
-    bottomView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"base"]];
+    bottomView = [[UIImageView alloc] initWithImage:[ImagesUtil menuInferior]];
     CGRect mainScreen = [[UIScreen mainScreen] bounds];
     
     bottomView.frame = CGRectMake(0, (mainScreen.size.height - bottomView.frame.size.height), bottomView.frame.size.width, bottomView.frame.size.height);
@@ -129,7 +129,7 @@
 
 - (void)mountUserLocationButton
 {
-    UIImage *locationImage = [UIImage imageNamed:@"location"];
+    UIImage *locationImage = [ImagesUtil location];
     
     CGFloat x = self.defaultPadding;
     CGFloat y = (self.mainScreen.size.height - locationImage.size.height - self.defaultPadding);
@@ -143,12 +143,14 @@
         if(self.mapView.userTrackingMode == RMUserTrackingModeFollow)
         {
             self.mapView.userTrackingMode = RMUserTrackingModeNone;
+            NSLog(@"NONE");
         }
         else
         {
             self.mapView.userTrackingMode = RMUserTrackingModeFollow;
-            [self moveMapToCorrectPlace];
+            NSLog(@"FOLLOW");
         }
+        [self moveMapToUserLocation];
     }];
     
     [self.view addSubview:userLocationButton];

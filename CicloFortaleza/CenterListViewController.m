@@ -61,7 +61,7 @@
     
     int mainScreenHeight = self.mainScreen.size.height;
 
-    UIImage *baseImage = [UIImage imageNamed:@"base"];
+    UIImage *baseImage = [ImagesUtil menuInferior];
     int baseHeight = baseImage.size.height;
     
     if(aTablePosition == TablePositionFull)
