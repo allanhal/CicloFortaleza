@@ -11,5 +11,6 @@
 @interface LeftViewController : UIViewController
 
 @property (strong, nonatomic) UILabel *topLabel;
+@property (nonatomic) int positionPadding;
 
 @end

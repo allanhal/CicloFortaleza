@@ -32,6 +32,14 @@
 
 +(UIImage *)linha;
 
-+(UIImage *)location;
++(UIImage *)seta;
+
++(UIImage *)setaVazada;
+
++(UIImage *)cima;
+
++(UIImage *)cimacima;
+
++(UIImage *)baixo;
 
 @end

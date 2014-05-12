@@ -16,6 +16,7 @@
 @synthesize kmlParser;
 @synthesize mainScreen;
 @synthesize defaultPadding;
+@synthesize userLocationButton;
 
 - (void)viewDidLoad
 {
@@ -33,9 +34,9 @@
 {
     RMMapboxSource *tileSource = [[RMMapboxSource alloc] initWithMapID:@"allanhal.i50boh1n"];
     
-    mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:tileSource];
+    mapView = [[MapChanged alloc] initWithFrame:self.view.bounds andTilesource:tileSource];
     mapView.delegate = self;
-//    mapView.userTrackingMode = MKUserTrackingModeFollow;
+    mapView.userTrackingMode = RMUserTrackingModeFollow;
     mapView.showsUserLocation = YES;
     mapView.zoom = 16;
     
@@ -125,11 +126,19 @@
 
 - (void)moveMapToCoordinate:(CLLocationCoordinate2D)coordinate
 {
-    if([Manager tableManager].tablePosition == TablePositionBottom)
-    {
-        coordinate = [CoordinateUtil translateCoord:coordinate MetersLat:-200 MetersLong:0];
-    }
     self.mapView.centerCoordinate = coordinate;
+}
+
+- (void)changeToFollow:(BOOL)follow
+{
+    if(follow)
+    {
+        self.mapView.userTrackingMode = RMUserTrackingModeFollow;
+    }
+    else
+    {
+        self.mapView.userTrackingMode = RMUserTrackingModeNone;
+    }
 }
 
 #pragma mark RMMapViewDelegate
@@ -146,22 +155,19 @@
     return marker;
 }
 
-- (void)afterMapMove:(RMMapView *)map byUser:(BOOL)wasUserAction
+- (void)beforeMapMove:(RMMapView *)map byUser:(BOOL)wasUserAction
 {
     if(wasUserAction)
     {
-        self.mapView.userTrackingMode = RMUserTrackingModeNone;
+        UIImage *setaVazada = [ImagesUtil setaVazada];
+        [self.userLocationButton setImage:setaVazada forState:UIControlStateNormal];
+        [self changeToFollow:NO];
     }
 }
 
-- (void)mapView:(RMMapView *)mapView didUpdateUserLocation:(RMUserLocation *)userLocation
+- (void)mapView:(RMMapView *)mapView didChangeUserTrackingMode:(RMUserTrackingMode)mode animated:(BOOL)animated
 {
-    [self moveMapToCoordinate:userLocation.coordinate];
+    [self moveMapToUserLocation];
 }
-
-//- (void)mapView:(RMMapView *)mapView didChangeUserTrackingMode:(RMUserTrackingMode)mode animated:(BOOL)animated
-//{
-//    [self moveMapToCoordinate:self.mapView.userLocation.coordinate];
-//}
 
 @end

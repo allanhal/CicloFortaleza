@@ -22,32 +22,32 @@
 
 +(UIImage *)oficinaPequeno
 {
-    return [UIImage imageNamed:@"icon01g"];
+    return [UIImage imageNamed:@"icon01p"];
 }
 
 +(UIImage *)oficinaGrande
 {
-    return [UIImage imageNamed:@"icon01p"];
+    return [UIImage imageNamed:@"icon01g"];
 }
 
 +(UIImage *)bicicletarioPequeno
 {
-    return [UIImage imageNamed:@"icon02g"];
+    return [UIImage imageNamed:@"icon02p"];
 }
 
 +(UIImage *)bicicletarioGrande
 {
-    return [UIImage imageNamed:@"icon02p"];
+    return [UIImage imageNamed:@"icon02g"];
 }
 
 +(UIImage *)lojaPequeno
 {
-    return [UIImage imageNamed:@"icon03g"];
+    return [UIImage imageNamed:@"icon03p"];
 }
 
 +(UIImage *)lojaGrande
 {
-    return [UIImage imageNamed:@"icon03p"];
+    return [UIImage imageNamed:@"icon03g"];
 }
 
 +(UIImage *)topo
@@ -65,9 +65,29 @@
     return [UIImage imageNamed:@"linha01"];
 }
 
-+(UIImage *)location
++(UIImage *)seta
 {
-    return [UIImage imageNamed:@"location"];
+    return [UIImage imageNamed:@"seta"];
+}
+
++(UIImage *)setaVazada
+{
+    return [UIImage imageNamed:@"setavazada"];
+}
+
++(UIImage *)cima
+{
+    return [UIImage imageNamed:@"cima"];
+}
+
++(UIImage *)cimacima
+{
+    return [UIImage imageNamed:@"cimacima"];
+}
+
++(UIImage *)baixo
+{
+    return [UIImage imageNamed:@"baixo"];
 }
 
 @end

@@ -17,54 +17,34 @@
 @implementation LeftViewController
 
 @synthesize topLabel;
+@synthesize positionPadding;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [ColorUtil r:14 g:46 b:51];
     
-    [self mountTopic:@"Categoria 1" withPosition:1];
+    self.positionPadding = 30;
+    
+    [self mountTopic:@"Busca" withPosition:1];
+    
+    [self mountOption:@"Filtro 1" withPosition:2 withSwitch:[NSNumber numberWithInt:0]];
+    [self mountOption:@"Filtro 2" withPosition:3 withSwitch:[NSNumber numberWithInt:1]];
+    [self mountOption:@"Filtro 3" withPosition:4 withSwitch:[NSNumber numberWithInt:0]];
+    [self mountOption:@"Filtro 4" withPosition:5 withSwitch:[NSNumber numberWithInt:0]];
+    
+    [self mountTopic:@"Mapas" withPosition:6];
+    
+    [self mountOption:@"Golbery" withPosition:7 action:^{
+    }];
 
-    [self mountOption:@"Opcão 1" withPosition:2 withSwitch:[NSNumber numberWithInt:0]];
-    
-    [self mountTopic:@"Categoria 3" withPosition:3];
-    
-    [self mountOption:@"Completo" withPosition:4 action:^{
-        MainViewController *main = (MainViewController *)self.sidePanelController;
-        CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
-        
-        [Manager tableManager].tablePosition = TablePositionFull;
-        [centerViewController changeToDefaultTablePosition];
-    }];
-    
-    [self mountOption:@"Compacto" withPosition:5 action:^{
-        MainViewController *main = (MainViewController *)self.sidePanelController;
-        CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
-        
-        [Manager tableManager].tablePosition = TablePositionBottom;
-        [centerViewController changeToDefaultTablePosition];
-    }];
-    
-    [self mountOption:@"Topo" withPosition:6 action:^{
-        MainViewController *main = (MainViewController *)self.sidePanelController;
-        CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
-        
-        [Manager tableManager].tablePosition = TablePositionTop;
-        [centerViewController changeToDefaultTablePosition];
-    }];
-    
-    [self mountOption:@"Nenhum" withPosition:7 action:^{
-        MainViewController *main = (MainViewController *)self.sidePanelController;
-        CenterViewController *centerViewController = (CenterViewController *)main.centerPanel;
-        
-        [Manager tableManager].tablePosition = TablePositionNone;
-        [centerViewController changeToDefaultTablePosition];
+    [self mountOption:@"Felipe Alves" withPosition:8 action:^{
     }];
 }
 
 - (void)mountTopic:(NSString *)text withPosition:(int)position
 {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, position*50, 100, 20)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, position*positionPadding, 100, 20)];
     label.text = text;
     label.backgroundColor = [UIColor blackColor];
     label.textColor = [UIColor redColor];
@@ -79,8 +59,13 @@
 
 - (void)mountOption:(NSString *)text withPosition:(int)position action:(void (^)(void))action
 {
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(40, position*50, 100, 20)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(40, position*positionPadding, 200, 20)];
     button.titleLabel.text = text;
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    button.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    
+    button.backgroundColor = [UIColor blueColor];
+    
     [button setTitle:text forState:UIControlStateNormal];
     
     [button handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
@@ -94,7 +79,7 @@
 
 - (void)mountOption:(NSString *)text withPosition:(int)position withSwitch:(NSNumber *)switchOn
 {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(40, position*50, 100, 20)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(40, position*positionPadding, 100, 20)];
     label.text = text;
     label.backgroundColor = [UIColor whiteColor];
     label.textColor = [UIColor redColor];
@@ -109,7 +94,7 @@
 
 - (void)mountBoolWithPosition:(int)position On:(BOOL)on
 {
-    MBSwitch *aSwitch = [[MBSwitch alloc] initWithFrame:CGRectMake(185, position*50, 35, 20)];
+    MBSwitch *aSwitch = [[MBSwitch alloc] initWithFrame:CGRectMake(185, position*positionPadding, 35, 20)];
     aSwitch.offTintColor = [ColorUtil r:14 g:46 b:51];
     aSwitch.thumbTintColor = [ColorUtil r:102 g:153 b:153];
     aSwitch.onTintColor = [ColorUtil r:70 g:114 b:116];

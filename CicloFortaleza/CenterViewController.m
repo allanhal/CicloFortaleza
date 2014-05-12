@@ -18,9 +18,9 @@
 @synthesize topLabel;
 @synthesize topTextField;
 @synthesize searchButton;
-@synthesize userLocationButton;
 @synthesize lineView;
 @synthesize bottomView;
+@synthesize tableSizeButton;
 
 - (void)viewDidLoad
 {
@@ -32,13 +32,15 @@
 - (void)mountNavBar
 {
     [self mountTopView];
-    [self mountMenuButton];
+
     [self mountTopLabel];
     [self mountTopTextField];
     [self mountSearchButton];
     [self mountLineView];
     [self mountBottomView];
+    [self mountMenuButton];
     [self mountUserLocationButton];
+    [self mountTableSize];
 }
 
 - (void)mountTopView
@@ -47,21 +49,14 @@
     [self.view addSubview:topView];
 }
 
-- (void)mountMenuButton
-{
-    menuButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 65, 30)];
-    
-    [menuButton setImage:[ImagesUtil menu] forState:UIControlStateNormal];
-    [menuButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
-        [self.sidePanelController showLeftPanelAnimated:YES];
-    }];
-    
-    [self.view addSubview:menuButton];
-}
-
 - (void)mountTopLabel
 {
-    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(110, 25, 100, 20)];
+    CGFloat x = 110;
+    CGFloat y = 25;
+    CGFloat width = 100;
+    CGFloat height = 20;
+    
+    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(x, y, width, height)];
     topLabel.text = @"CALANGA";
     topLabel.textColor = [UIColor whiteColor];
     UIFont *labelFont = [UIFont boldSystemFontOfSize:20];
@@ -72,7 +67,14 @@
 
 - (void)mountTopTextField
 {
-    topTextField = [[UITextField alloc] initWithFrame:CGRectMake(60, 25, 180, 20)];
+    UIImage *buscaImage = [ImagesUtil busca];
+    
+    CGFloat x = self.defaultPadding;
+    CGFloat y = 25;
+    CGFloat width = self.mainScreen.size.width - buscaImage.size.width - self.defaultPadding - self.defaultPadding;
+    CGFloat height = 20;
+    
+    topTextField = [[UITextField alloc] initWithFrame:CGRectMake(x, y, width, height)];
     topTextField.placeholder = @"Buscar...";
     UIColor *color = [UIColor whiteColor];
     topTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:topTextField.placeholder attributes:@{NSForegroundColorAttributeName: color}];
@@ -84,10 +86,16 @@
 
 - (void)mountSearchButton
 {
-    userLocationButton = [[UIButton alloc] initWithFrame:CGRectMake(230, 22, 65, 30)];
-    [userLocationButton setImage:[ImagesUtil busca] forState:UIControlStateNormal];
+    UIImage *buscaImage = [ImagesUtil busca];
+    CGFloat x = self.mainScreen.size.width - buscaImage.size.width - self.defaultPadding;
+    CGFloat y = 15;
+    CGFloat width = buscaImage.size.width;
+    CGFloat height = buscaImage.size.height;
     
-    [userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
+    self.searchButton = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    [self.searchButton setImage:buscaImage forState:UIControlStateNormal];
+    
+    [self.searchButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
         self.topLabel.hidden = !self.topLabel.hidden;
         self.topTextField.hidden = !self.topTextField.hidden;
         
@@ -104,7 +112,7 @@
         }
     }];
     
-    [self.view addSubview:userLocationButton];
+    [self.view addSubview:self.searchButton];
 }
 
 - (void)mountLineView
@@ -120,41 +128,103 @@
 
 - (void)mountBottomView
 {
-    bottomView = [[UIImageView alloc] initWithImage:[ImagesUtil menuInferior]];
-    CGRect mainScreen = [[UIScreen mainScreen] bounds];
+    UIImage *menuInferiorImage = [ImagesUtil menuInferior];
+    CGFloat x = 0;
+    CGFloat y = (self.mainScreen.size.height - menuInferiorImage.size.height);
+    CGFloat width = menuInferiorImage.size.width;
+    CGFloat height = menuInferiorImage.size.height;
     
-    bottomView.frame = CGRectMake(0, (mainScreen.size.height - bottomView.frame.size.height), bottomView.frame.size.width, bottomView.frame.size.height);
+    bottomView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    [bottomView setImage:menuInferiorImage];
+
     [self.view addSubview:bottomView];
+}
+
+- (void)mountMenuButton
+{
+    UIImage *menuImage = [ImagesUtil menu];
+    CGFloat x = self.defaultPadding;
+    CGFloat y = (self.mainScreen.size.height - menuImage.size.height);
+    CGFloat width = menuImage.size.width;
+    CGFloat height = menuImage.size.height;
+    
+    menuButton = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    
+    [menuButton setImage:menuImage forState:UIControlStateNormal];
+    [menuButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
+        [self.sidePanelController showLeftPanelAnimated:YES];
+    }];
+    
+    [self.view addSubview:menuButton];
 }
 
 - (void)mountUserLocationButton
 {
-    UIImage *locationImage = [ImagesUtil location];
+    UIImage *setaVazada = [ImagesUtil setaVazada];
+    UIImage *seta = [ImagesUtil seta];
     
-    CGFloat x = self.defaultPadding;
-    CGFloat y = (self.mainScreen.size.height - locationImage.size.height - self.defaultPadding);
-    CGFloat width = locationImage.size.width;
-    CGFloat height = locationImage.size.height;
+    CGFloat x = self.mainScreen.size.width/2 - seta.size.width/2;
+    CGFloat y = (self.mainScreen.size.height - seta.size.height);
+    CGFloat width = seta.size.width;
+    CGFloat height = seta.size.height;
     
-    userLocationButton = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];
-    [userLocationButton setImage:locationImage forState:UIControlStateNormal];
+    self.userLocationButton = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    [self.userLocationButton setImage:seta forState:UIControlStateNormal];
     
-    [userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
+    [self.userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
         if(self.mapView.userTrackingMode == RMUserTrackingModeFollow)
         {
-            self.mapView.userTrackingMode = RMUserTrackingModeNone;
-            NSLog(@"NONE");
+            [self.userLocationButton setImage:setaVazada forState:UIControlStateNormal];
+            [self changeToFollow:NO];
         }
         else
         {
-            self.mapView.userTrackingMode = RMUserTrackingModeFollow;
-            NSLog(@"FOLLOW");
+            [self.userLocationButton setImage:seta forState:UIControlStateNormal];
+            [self changeToFollow:YES];
         }
         [self moveMapToUserLocation];
     }];
     
-    [self.view addSubview:userLocationButton];
+    [self.view addSubview:self.userLocationButton];
 }
 
+- (void)mountTableSize
+{
+    UIImage *cima = [ImagesUtil cima];
+    UIImage *baixo = [ImagesUtil baixo];
+    
+    UIImage *cimacima = [ImagesUtil cimacima];
+    
+    CGFloat x = self.mainScreen.size.width - cimacima.size.width - self.defaultPadding;
+    CGFloat y = (self.mainScreen.size.height - cimacima.size.height);
+    CGFloat width = cima.size.width;
+    CGFloat height = cima.size.height;
+    
+    self.tableSizeButton = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    [self.tableSizeButton setImage:cimacima forState:UIControlStateNormal];
+    
+    [self.tableSizeButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
+        if([Manager tableManager].tablePosition == TablePositionNone)
+        {
+            [Manager tableManager].tablePosition = TablePositionBottom;
+            [self changeToDefaultTablePosition];
+            [self.tableSizeButton setImage:cimacima forState:UIControlStateNormal];
+        }
+        else if([Manager tableManager].tablePosition == TablePositionBottom)
+        {
+            [Manager tableManager].tablePosition = TablePositionFull;
+            [self changeToDefaultTablePosition];
+            [self.tableSizeButton setImage:baixo forState:UIControlStateNormal];
+        }
+        else if([Manager tableManager].tablePosition == TablePositionFull)
+        {
+            [Manager tableManager].tablePosition = TablePositionNone;
+            [self changeToDefaultTablePosition];
+            [self.tableSizeButton setImage:cima forState:UIControlStateNormal];
+        }
+    }];
+    
+    [self.view addSubview:self.tableSizeButton];
+}
 
 @end

@@ -27,6 +27,8 @@
 		9D1D503319140A6E0074D849 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D503119140A6E0074D849 /* LeftViewController.m */; };
 		9D36326219184C83001A3E9F /* TableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D36326119184C83001A3E9F /* TableManager.m */; };
 		9D36326319184C83001A3E9F /* TableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D36326119184C83001A3E9F /* TableManager.m */; };
+		9D3E7C1919205C9C00C17169 /* MapChanged.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3E7C1819205C9C00C17169 /* MapChanged.m */; };
+		9D3E7C1A19205C9C00C17169 /* MapChanged.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3E7C1819205C9C00C17169 /* MapChanged.m */; };
 		9D4878671913EAD10076C44A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4878661913EAD10076C44A /* Foundation.framework */; };
 		9D4878691913EAD10076C44A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4878681913EAD10076C44A /* CoreGraphics.framework */; };
 		9D48786B1913EAD10076C44A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D48786A1913EAD10076C44A /* UIKit.framework */; };
@@ -208,6 +210,8 @@
 		9D1D503119140A6E0074D849 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		9D36326019184C83001A3E9F /* TableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableManager.h; sourceTree = "<group>"; };
 		9D36326119184C83001A3E9F /* TableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableManager.m; sourceTree = "<group>"; };
+		9D3E7C1719205C9C00C17169 /* MapChanged.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapChanged.h; sourceTree = "<group>"; };
+		9D3E7C1819205C9C00C17169 /* MapChanged.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapChanged.m; sourceTree = "<group>"; };
 		9D4878631913EAD10076C44A /* CicloFortaleza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CicloFortaleza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4878661913EAD10076C44A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9D4878681913EAD10076C44A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -672,6 +676,8 @@
 				9D608FEE191EFEB7004A8FD9 /* CoordinateUtil.m */,
 				9D0298E7191F063000A2DDB1 /* ImagesUtil.h */,
 				9D0298E8191F063000A2DDB1 /* ImagesUtil.m */,
+				9D3E7C1719205C9C00C17169 /* MapChanged.h */,
+				9D3E7C1819205C9C00C17169 /* MapChanged.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -959,6 +965,7 @@
 				9D4878F01913ED8B0076C44A /* AFNetworkReachabilityManager.m in Sources */,
 				9D1D502C191406190074D849 /* JASidePanelController.m in Sources */,
 				9D1D4FFD1913FBA20074D849 /* UIViewController+MMDrawerController.m in Sources */,
+				9D3E7C1919205C9C00C17169 /* MapChanged.m in Sources */,
 				9D1D4FF71913FBA20074D849 /* MMDrawerBarButtonItem.m in Sources */,
 				9D4996B419171AD600E3A968 /* ColorUtil.m in Sources */,
 				9D4878D01913ED850076C44A /* UIProgressView+AFNetworking.m in Sources */,
@@ -1039,6 +1046,7 @@
 				9D1D4FFA1913FBA20074D849 /* MMDrawerController.m in Sources */,
 				9D4878EF1913ED8B0076C44A /* AFHTTPSessionManager.m in Sources */,
 				9D69C90A19147B1C000B8A30 /* CustomCell.m in Sources */,
+				9D3E7C1A19205C9C00C17169 /* MapChanged.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
