@@ -10,8 +10,6 @@
 
 @interface CenterListViewController : CenterMapViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) UITableView *tableView;
-
 - (void)changeToDefaultTablePosition;
 - (void)changeTablePosition:(TablePosition)aTablePosition;
 

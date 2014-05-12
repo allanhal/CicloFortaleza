@@ -8,6 +8,7 @@
 
 #import "KMLManager.h"
 #import "Manager.h"
+#import <MapKit/MKAnnotation.h>
 
 @implementation KMLManager
 
@@ -37,6 +38,13 @@ static NSURL *lastUrl = nil;
     }
     KMLParser *toReturn = [[KMLParser alloc] initWithURL:lastUrl];
     [toReturn parseKML];
+    
+    for(MKPointAnnotation *annotation in [toReturn points])
+    {
+        NSLog(@"%@", annotation.title);
+        [[Manager tableManager].tableList addObject:annotation];
+    }
+    
     return toReturn;
 }
 

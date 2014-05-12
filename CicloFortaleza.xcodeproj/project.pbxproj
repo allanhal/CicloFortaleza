@@ -728,8 +728,8 @@
 		9D69C8F2191449B9000B8A30 /* CenterViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9DE6041319194759008CCEEA /* List */,
 				9DE6041219194755008CCEEA /* Map */,
+				9DE6041319194759008CCEEA /* List */,
 				9D69C8F319144CD3000B8A30 /* CenterViewController.h */,
 				9D69C8F419144CD3000B8A30 /* CenterViewController.m */,
 			);

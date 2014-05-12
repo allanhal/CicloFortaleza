@@ -63,28 +63,9 @@
     NSArray *annotations = [kmlParser points];
     for(MKPointAnnotation *point in annotations)
     {
-//        NSLog(@"%@",placemark);
-//        CLLocationCoordinate2D aCoordinate = [[placemark point].coordinate;
-        
-//        KMLStyle *style;
-//        KMLGeometry *geometry;
-//        
-//        NSString *name;
-//        NSString *placemarkDescription;
-//        
-//        NSString *styleUrl;
-//        
-//        MKShape *mkShape;
-//        
-//        MKAnnotationView *annotationView;
-//        MKOverlayPathView *overlayView;
-        
-//        NSString *title = NSString stringWithFormat:@"%@ %@", point.title, point.
         RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:mapView
                                                               coordinate:point.coordinate
                                                                 andTitle:point.title];
-
-        
         [self.mapView addAnnotation:annotation];
     }
     
@@ -117,6 +98,9 @@
     {
         [ZAActivityBar showSuccessWithStatus:@"Mapa carregado."];
     }
+    
+    [Manager tableManager].tablePosition = TablePositionBottom;
+    [[Manager tableManager] changeToDefaultTablePosition];
 }
 
 - (void)moveMapToUserLocation

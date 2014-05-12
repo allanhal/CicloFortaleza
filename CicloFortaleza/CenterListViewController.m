@@ -12,13 +12,9 @@
 
 @implementation CenterListViewController
 
-@synthesize tableView;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
     [self makeTableView];
 }
 
@@ -30,21 +26,19 @@
     CGFloat height = 0;
     CGRect tableFrame = CGRectMake(x, y, width, height);
     
-    tableView = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
-    
-//    [Manager tableManager] tablePosition = TablePositionBottom;
+    [Manager tableManager].tableView = [[UITableView alloc]initWithFrame:tableFrame style:UITableViewStylePlain];
     
     [self changeToDefaultTablePosition];
     
-    tableView.backgroundColor = [UIColor clearColor];
-    tableView.sectionFooterHeight = 0;
-    tableView.sectionHeaderHeight = 0;
-    tableView.showsVerticalScrollIndicator = NO;
+    [Manager tableManager].tableView.backgroundColor = [UIColor clearColor];
+    [Manager tableManager].tableView.sectionFooterHeight = 0;
+    [Manager tableManager].tableView.sectionHeaderHeight = 0;
+    [Manager tableManager].tableView.showsVerticalScrollIndicator = NO;
     
-    tableView.delegate = self;
-    tableView.dataSource = self;
+    [Manager tableManager].tableView.delegate = self;
+    [Manager tableManager].tableView.dataSource = self;
     
-    [self.view addSubview:tableView];
+    [self.view addSubview:[Manager tableManager].tableView];
 }
 
 - (void)changeToDefaultTablePosition
@@ -54,66 +48,7 @@
 
 - (void)changeTablePosition:(TablePosition)aTablePosition
 {
-    CGFloat x;
-    CGFloat y;
-    CGFloat width;
-    CGFloat height;
-    
-    int mainScreenHeight = self.mainScreen.size.height;
-
-    UIImage *baseImage = [ImagesUtil menuInferior];
-    int baseHeight = baseImage.size.height;
-    
-    if(aTablePosition == TablePositionFull)
-    {
-        x = 10;
-        y = 70;
-        width = 300;
-        height = (mainScreenHeight - y) - baseHeight;
-    }
-    else if(aTablePosition == TablePositionNone)
-    {
-        x = self.tableView.frame.origin.x;
-        y = (mainScreenHeight) - baseHeight;
-        width = 300;
-        height = 0;
-    }
-    else if(aTablePosition == TablePositionBottom)
-    {
-        x = 10;
-        //iPhone 5/5S
-        y = 300;
-        //iPhone 4/4S
-//        y = 200;
-        width = 300;
-        height = (mainScreenHeight - y) - baseHeight;
-    }
-    else if(aTablePosition == TablePositionTop)
-    {
-        x = 10;
-        y = 70;
-        width = 300;
-        height = 250;
-    }
-    else
-    {
-        //TablePositionBottom
-        x = 10;
-        //iPhone 5/5S
-        y = 300;
-        //iPhone 4/4S
-//        y = 200;
-        width = 300;
-        height = (mainScreenHeight - y) - baseHeight;
-    }
-    
-    CGRect tableFrame = CGRectMake(x, y, width, height);
-    
-    [UIView animateWithDuration:0.4 animations:^{
-        self.tableView.frame = tableFrame;
-        [self.tableView setNeedsDisplay];
-    }];
-    
+    [[Manager tableManager] changeTablePosition:aTablePosition];
     [self moveMapToUserLocation];
 }
 
@@ -138,6 +73,13 @@
     }
 
     cell.cellLabel.text = [NSString stringWithFormat:@"%@ %d", @"Bicicletário ", (int)indexPath.section];
+    NSMutableArray *list = [Manager tableManager].tableList;
+    int row = (int)indexPath.section;
+    if([list count] > 0)
+    {
+        MKPointAnnotation *pointAnnotation = [list objectAtIndex:row];
+        cell.cellLabel.text = pointAnnotation.title;
+    }
     
     return cell;
 }
@@ -162,7 +104,8 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 10;
+    int count = [[Manager tableManager].tableList count];
+    return count > 0 ? count : 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

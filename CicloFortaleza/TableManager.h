@@ -19,8 +19,11 @@ typedef NS_ENUM(NSInteger, TablePosition) {
 };
 
 @property (nonatomic) TablePosition tablePosition;
-@property (strong, nonatomic) NSArray *tableList;
+@property (strong, nonatomic) NSMutableArray *tableList;
+@property (strong, nonatomic) UITableView *tableView;
 
 + (TableManager *)instance;
+- (void)changeToDefaultTablePosition;
+- (void)changeTablePosition:(TablePosition)aTablePosition;
 
 @end
