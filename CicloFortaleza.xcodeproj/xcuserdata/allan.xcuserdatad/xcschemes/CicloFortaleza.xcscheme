@@ -70,7 +70,7 @@
       <AdditionalOptions>
       </AdditionalOptions>
       <LocationScenarioReference
-         identifier = "../../Prac&#807;a Portugal.gpx"
+         identifier = "../../Prac&#x327;a Portugal.gpx"
          referenceType = "0">
       </LocationScenarioReference>
    </LaunchAction>

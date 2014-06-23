@@ -101,6 +101,8 @@
     
     [Manager tableManager].tablePosition = TablePositionBottom;
     [[Manager tableManager] changeToDefaultTablePosition];
+    
+    [self remakeListBasedOnLocation];
 }
 
 - (void)moveMapToUserLocation
@@ -152,6 +154,44 @@
 - (void)mapView:(RMMapView *)mapView didChangeUserTrackingMode:(RMUserTrackingMode)mode animated:(BOOL)animated
 {
     [self moveMapToUserLocation];
+}
+
+- (void)remakeListBasedOnLocation
+{
+    NSMutableArray *orderedList = [[NSMutableArray alloc] init];
+    
+    CLLocationCoordinate2D userLocation = self.mapView.userLocation.coordinate;
+    CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:userLocation.latitude longitude:userLocation.longitude];
+    
+    NSMutableArray *tableList = [Manager tableManager].tableList;
+    for(MKPointAnnotation *newAnnotation in tableList)
+    {
+        if([orderedList count] == 0)
+        {
+            [orderedList addObject:newAnnotation];
+        }
+        else
+        {
+            int index = 0;
+            for(MKPointAnnotation *orderedAnnotation in orderedList)
+            {
+                MKPointAnnotation *localAnnotation = [tableList objectAtIndex:index];
+                
+                CLLocation *newLocation = [[CLLocation alloc] initWithLatitude:orderedAnnotation.coordinate.latitude longitude:orderedAnnotation.coordinate.longitude];
+                CLLocationDistance distanceToNewLocation = [currentLocation distanceFromLocation:newLocation];
+                
+                CLLocation *localLocation = [[CLLocation alloc] initWithLatitude:localAnnotation.coordinate.latitude longitude:localAnnotation.coordinate.longitude];
+                CLLocationDistance distanceToLocalLocation = [currentLocation distanceFromLocation:localLocation];
+                
+                if(distanceToNewLocation > distanceToLocalLocation)
+                {
+                    [orderedList insertObject:newAnnotation atIndex:index];
+                    break;
+                }
+                index++;
+            }
+        }
+    }
 }
 
 @end

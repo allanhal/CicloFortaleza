@@ -10,7 +10,8 @@
 
 @implementation CustomCell
 
-@synthesize cellLabel;
+@synthesize titleLabel;
+@synthesize subtitleLabel;
 
 -(void)addSubview:(UIView *)view
 {

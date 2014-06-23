@@ -42,10 +42,15 @@ static NSURL *lastUrl = nil;
     for(MKPointAnnotation *annotation in [toReturn points])
     {
         NSLog(@"%@", annotation.title);
-        [[Manager tableManager].tableList addObject:annotation];
+        [self insertOnTableList:annotation];
     }
     
     return toReturn;
+}
+
+- (void)insertOnTableList:(MKPointAnnotation *)annotation
+{
+    [[Manager tableManager].tableList addObject:annotation];
 }
 
 - (void)updateKmlWithCompletionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))completionHandler

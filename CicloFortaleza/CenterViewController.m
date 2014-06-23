@@ -41,6 +41,7 @@
     [self mountMenuButton];
     [self mountUserLocationButton];
     [self mountTableSize];
+    
 }
 
 - (void)mountTopView

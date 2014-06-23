@@ -52,6 +52,50 @@
     [self moveMapToUserLocation];
 }
 
+- (CustomCell *)createCell:(NSString *)cellIdentifier aTableView:(UITableView *)aTableView
+{
+    CustomCell *toReturn = [[CustomCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    toReturn.frame = CGRectMake(0, 0, aTableView.frame.size.width, 90);
+    toReturn.backgroundColor = [UIColor clearColor];
+    toReturn.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    toReturn.titleLabel = [[UILabel alloc] initWithFrame:toReturn.frame];
+    toReturn.titleLabel.backgroundColor = [UIColor clearColor];
+    toReturn.titleLabel.textColor = [UIColor whiteColor];
+    
+    [toReturn addSubview:[self translucentView:toReturn.frame]];
+    [toReturn addSubview:toReturn.titleLabel];
+    
+    return toReturn;
+}
+
+- (CustomCell *)createNewCustomCell:(NSString *)cellIdentifier aTableView:(UITableView *)aTableView
+{
+    CustomCell *toReturn = [[CustomCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    toReturn.frame = CGRectMake(0, 0, aTableView.frame.size.width, 90);
+    toReturn.backgroundColor = [UIColor clearColor];
+    toReturn.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    toReturn.titleLabel = [[UILabel alloc] init];
+    toReturn.titleLabel.backgroundColor = [UIColor clearColor];
+    toReturn.titleLabel.textColor = [UIColor whiteColor];
+    toReturn.titleLabel.frame = CGRectMake(0, 0, toReturn.frame.size.width-0, 22);
+    
+    toReturn.subtitleLabel = [[UITextView alloc] init];
+    toReturn.subtitleLabel.backgroundColor = [UIColor clearColor];
+    toReturn.subtitleLabel.textColor = [UIColor whiteColor];
+    toReturn.subtitleLabel.frame = CGRectMake(0, 20, toReturn.frame.size.width-0, 70);
+    toReturn.subtitleLabel.layer.borderWidth = 2;
+    toReturn.subtitleLabel.editable = NO;
+    toReturn.subtitleLabel.selectable = NO;
+    
+    [toReturn addSubview:[self translucentView:toReturn.frame]];
+    [toReturn addSubview:toReturn.titleLabel];
+    [toReturn addSubview:toReturn.subtitleLabel];
+    
+    return toReturn;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cell";
@@ -59,26 +103,16 @@
     
     if (cell == nil)
     {
-        cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        cell.frame = CGRectMake(0, 0, aTableView.frame.size.width, 90);
-        cell.backgroundColor = [UIColor clearColor];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        cell.cellLabel = [[UILabel alloc] initWithFrame:cell.frame];
-        cell.cellLabel.backgroundColor = [UIColor clearColor];
-        cell.cellLabel.textColor = [UIColor whiteColor];
-
-        [cell addSubview:[self translucentView:cell.frame]];
-        [cell addSubview:cell.cellLabel];
+        cell = [self createNewCustomCell:cellIdentifier  aTableView:aTableView];
     }
 
-    cell.cellLabel.text = [NSString stringWithFormat:@"%@ %d", @"Bicicletário ", (int)indexPath.section];
     NSMutableArray *list = [Manager tableManager].tableList;
     int row = (int)indexPath.section;
     if([list count] > 0)
     {
         MKPointAnnotation *pointAnnotation = [list objectAtIndex:row];
-        cell.cellLabel.text = pointAnnotation.title;
+        cell.titleLabel.text = pointAnnotation.title;
+        cell.subtitleLabel.text = pointAnnotation.subtitle;
     }
     
     return cell;

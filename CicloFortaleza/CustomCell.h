@@ -10,6 +10,7 @@
 
 @interface CustomCell : UITableViewCell
 
-@property (nonatomic, strong) UILabel *cellLabel; //tint color of blur, [UIColor
+@property (nonatomic, strong) UILabel *titleLabel;          //tint color of blur, [UIColor
+@property (nonatomic, strong) UITextView *subtitleLabel;    //tint color of blur, [UIColor
 
 @end
