@@ -80,14 +80,17 @@
     toReturn.titleLabel.backgroundColor = [UIColor clearColor];
     toReturn.titleLabel.textColor = [UIColor whiteColor];
     toReturn.titleLabel.frame = CGRectMake(0, 0, toReturn.frame.size.width-0, 22);
+    toReturn.titleLabel.font = [UIFont fontWithDescriptor:[toReturn.titleLabel.font.fontDescriptor
+                                                           fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold] size:0];
     
     toReturn.subtitleLabel = [[UITextView alloc] init];
     toReturn.subtitleLabel.backgroundColor = [UIColor clearColor];
     toReturn.subtitleLabel.textColor = [UIColor whiteColor];
-    toReturn.subtitleLabel.frame = CGRectMake(0, 20, toReturn.frame.size.width-0, 70);
+    toReturn.subtitleLabel.frame = CGRectMake(0, 20, toReturn.frame.size.width-0, toReturn.frame.size.height-20);
     toReturn.subtitleLabel.layer.borderWidth = 2;
     toReturn.subtitleLabel.editable = NO;
     toReturn.subtitleLabel.selectable = NO;
+    toReturn.subtitleLabel.scrollEnabled = NO;
     
     [toReturn addSubview:[self translucentView:toReturn.frame]];
     [toReturn addSubview:toReturn.titleLabel];
