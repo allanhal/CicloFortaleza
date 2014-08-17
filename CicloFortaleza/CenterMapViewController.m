@@ -102,7 +102,7 @@
     [Manager tableManager].tablePosition = TablePositionBottom;
     [[Manager tableManager] changeToDefaultTablePosition];
     
-    [self remakeListBasedOnLocation];
+    [Manager tableManager].tableList = [self remakeListBasedOnLocation];
 }
 
 - (void)moveMapToUserLocation
@@ -156,24 +156,27 @@
     [self moveMapToUserLocation];
 }
 
-- (void)remakeListBasedOnLocation
+//Make list to be from the closest to the farthest
+- (NSMutableArray *)remakeListBasedOnLocation1
 {
-    NSMutableArray *orderedList = [[NSMutableArray alloc] init];
+    NSMutableArray *orderedListToReturn = [[NSMutableArray alloc] init];
     
+    //Localização do Usuário
     CLLocationCoordinate2D userLocation = self.mapView.userLocation.coordinate;
     CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:userLocation.latitude longitude:userLocation.longitude];
     
     NSMutableArray *tableList = [Manager tableManager].tableList;
     for(MKPointAnnotation *newAnnotation in tableList)
     {
-        if([orderedList count] == 0)
+        //Quando a lista está vazia adicionamos 1 location
+        if([orderedListToReturn count] == 0)
         {
-            [orderedList addObject:newAnnotation];
+            [orderedListToReturn addObject:newAnnotation];
         }
         else
         {
             int index = 0;
-            for(MKPointAnnotation *orderedAnnotation in orderedList)
+            for(MKPointAnnotation *orderedAnnotation in orderedListToReturn)
             {
                 MKPointAnnotation *localAnnotation = [tableList objectAtIndex:index];
                 
@@ -183,15 +186,39 @@
                 CLLocation *localLocation = [[CLLocation alloc] initWithLatitude:localAnnotation.coordinate.latitude longitude:localAnnotation.coordinate.longitude];
                 CLLocationDistance distanceToLocalLocation = [currentLocation distanceFromLocation:localLocation];
                 
-                if(distanceToNewLocation > distanceToLocalLocation)
+                if(distanceToNewLocation >= distanceToLocalLocation)
+           
                 {
-                    [orderedList insertObject:newAnnotation atIndex:index];
+                    [orderedListToReturn insertObject:newAnnotation atIndex:index];
                     break;
                 }
                 index++;
             }
         }
     }
+    
+    return orderedListToReturn;
 }
+
+- (NSMutableArray *)remakeListBasedOnLocation
+{
+    NSMutableArray *orderedListToReturn = [[NSMutableArray alloc] init];
+    
+    //Localização do Usuário
+    CLLocationCoordinate2D userLocation = self.mapView.userLocation.coordinate;
+    CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:userLocation.latitude longitude:userLocation.longitude];
+    
+    NSMutableArray *unorderedLocations = [Manager tableManager].tableList;
+    for(MKPointAnnotation *originalUnorderedLocation in unorderedLocations)
+    {
+        // Quando a lista está vazia adicionamos 1 location
+        if([orderedListToReturn count] == 0)
+        {
+            [orderedListToReturn addObject:[unorderedLocations objectAtIndex:0]];
+        }
+    }
+    return orderedListToReturn;
+}
+
 
 @end
