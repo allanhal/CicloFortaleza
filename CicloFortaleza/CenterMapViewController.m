@@ -102,7 +102,7 @@
     [Manager tableManager].tablePosition = TablePositionBottom;
     [[Manager tableManager] changeToDefaultTablePosition];
     
-    [Manager tableManager].tableList = [self remakeListBasedOnLocation];
+//    [Manager tableManager].tableList = [self remakeListBasedOnLocation];
 }
 
 - (void)moveMapToUserLocation
