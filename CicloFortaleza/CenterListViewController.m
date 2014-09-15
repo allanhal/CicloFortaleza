@@ -111,7 +111,7 @@
 
     NSMutableArray *list = [Manager tableManager].tableList;
     int row = (int)indexPath.section;
-    if([list count] > 0)
+    if([list count] > 0 && [list count] > row)
     {
         MKPointAnnotation *pointAnnotation = [list objectAtIndex:row];
         cell.titleLabel.text = pointAnnotation.title;
