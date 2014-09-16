@@ -40,6 +40,11 @@
 
     [self mountOption:@"Felipe Alves" withPosition:8 action:^{
     }];
+
+    
+    [self mountOption:@"Get Distance" withPosition:8 action:^{
+        [[Manager requestManager] getDistanceFromCurrentLocationToAddress:@"Rua Marcos Macedo, 44"];
+    }];
 }
 
 - (void)mountTopic:(NSString *)text withPosition:(int)position

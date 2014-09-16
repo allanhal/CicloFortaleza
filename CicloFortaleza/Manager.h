@@ -11,6 +11,7 @@
 #import "KMLManager.h"
 #import "TableManager.h"
 
+
 @interface Manager : NSObject
 
 +(RequestManager *)requestManager;

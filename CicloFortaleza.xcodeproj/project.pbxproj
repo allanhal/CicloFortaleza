@@ -127,6 +127,10 @@
 		9D4F238B1914B93700A55D78 /* UIControl+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23831914B93700A55D78 /* UIControl+ALActionBlocks.m */; };
 		9D4F238C1914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */; };
 		9D4F238D1914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */; };
+		9D5417AF19C7BCF30036FBB1 /* BikeDelivery.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9D5417AE19C7BCF30036FBB1 /* BikeDelivery.kml */; };
+		9D5417B019C7BCF30036FBB1 /* BikeDelivery.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9D5417AE19C7BCF30036FBB1 /* BikeDelivery.kml */; };
+		9D5417B419C7D0D30036FBB1 /* MKPolygon+PointInPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5417B319C7D0D30036FBB1 /* MKPolygon+PointInPolygon.m */; };
+		9D5417B519C7D0D30036FBB1 /* MKPolygon+PointInPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5417B319C7D0D30036FBB1 /* MKPolygon+PointInPolygon.m */; };
 		9D608FEF191EFEB7004A8FD9 /* CoordinateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D608FEE191EFEB7004A8FD9 /* CoordinateUtil.m */; };
 		9D608FF0191EFEB7004A8FD9 /* CoordinateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D608FEE191EFEB7004A8FD9 /* CoordinateUtil.m */; };
 		9D609002191F0495004A8FD9 /* baixo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D608FF1191F0495004A8FD9 /* baixo.png */; };
@@ -310,6 +314,9 @@
 		9D4F23831914B93700A55D78 /* UIControl+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ALActionBlocks.m"; sourceTree = "<group>"; };
 		9D4F23841914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+ALActionBlocks.h"; sourceTree = "<group>"; };
 		9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+ALActionBlocks.m"; sourceTree = "<group>"; };
+		9D5417AE19C7BCF30036FBB1 /* BikeDelivery.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BikeDelivery.kml; sourceTree = "<group>"; };
+		9D5417B219C7D0D30036FBB1 /* MKPolygon+PointInPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKPolygon+PointInPolygon.h"; sourceTree = "<group>"; };
+		9D5417B319C7D0D30036FBB1 /* MKPolygon+PointInPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKPolygon+PointInPolygon.m"; sourceTree = "<group>"; };
 		9D608FED191EFEB7004A8FD9 /* CoordinateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateUtil.h; sourceTree = "<group>"; };
 		9D608FEE191EFEB7004A8FD9 /* CoordinateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateUtil.m; sourceTree = "<group>"; };
 		9D608FF1191F0495004A8FD9 /* baixo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baixo.png; path = images/baixo.png; sourceTree = "<group>"; };
@@ -484,6 +491,7 @@
 				9D69C90619147B03000B8A30 /* Cell */,
 				9D4879081913EE8F0076C44A /* Manager */,
 				9D4879031913EE520076C44A /* Parser */,
+				9D5417B119C7D0B10036FBB1 /* Categories */,
 				9D48786D1913EAD10076C44A /* Supporting Files */,
 			);
 			path = CicloFortaleza;
@@ -638,6 +646,7 @@
 			isa = PBXGroup;
 			children = (
 				9D4879191913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */,
+				9D5417AE19C7BCF30036FBB1 /* BikeDelivery.kml */,
 			);
 			name = KML;
 			sourceTree = "<group>";
@@ -714,6 +723,15 @@
 				9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */,
 			);
 			path = ALActionBlocks;
+			sourceTree = "<group>";
+		};
+		9D5417B119C7D0B10036FBB1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9D5417B219C7D0D30036FBB1 /* MKPolygon+PointInPolygon.h */,
+				9D5417B319C7D0D30036FBB1 /* MKPolygon+PointInPolygon.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		9D69C8F1191449A4000B8A30 /* LeftViewController */ = {
@@ -881,6 +899,7 @@
 				9D609010191F0495004A8FD9 /* icon02p.png in Resources */,
 				9D609022191F0495004A8FD9 /* topo.png in Resources */,
 				9D60901C191F0495004A8FD9 /* menuinferior.png in Resources */,
+				9D5417AF19C7BCF30036FBB1 /* BikeDelivery.kml in Resources */,
 				9D609012191F0495004A8FD9 /* icon03g.png in Resources */,
 				9D609006191F0495004A8FD9 /* cima.png in Resources */,
 				9D48787D1913EAD20076C44A /* Main_iPad.storyboard in Resources */,
@@ -919,6 +938,7 @@
 				9D609009191F0495004A8FD9 /* cimacima.png in Resources */,
 				9D609007191F0495004A8FD9 /* cima.png in Resources */,
 				9D60900D191F0495004A8FD9 /* icon01p.png in Resources */,
+				9D5417B019C7BCF30036FBB1 /* BikeDelivery.kml in Resources */,
 				9D4878A41913ECE20076C44A /* Academia Dunas.gpx in Resources */,
 				9D4878B11913ED7C0076C44A /* ZAActivityBar.bundle in Resources */,
 				9D4878A61913ECE20076C44A /* Praça Portugal.gpx in Resources */,
@@ -986,6 +1006,7 @@
 				9D4878D21913ED850076C44A /* UIRefreshControl+AFNetworking.m in Sources */,
 				9D4878F81913ED8B0076C44A /* AFURLResponseSerialization.m in Sources */,
 				9DAD6B671916383500CFF4F0 /* MBSwitch.m in Sources */,
+				9D5417B419C7D0D30036FBB1 /* MKPolygon+PointInPolygon.m in Sources */,
 				9D4878D41913ED850076C44A /* UIWebView+AFNetworking.m in Sources */,
 				9D36326219184C83001A3E9F /* TableManager.m in Sources */,
 				9D4878CC1913ED850076C44A /* UIButton+AFNetworking.m in Sources */,
@@ -1040,6 +1061,7 @@
 				9D4878F11913ED8B0076C44A /* AFNetworkReachabilityManager.m in Sources */,
 				9D4878CB1913ED850076C44A /* UIAlertView+AFNetworking.m in Sources */,
 				9D608FF0191EFEB7004A8FD9 /* CoordinateUtil.m in Sources */,
+				9D5417B519C7D0D30036FBB1 /* MKPolygon+PointInPolygon.m in Sources */,
 				9D4996B519171AD600E3A968 /* ColorUtil.m in Sources */,
 				9D4878EB1913ED8B0076C44A /* AFHTTPRequestOperation.m in Sources */,
 				9D1D503319140A6E0074D849 /* LeftViewController.m in Sources */,

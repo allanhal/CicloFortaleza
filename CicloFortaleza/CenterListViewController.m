@@ -15,7 +15,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self makeTableView];
+//    [self makeTableView];
 }
 
 -(void)makeTableView

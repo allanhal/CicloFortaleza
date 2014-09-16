@@ -31,8 +31,10 @@ static NSURL *lastUrl = nil;
         // Locate the path to the .kml file in the application's bundle
         // and parse it with the KMLParser.
         NSString *path;
-        //    path = [[NSBundle mainBundle] pathForResource:@"KML_Sample" ofType:@"kml"];
-        path = [[NSBundle mainBundle] pathForResource:@"Mapa Cicloviário e de Rotas Alternativas de Fortaleza" ofType:@"kml"];
+//        path = [[NSBundle mainBundle] pathForResource:@"KML_Sample" ofType:@"kml"];
+//        path = [[NSBundle mainBundle] pathForResource:@"Mapa Cicloviário e de Rotas Alternativas de Fortaleza" ofType:@"kml"];
+        
+        path = [[NSBundle mainBundle] pathForResource:@"BikeDelivery" ofType:@"kml"];
         
         lastUrl = [NSURL fileURLWithPath:path];
     }
@@ -76,9 +78,15 @@ static NSURL *lastUrl = nil;
     return URL;
 }
 
+- (NSURL *)kmlBikeDelivery
+{
+    NSURL *URL = [NSURL URLWithString:@"http://mapsengine.google.com/map/u/0/kml?mid=z771F9hzkwYM.kbsC0L06naJU&amp;lid=z771F9hzkwYM.kIDpXwJUqJCI"];
+    return URL;
+}
+
 - (NSURL *)kmlAddress
 {
-    return [self kmlFelipeAlves];
+    return [self kmlBikeDelivery];
 }
 
 @end

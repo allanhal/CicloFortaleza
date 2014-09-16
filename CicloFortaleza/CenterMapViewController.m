@@ -9,6 +9,7 @@
 #import "CenterMapViewController.h"
 #import "ZAActivityBar.h"
 #import "CoordinateUtil.h"
+#import "MKPolygon+PointInPolygon.h"
 
 @implementation CenterMapViewController
 
@@ -59,6 +60,11 @@
     // Add all of the MKOverlay objects parsed from the KML file to the map.
     NSArray *overlays = [kmlParser overlays];
     
+    MKPolygon *poly = [overlays objectAtIndex:0];
+    
+    BOOL inside = [poly coordInPolygon:self.mapView.userLocation.coordinate];
+    
+    
     // Add all of the MKAnnotation objects parsed from the KML file to the map.
     NSArray *annotations = [kmlParser points];
     for(MKPointAnnotation *point in annotations)
@@ -67,27 +73,6 @@
                                                               coordinate:point.coordinate
                                                                 andTitle:point.title];
         [self.mapView addAnnotation:annotation];
-    }
-    
-    // Walk the list of overlays and annotations and create a MKMapRect that
-    // bounds all of them and store it into flyTo.
-    MKMapRect flyTo = MKMapRectNull;
-    for (id <MKOverlay> overlay in overlays) {
-        if (MKMapRectIsNull(flyTo)) {
-            flyTo = [overlay boundingMapRect];
-        } else {
-            flyTo = MKMapRectUnion(flyTo, [overlay boundingMapRect]);
-        }
-    }
-    
-    for (id <MKAnnotation> annotation in annotations) {
-        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
-        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
-        if (MKMapRectIsNull(flyTo)) {
-            flyTo = pointRect;
-        } else {
-            flyTo = MKMapRectUnion(flyTo, pointRect);
-        }
     }
     
     if(error)
@@ -99,10 +84,7 @@
         [ZAActivityBar showSuccessWithStatus:@"Mapa carregado."];
     }
     
-    [Manager tableManager].tablePosition = TablePositionBottom;
     [[Manager tableManager] changeToDefaultTablePosition];
-    
-//    [Manager tableManager].tableList = [self remakeListBasedOnLocation];
 }
 
 - (void)moveMapToUserLocation

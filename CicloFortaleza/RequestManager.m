@@ -42,4 +42,36 @@
     [downloadTask resume];
 }
 
+- (void)getDistanceFromCurrentLocationToAddress:(NSString *)address
+{
+//    [self getDistanceFrom:[Manager mapManager].mapView.userLocation.coordinate ToAddress:address];
+}
+
+- (void)getDistanceFrom:(CLLocationCoordinate2D)coordinateFrom ToAddress:(NSString *)address
+{
+    NSString *mapEnginerUrl = @"http://maps.googleapis.com/maps/api/distancematrix/json?origins=";
+    mapEnginerUrl = [mapEnginerUrl stringByAppendingString:[NSString stringWithFormat:@"%f,%f", coordinateFrom.latitude, coordinateFrom.longitude]];
+    mapEnginerUrl = [mapEnginerUrl stringByAppendingString:@"&destinations="];
+    mapEnginerUrl = [mapEnginerUrl stringByAppendingString:address];
+    mapEnginerUrl = [mapEnginerUrl stringByAppendingString:@"&mode=walking&language=pt-BR&sensor=false"];
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:mapEnginerUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *dic = (NSDictionary *)responseObject;
+        
+        NSArray *rows = [dic objectForKey:@"rows"];
+        
+        NSArray *elements = [[rows objectAtIndex:0] objectForKey:@"elements"];
+        
+        NSDictionary *distance = [[elements objectAtIndex:0] objectForKey:@"distance"];
+        
+        NSNumber *value = [distance objectForKey:@"value"];
+        
+        NSLog(@"DISTANCE: %@ meters", value);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
+
 @end
