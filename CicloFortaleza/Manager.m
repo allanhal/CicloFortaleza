@@ -25,4 +25,9 @@
     return [TableManager instance];
 }
 
++(LocationManager *)locationManager;
+{
+    return [LocationManager instance];
+}
+
 @end

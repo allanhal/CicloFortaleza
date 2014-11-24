@@ -127,6 +127,10 @@
 		9D4F238B1914B93700A55D78 /* UIControl+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23831914B93700A55D78 /* UIControl+ALActionBlocks.m */; };
 		9D4F238C1914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */; };
 		9D4F238D1914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */; };
+		9D50C0921A2397DF003E54D7 /* MKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D50C0911A2397DF003E54D7 /* MKMapViewController.m */; };
+		9D50C0931A2397DF003E54D7 /* MKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D50C0911A2397DF003E54D7 /* MKMapViewController.m */; };
+		9D50C0961A239999003E54D7 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D50C0951A239999003E54D7 /* LocationManager.m */; };
+		9D50C0971A239999003E54D7 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D50C0951A239999003E54D7 /* LocationManager.m */; };
 		9D608FEF191EFEB7004A8FD9 /* CoordinateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D608FEE191EFEB7004A8FD9 /* CoordinateUtil.m */; };
 		9D608FF0191EFEB7004A8FD9 /* CoordinateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D608FEE191EFEB7004A8FD9 /* CoordinateUtil.m */; };
 		9D609002191F0495004A8FD9 /* baixo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D608FF1191F0495004A8FD9 /* baixo.png */; };
@@ -310,6 +314,10 @@
 		9D4F23831914B93700A55D78 /* UIControl+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ALActionBlocks.m"; sourceTree = "<group>"; };
 		9D4F23841914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+ALActionBlocks.h"; sourceTree = "<group>"; };
 		9D4F23851914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+ALActionBlocks.m"; sourceTree = "<group>"; };
+		9D50C0901A2397DF003E54D7 /* MKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapViewController.h; sourceTree = "<group>"; };
+		9D50C0911A2397DF003E54D7 /* MKMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapViewController.m; sourceTree = "<group>"; };
+		9D50C0941A239999003E54D7 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		9D50C0951A239999003E54D7 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		9D608FED191EFEB7004A8FD9 /* CoordinateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateUtil.h; sourceTree = "<group>"; };
 		9D608FEE191EFEB7004A8FD9 /* CoordinateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateUtil.m; sourceTree = "<group>"; };
 		9D608FF1191F0495004A8FD9 /* baixo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = baixo.png; path = images/baixo.png; sourceTree = "<group>"; };
@@ -630,6 +638,8 @@
 				9D4879101913EE9E0076C44A /* RequestManager.m */,
 				9D36326019184C83001A3E9F /* TableManager.h */,
 				9D36326119184C83001A3E9F /* TableManager.m */,
+				9D50C0941A239999003E54D7 /* LocationManager.h */,
+				9D50C0951A239999003E54D7 /* LocationManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -716,6 +726,15 @@
 			path = ALActionBlocks;
 			sourceTree = "<group>";
 		};
+		9D50C08F1A23978D003E54D7 /* MKMapBox */ = {
+			isa = PBXGroup;
+			children = (
+				9D50C0901A2397DF003E54D7 /* MKMapViewController.h */,
+				9D50C0911A2397DF003E54D7 /* MKMapViewController.m */,
+			);
+			name = MKMapBox;
+			sourceTree = "<group>";
+		};
 		9D69C8F1191449A4000B8A30 /* LeftViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -728,6 +747,7 @@
 		9D69C8F2191449B9000B8A30 /* CenterViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9D50C08F1A23978D003E54D7 /* MKMapBox */,
 				9DE6041219194755008CCEEA /* Map */,
 				9DE6041319194759008CCEEA /* List */,
 				9D69C8F319144CD3000B8A30 /* CenterViewController.h */,
@@ -954,6 +974,7 @@
 				9D4878CA1913ED850076C44A /* UIAlertView+AFNetworking.m in Sources */,
 				9D69C90919147B1C000B8A30 /* CustomCell.m in Sources */,
 				9D4878F41913ED8B0076C44A /* AFURLConnectionOperation.m in Sources */,
+				9D50C0961A239999003E54D7 /* LocationManager.m in Sources */,
 				9D4878FE1913EDA30076C44A /* SKBounceAnimation.m in Sources */,
 				9D69C8FA1914544B000B8A30 /* ILTranslucentView.m in Sources */,
 				9D4F238A1914B93700A55D78 /* UIControl+ALActionBlocks.m in Sources */,
@@ -989,6 +1010,7 @@
 				9D4878D41913ED850076C44A /* UIWebView+AFNetworking.m in Sources */,
 				9D36326219184C83001A3E9F /* TableManager.m in Sources */,
 				9D4878CC1913ED850076C44A /* UIButton+AFNetworking.m in Sources */,
+				9D50C0921A2397DF003E54D7 /* MKMapViewController.m in Sources */,
 				9D4878EE1913ED8B0076C44A /* AFHTTPSessionManager.m in Sources */,
 				9D4878CE1913ED850076C44A /* UIImageView+AFNetworking.m in Sources */,
 				9D4878C61913ED850076C44A /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1023,6 +1045,7 @@
 				9D69C8F0191449A1000B8A30 /* CenterListViewController.m in Sources */,
 				9D1D5005191404CF0074D849 /* MainViewController.m in Sources */,
 				9D4878C91913ED850076C44A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				9D50C0931A2397DF003E54D7 /* MKMapViewController.m in Sources */,
 				9D4878D31913ED850076C44A /* UIRefreshControl+AFNetworking.m in Sources */,
 				9D4879121913EE9E0076C44A /* BasicManager.m in Sources */,
 				9D4879141913EE9E0076C44A /* KMLManager.m in Sources */,
@@ -1044,6 +1067,7 @@
 				9D4878EB1913ED8B0076C44A /* AFHTTPRequestOperation.m in Sources */,
 				9D1D503319140A6E0074D849 /* LeftViewController.m in Sources */,
 				9D1D4FFA1913FBA20074D849 /* MMDrawerController.m in Sources */,
+				9D50C0971A239999003E54D7 /* LocationManager.m in Sources */,
 				9D4878EF1913ED8B0076C44A /* AFHTTPSessionManager.m in Sources */,
 				9D69C90A19147B1C000B8A30 /* CustomCell.m in Sources */,
 				9D3E7C1A19205C9C00C17169 /* MapChanged.m in Sources */,

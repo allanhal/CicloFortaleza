@@ -7,11 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "Manager.h"
+#import <CoreLocation/CoreLocation.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[Manager locationManager] startUpdateGPS];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
