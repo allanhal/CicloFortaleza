@@ -10,11 +10,13 @@
 #import "RequestManager.h"
 #import "KMLManager.h"
 #import "TableManager.h"
+#import "PositionManager.h"
 
 @interface Manager : NSObject
 
 +(RequestManager *)requestManager;
 +(KMLManager *)kmlManager;
 +(TableManager *)tableManager;
++(PositionManager *)positionManager;
 
 @end

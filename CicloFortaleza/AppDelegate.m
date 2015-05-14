@@ -7,12 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "Manager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    [[Manager positionManager] startUpdatingLocation];
+    
     return YES;
 }
 							

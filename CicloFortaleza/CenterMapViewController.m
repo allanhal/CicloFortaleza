@@ -22,6 +22,8 @@
 {
     [super viewDidLoad];
     
+    [Manager positionManager].locationManager.delegate = self;
+    
     mainScreen = [[UIScreen mainScreen] bounds];
     defaultPadding = 10;
     
@@ -36,7 +38,7 @@
     
     mapView = [[MapChanged alloc] initWithFrame:self.view.bounds andTilesource:tileSource];
     mapView.delegate = self;
-    mapView.userTrackingMode = RMUserTrackingModeFollow;
+//    mapView.userTrackingMode = RMUserTrackingModeFollow;
     mapView.showsUserLocation = YES;
     mapView.zoom = 16;
     
@@ -107,7 +109,8 @@
 
 - (void)moveMapToUserLocation
 {
-    [self moveMapToCoordinate:self.mapView.userLocation.coordinate];
+    CLLocationCoordinate2D coordinate = [[Manager positionManager] userCoordinate];
+    [self moveMapToCoordinate:coordinate];
 }
 
 - (void)moveMapToCoordinate:(CLLocationCoordinate2D)coordinate
@@ -117,14 +120,7 @@
 
 - (void)changeToFollow:(BOOL)follow
 {
-    if(follow)
-    {
-        self.mapView.userTrackingMode = RMUserTrackingModeFollow;
-    }
-    else
-    {
-        self.mapView.userTrackingMode = RMUserTrackingModeNone;
-    }
+    self.follow = follow;
 }
 
 #pragma mark RMMapViewDelegate
@@ -162,7 +158,7 @@
     NSMutableArray *orderedListToReturn = [[NSMutableArray alloc] init];
     
     //Localização do Usuário
-    CLLocationCoordinate2D userLocation = self.mapView.userLocation.coordinate;
+    CLLocationCoordinate2D userLocation = [[Manager positionManager] userCoordinate];
     CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:userLocation.latitude longitude:userLocation.longitude];
     
     NSMutableArray *tableList = [Manager tableManager].tableList;
@@ -205,7 +201,7 @@
     NSMutableArray *orderedListToReturn = [[NSMutableArray alloc] init];
     
     //Localização do Usuário
-    CLLocationCoordinate2D userLocation = self.mapView.userLocation.coordinate;
+    CLLocationCoordinate2D userLocation = [[Manager positionManager] userCoordinate];
     CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:userLocation.latitude longitude:userLocation.longitude];
     
     NSMutableArray *unorderedLocations = [Manager tableManager].tableList;
@@ -220,5 +216,19 @@
     return orderedListToReturn;
 }
 
+#pragma mark - CLLocationManagerDelegate Delegate Methods
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    if(self.follow)
+    {
+        CLLocation* location = [locations lastObject];
+        self.mapView.centerCoordinate = location.coordinate;
+    }
+    else
+    {
+        self.mapView.userTrackingMode = RMUserTrackingModeNone;
+    }
+}
 
 @end

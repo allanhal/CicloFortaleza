@@ -10,29 +10,29 @@
 	<string>CicloFortaleza</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>02DA3EFE-3C23-437B-880D-44FDE368CD93</key>
-		<string>https://github.com/allansagarana/CicloFortaleza.git</string>
+		<key>DD86C06D3862EF73E3656755FF0D120A519120EE</key>
+		<string>https://github.com/allanhal/CicloFortaleza.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CicloFortaleza.xcodeproj/project.xcworkspace</string>
+	<string>CicloFortaleza.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>02DA3EFE-3C23-437B-880D-44FDE368CD93</key>
+		<key>DD86C06D3862EF73E3656755FF0D120A519120EE</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/allansagarana/CicloFortaleza.git</string>
+	<string>https://github.com/allanhal/CicloFortaleza.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>02DA3EFE-3C23-437B-880D-44FDE368CD93</string>
+	<string>DD86C06D3862EF73E3656755FF0D120A519120EE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>02DA3EFE-3C23-437B-880D-44FDE368CD93</string>
+			<string>DD86C06D3862EF73E3656755FF0D120A519120EE</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CicloFortaleza</string>
 		</dict>

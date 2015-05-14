@@ -173,7 +173,7 @@
     [self.userLocationButton setImage:seta forState:UIControlStateNormal];
     
     [self.userLocationButton handleControlEvents:UIControlEventTouchUpInside withBlock:^(id weakControl) {
-        if(self.mapView.userTrackingMode == RMUserTrackingModeFollow)
+        if(self.follow)
         {
             [self.userLocationButton setImage:setaVazada forState:UIControlStateNormal];
             [self changeToFollow:NO];

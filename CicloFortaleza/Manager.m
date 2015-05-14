@@ -25,4 +25,9 @@
     return [TableManager instance];
 }
 
++(PositionManager *)positionManager;
+{
+    return [PositionManager instance];
+}
+
 @end

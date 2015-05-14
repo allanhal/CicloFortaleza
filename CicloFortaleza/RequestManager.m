@@ -32,7 +32,8 @@
     
     NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+        NSString *suggestedFilename = [response suggestedFilename];
+        return [documentsDirectoryURL URLByAppendingPathComponent:suggestedFilename];
     } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         if(completionHandler)
         {

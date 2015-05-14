@@ -15,13 +15,14 @@
 #import "ImagesUtil.h"
 #import "MapChanged.h"
 
-@interface CenterMapViewController : MMDrawerController <RMMapViewDelegate>
+@interface CenterMapViewController : MMDrawerController <CLLocationManagerDelegate, RMMapViewDelegate>
 
 @property (strong, nonatomic) MapChanged *mapView;
 @property (strong, nonatomic) KMLParser *kmlParser;
 @property (nonatomic) CGRect mainScreen;
 @property (nonatomic) CGFloat defaultPadding;
 @property (strong, nonatomic) UIButton *userLocationButton;
+@property (nonatomic) BOOL follow;
 
 - (void)moveMapToUserLocation;
 - (void)moveMapToCoordinate:(CLLocationCoordinate2D)coordinate;

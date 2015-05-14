@@ -107,6 +107,7 @@
 		9D48791B1913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */ = {isa = PBXBuildFile; fileRef = 9D4879191913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */; };
 		9D48791F1913F3EF0076C44A /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D48791E1913F3EF0076C44A /* bike.png */; };
 		9D4879201913F3EF0076C44A /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D48791E1913F3EF0076C44A /* bike.png */; };
+		9D48B6681B04594E00732E16 /* PositionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D48B6671B04594E00732E16 /* PositionManager.m */; };
 		9D4996B419171AD600E3A968 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4996B319171AD600E3A968 /* ColorUtil.m */; };
 		9D4996B519171AD600E3A968 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4996B319171AD600E3A968 /* ColorUtil.m */; };
 		9D4996C51917297000E3A968 /* POI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4996C41917297000E3A968 /* POI.m */; };
@@ -289,6 +290,8 @@
 		9D4879101913EE9E0076C44A /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
 		9D4879191913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml"; sourceTree = "<group>"; };
 		9D48791E1913F3EF0076C44A /* bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bike.png; sourceTree = "<group>"; };
+		9D48B6661B04594E00732E16 /* PositionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionManager.h; sourceTree = "<group>"; };
+		9D48B6671B04594E00732E16 /* PositionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionManager.m; sourceTree = "<group>"; };
 		9D4996B219171AD600E3A968 /* ColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
 		9D4996B319171AD600E3A968 /* ColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtil.m; sourceTree = "<group>"; };
 		9D4996C31917297000E3A968 /* POI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POI.h; sourceTree = "<group>"; };
@@ -630,6 +633,8 @@
 				9D4879101913EE9E0076C44A /* RequestManager.m */,
 				9D36326019184C83001A3E9F /* TableManager.h */,
 				9D36326119184C83001A3E9F /* TableManager.m */,
+				9D48B6661B04594E00732E16 /* PositionManager.h */,
+				9D48B6671B04594E00732E16 /* PositionManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -972,6 +977,7 @@
 				9D4878731913EAD10076C44A /* main.m in Sources */,
 				9D69C8F519144CD3000B8A30 /* CenterViewController.m in Sources */,
 				9D1D502E191406190074D849 /* UIViewController+JASidePanel.m in Sources */,
+				9D48B6681B04594E00732E16 /* PositionManager.m in Sources */,
 				9D1D5004191404CF0074D849 /* MainViewController.m in Sources */,
 				9D4F23881914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m in Sources */,
 				9D4878F21913ED8B0076C44A /* AFSecurityPolicy.m in Sources */,

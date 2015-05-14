@@ -26,8 +26,8 @@ static NSURL *lastUrl = nil;
 
 - (KMLParser *)retrieveKmlParsed
 {
-    if(!lastUrl)
-    {
+//    if(!lastUrl)
+//    {
         // Locate the path to the .kml file in the application's bundle
         // and parse it with the KMLParser.
         NSString *path;
@@ -35,11 +35,12 @@ static NSURL *lastUrl = nil;
         path = [[NSBundle mainBundle] pathForResource:@"Mapa Cicloviário e de Rotas Alternativas de Fortaleza" ofType:@"kml"];
         
         lastUrl = [NSURL fileURLWithPath:path];
-    }
+//    }
+    
     KMLParser *toReturn = [[KMLParser alloc] initWithURL:lastUrl];
     [toReturn parseKML];
-    
-    for(MKPointAnnotation *annotation in [toReturn points])
+    NSArray *points = [toReturn points];
+    for(MKPointAnnotation *annotation in points)
     {
         NSLog(@"%@", annotation.title);
         [self insertOnTableList:annotation];
@@ -78,7 +79,7 @@ static NSURL *lastUrl = nil;
 
 - (NSURL *)kmlAddress
 {
-    return [self kmlFelipeAlves];
+    return [self kmlGolbery];
 }
 
 @end
