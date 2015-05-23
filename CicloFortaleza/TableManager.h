@@ -25,5 +25,6 @@ typedef NS_ENUM(NSInteger, TablePosition) {
 + (TableManager *)instance;
 - (void)changeToDefaultTablePosition;
 - (void)changeTablePosition:(TablePosition)aTablePosition;
+- (NSArray *)remakeListBasedOnLocation;
 
 @end

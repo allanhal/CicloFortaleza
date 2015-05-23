@@ -23,6 +23,7 @@
 @property (nonatomic) CGFloat defaultPadding;
 @property (strong, nonatomic) UIButton *userLocationButton;
 @property (nonatomic) BOOL follow;
+@property (nonatomic) BOOL shouldRemakeListBasedOnLocation;
 
 - (void)moveMapToUserLocation;
 - (void)moveMapToCoordinate:(CLLocationCoordinate2D)coordinate;

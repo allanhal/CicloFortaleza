@@ -116,6 +116,15 @@
         MKPointAnnotation *pointAnnotation = [list objectAtIndex:row];
         cell.titleLabel.text = pointAnnotation.title;
         cell.subtitleLabel.text = pointAnnotation.subtitle;
+        
+        CLLocationCoordinate2D userLocation = [[Manager positionManager] userCoordinate];
+        CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:userLocation.latitude longitude:userLocation.longitude];
+        
+        CLLocation *cellLocation = [[CLLocation alloc] initWithLatitude:pointAnnotation.coordinate.latitude longitude:pointAnnotation.coordinate.longitude];
+        CLLocationDistance distanceToNewLocation = [currentLocation distanceFromLocation:cellLocation];
+        NSString *distance = [NSString stringWithFormat:@"Distância: %.2f KM\n", distanceToNewLocation/1000];
+        
+        cell.subtitleLabel.text = [distance stringByAppendingString:cell.subtitleLabel.text];
     }
     
     return cell;

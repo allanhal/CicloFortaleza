@@ -7,7 +7,9 @@
 //
 
 #import "TableManager.h"
+#import "Manager.h"
 #import "ImagesUtil.h"
+#import "CoordinateUtil.h"
 
 @implementation TableManager
 
@@ -102,6 +104,31 @@
     }];
     
     [tableView reloadData];
+}
+
+- (NSArray *)remakeListBasedOnLocation
+{    
+    //Localização do Usuário
+    CLLocationCoordinate2D userLocation = [[Manager positionManager] userCoordinate];
+    CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:userLocation.latitude longitude:userLocation.longitude];
+    
+    NSArray *unorderedLocations = self.tableList;
+    
+    NSArray *sortedArray;
+    sortedArray = [unorderedLocations sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+        CLLocationCoordinate2D coordinateA = [(MKPointAnnotation*)a coordinate];
+        CLLocationCoordinate2D coordinateB = [(MKPointAnnotation*)b coordinate];
+        
+        CLLocation *locationA = [[CLLocation alloc] initWithLatitude:coordinateA.latitude longitude:coordinateA.longitude];
+        CLLocationDistance distanceToLocationA = [currentLocation distanceFromLocation:locationA];
+        
+        CLLocation *locationB = [[CLLocation alloc] initWithLatitude:coordinateB.latitude longitude:coordinateB.longitude];
+        CLLocationDistance distanceToLocationB = [currentLocation distanceFromLocation:locationB];
+        
+        return distanceToLocationA > distanceToLocationB;
+    }];
+    
+    return sortedArray;
 }
 
 @end
