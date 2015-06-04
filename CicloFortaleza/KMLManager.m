@@ -9,6 +9,7 @@
 #import "KMLManager.h"
 #import "Manager.h"
 #import <MapKit/MKAnnotation.h>
+#import "SSZipArchive.h"
 
 @implementation KMLManager
 
@@ -26,8 +27,8 @@ static NSURL *lastUrl = nil;
 
 - (KMLParser *)retrieveKmlParsed
 {
-//    if(!lastUrl)
-//    {
+    if(!lastUrl)
+    {
         // Locate the path to the .kml file in the application's bundle
         // and parse it with the KMLParser.
         NSString *path;
@@ -35,7 +36,7 @@ static NSURL *lastUrl = nil;
         path = [[NSBundle mainBundle] pathForResource:@"Mapa Cicloviário e de Rotas Alternativas de Fortaleza" ofType:@"kml"];
         
         lastUrl = [NSURL fileURLWithPath:path];
-//    }
+    }
     
     KMLParser *toReturn = [[KMLParser alloc] initWithURL:lastUrl];
     [toReturn parseKML];
@@ -57,12 +58,45 @@ static NSURL *lastUrl = nil;
 - (void)updateKmlWithCompletionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))completionHandler
 {
     [[Manager requestManager] downloadKMLWithCompletionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-        lastUrl = filePath;
+        lastUrl = [self unzipFile:filePath];
+
         if(completionHandler)
         {
             completionHandler(response, filePath, error);
         }
     }];
+}
+
+- (NSURL *)unzipFile:(NSURL *)filePath
+{
+    // Unzipping
+    //@"path_to_your_zip_file";
+    NSString *zipPath = filePath.path;
+    
+    //@"path_to_the_folder_where_you_want_it_unzipped";
+    NSString *destinationPath = [filePath.path stringByAppendingString:@"unzip"];
+    
+    [SSZipArchive unzipFileAtPath:zipPath toDestination:destinationPath];
+    
+    //NSArray *filesAtPath = [self listFileAtPath:destinationPath];
+    
+    destinationPath = [destinationPath stringByAppendingString:@"/doc.kml"];
+    return [NSURL fileURLWithPath:destinationPath];
+}
+
+-(NSArray *)listFileAtPath:(NSString *)path
+{
+    //-----> LIST ALL FILES <-----//
+    NSLog(@"LISTING ALL FILES FOUND");
+    
+    int count;
+    
+    NSArray *directoryContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:NULL];
+    for (count = 0; count < (int)[directoryContent count]; count++)
+    {
+        NSLog(@"File %d: %@", (count + 1), [directoryContent objectAtIndex:count]);
+    }
+    return directoryContent;
 }
 
 - (NSURL *)kmlFelipeAlves
@@ -79,7 +113,7 @@ static NSURL *lastUrl = nil;
 
 - (NSURL *)kmlAddress
 {
-    return [self kmlGolbery];
+    return [self kmlFelipeAlves];
 }
 
 @end

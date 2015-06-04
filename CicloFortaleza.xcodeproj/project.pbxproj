@@ -112,7 +112,6 @@
 		9D4996B519171AD600E3A968 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4996B319171AD600E3A968 /* ColorUtil.m */; };
 		9D4996C51917297000E3A968 /* POI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4996C41917297000E3A968 /* POI.m */; };
 		9D4996C61917297000E3A968 /* POI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4996C41917297000E3A968 /* POI.m */; };
-		9D4F234119148FD000A55D78 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F234019148FD000A55D78 /* Mapbox.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		9D4F23431914910400A55D78 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F23421914910400A55D78 /* CoreLocation.framework */; };
 		9D4F23451914910B00A55D78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F23441914910B00A55D78 /* QuartzCore.framework */; };
 		9D4F23471914911600A55D78 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F23461914911600A55D78 /* libsqlite3.0.dylib */; };
@@ -175,6 +174,13 @@
 		9D69C90A19147B1C000B8A30 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D69C90819147B1C000B8A30 /* CustomCell.m */; };
 		9D7BF24D1917ADF200C85FDC /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7BF24C1917ADF200C85FDC /* Mapbox.framework */; };
 		9D7BF24E1917ADF200C85FDC /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7BF24C1917ADF200C85FDC /* Mapbox.framework */; };
+		9D980EE11B1FFDCF0062323D /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D980EDE1B1FFDCF0062323D /* SSZipArchive.m */; };
+		9D980EED1B1FFDFC0062323D /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D980EE41B1FFDFC0062323D /* unzip.c */; };
+		9D980EEE1B1FFDFC0062323D /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D980EE51B1FFDFC0062323D /* zip.c */; };
+		9D980EEF1B1FFDFC0062323D /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D980EE81B1FFDFC0062323D /* mztools.c */; };
+		9D980EF01B1FFDFC0062323D /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D980EE91B1FFDFC0062323D /* ioapi.c */; };
+		9D980EF21B20041C0062323D /* Bitelli.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9D980EF11B20041C0062323D /* Bitelli.gpx */; };
+		9D980EF41B2008150062323D /* final laranja-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D980EF31B2008150062323D /* final laranja-11.png */; };
 		9DAD6B671916383500CFF4F0 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD6B661916383500CFF4F0 /* MBSwitch.m */; };
 		9DAD6B681916383500CFF4F0 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD6B661916383500CFF4F0 /* MBSwitch.m */; };
 /* End PBXBuildFile section */
@@ -342,6 +348,19 @@
 		9D69C90719147B1C000B8A30 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		9D69C90819147B1C000B8A30 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		9D7BF24C1917ADF200C85FDC /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		9D980EDE1B1FFDCF0062323D /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		9D980EDF1B1FFDCF0062323D /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		9D980EE41B1FFDFC0062323D /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		9D980EE51B1FFDFC0062323D /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		9D980EE61B1FFDFC0062323D /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		9D980EE71B1FFDFC0062323D /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		9D980EE81B1FFDFC0062323D /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		9D980EE91B1FFDFC0062323D /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		9D980EEA1B1FFDFC0062323D /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		9D980EEB1B1FFDFC0062323D /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		9D980EEC1B1FFDFC0062323D /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		9D980EF11B20041C0062323D /* Bitelli.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Bitelli.gpx; sourceTree = "<group>"; };
+		9D980EF31B2008150062323D /* final laranja-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "final laranja-11.png"; sourceTree = "<group>"; };
 		9DAD6B651916383500CFF4F0 /* MBSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSwitch.h; sourceTree = "<group>"; };
 		9DAD6B661916383500CFF4F0 /* MBSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSwitch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -357,7 +376,6 @@
 				9D7BF24D1917ADF200C85FDC /* Mapbox.framework in Frameworks */,
 				9D4F23451914910B00A55D78 /* QuartzCore.framework in Frameworks */,
 				9D4F23431914910400A55D78 /* CoreLocation.framework in Frameworks */,
-				9D4F234119148FD000A55D78 /* Mapbox.framework in Frameworks */,
 				9D4878691913EAD10076C44A /* CoreGraphics.framework in Frameworks */,
 				9D48786B1913EAD10076C44A /* UIKit.framework in Frameworks */,
 				9D4878671913EAD10076C44A /* Foundation.framework in Frameworks */,
@@ -524,6 +542,7 @@
 		9D48789E1913ECD70076C44A /* GPSSimulation */ = {
 			isa = PBXGroup;
 			children = (
+				9D980EF11B20041C0062323D /* Bitelli.gpx */,
 				9D48789F1913ECE20076C44A /* Academia Dunas.gpx */,
 				9D4878A01913ECE20076C44A /* Praça Portugal.gpx */,
 				9D4878A11913ECE20076C44A /* Sagarana.gpx */,
@@ -535,6 +554,7 @@
 		9D4878AB1913ED6A0076C44A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				9D980EE21B1FFDD90062323D /* SSZipArchive */,
 				9D7BF24B1917ADE700C85FDC /* MapBox */,
 				9DAD6B641916382800CFF4F0 /* MBSwitch */,
 				9D4F237B1914B93700A55D78 /* ALActionBlocks */,
@@ -650,6 +670,7 @@
 		9D48791D1913F3E70076C44A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9D980EF31B2008150062323D /* final laranja-11.png */,
 				9D48791E1913F3EF0076C44A /* bike.png */,
 				9D608FF1191F0495004A8FD9 /* baixo.png */,
 				9D608FF2191F0495004A8FD9 /* busca.png */,
@@ -767,6 +788,32 @@
 			name = MapBox;
 			sourceTree = "<group>";
 		};
+		9D980EE21B1FFDD90062323D /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				9D980EE31B1FFDF10062323D /* minizip */,
+				9D980EDE1B1FFDCF0062323D /* SSZipArchive.m */,
+				9D980EDF1B1FFDCF0062323D /* SSZipArchive.h */,
+			);
+			name = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		9D980EE31B1FFDF10062323D /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				9D980EE41B1FFDFC0062323D /* unzip.c */,
+				9D980EE51B1FFDFC0062323D /* zip.c */,
+				9D980EE61B1FFDFC0062323D /* unzip.h */,
+				9D980EE71B1FFDFC0062323D /* zip.h */,
+				9D980EE81B1FFDFC0062323D /* mztools.c */,
+				9D980EE91B1FFDFC0062323D /* ioapi.c */,
+				9D980EEA1B1FFDFC0062323D /* ioapi.h */,
+				9D980EEB1B1FFDFC0062323D /* crypt.h */,
+				9D980EEC1B1FFDFC0062323D /* mztools.h */,
+			);
+			name = minizip;
+			sourceTree = "<group>";
+		};
 		9DAD6B641916382800CFF4F0 /* MBSwitch */ = {
 			isa = PBXGroup;
 			children = (
@@ -879,6 +926,7 @@
 				9D609016191F0495004A8FD9 /* linha01.png in Resources */,
 				9D609020191F0495004A8FD9 /* setavazada.png in Resources */,
 				9D4F234C1914919300A55D78 /* Mapbox.bundle in Resources */,
+				9D980EF21B20041C0062323D /* Bitelli.gpx in Resources */,
 				9D4878A31913ECE20076C44A /* Academia Dunas.gpx in Resources */,
 				9D48791F1913F3EF0076C44A /* bike.png in Resources */,
 				9D60900A191F0495004A8FD9 /* icon01g.png in Resources */,
@@ -897,6 +945,7 @@
 				9D4878A91913ECE20076C44A /* São Luiz.gpx in Resources */,
 				9D60901E191F0495004A8FD9 /* seta.png in Resources */,
 				9D48791A1913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */,
+				9D980EF41B2008150062323D /* final laranja-11.png in Resources */,
 				9D609008191F0495004A8FD9 /* cimacima.png in Resources */,
 				9D4878B01913ED7C0076C44A /* ZAActivityBar.bundle in Resources */,
 				9D48787A1913EAD20076C44A /* Main_iPhone.storyboard in Resources */,
@@ -960,6 +1009,7 @@
 				9D69C90919147B1C000B8A30 /* CustomCell.m in Sources */,
 				9D4878F41913ED8B0076C44A /* AFURLConnectionOperation.m in Sources */,
 				9D4878FE1913EDA30076C44A /* SKBounceAnimation.m in Sources */,
+				9D980EED1B1FFDFC0062323D /* unzip.c in Sources */,
 				9D69C8FA1914544B000B8A30 /* ILTranslucentView.m in Sources */,
 				9D4F238A1914B93700A55D78 /* UIControl+ALActionBlocks.m in Sources */,
 				9D1D503219140A6E0074D849 /* LeftViewController.m in Sources */,
@@ -975,15 +1025,18 @@
 				9D4996B419171AD600E3A968 /* ColorUtil.m in Sources */,
 				9D4878D01913ED850076C44A /* UIProgressView+AFNetworking.m in Sources */,
 				9D4878731913EAD10076C44A /* main.m in Sources */,
+				9D980EE11B1FFDCF0062323D /* SSZipArchive.m in Sources */,
 				9D69C8F519144CD3000B8A30 /* CenterViewController.m in Sources */,
 				9D1D502E191406190074D849 /* UIViewController+JASidePanel.m in Sources */,
 				9D48B6681B04594E00732E16 /* PositionManager.m in Sources */,
 				9D1D5004191404CF0074D849 /* MainViewController.m in Sources */,
+				9D980EF01B1FFDFC0062323D /* ioapi.c in Sources */,
 				9D4F23881914B93700A55D78 /* UIBarButtonItem+ALActionBlocks.m in Sources */,
 				9D4878F21913ED8B0076C44A /* AFSecurityPolicy.m in Sources */,
 				9D4879111913EE9E0076C44A /* BasicManager.m in Sources */,
 				9D4F238C1914B93700A55D78 /* UIGestureRecognizer+ALActionBlocks.m in Sources */,
 				9D69C8EF191449A1000B8A30 /* CenterListViewController.m in Sources */,
+				9D980EEE1B1FFDFC0062323D /* zip.c in Sources */,
 				9D4879131913EE9E0076C44A /* KMLManager.m in Sources */,
 				9D4878B21913ED7C0076C44A /* ZAActivityBar.m in Sources */,
 				9D4996C51917297000E3A968 /* POI.m in Sources */,
@@ -993,6 +1046,7 @@
 				9D4878F81913ED8B0076C44A /* AFURLResponseSerialization.m in Sources */,
 				9DAD6B671916383500CFF4F0 /* MBSwitch.m in Sources */,
 				9D4878D41913ED850076C44A /* UIWebView+AFNetworking.m in Sources */,
+				9D980EEF1B1FFDFC0062323D /* mztools.c in Sources */,
 				9D36326219184C83001A3E9F /* TableManager.m in Sources */,
 				9D4878CC1913ED850076C44A /* UIButton+AFNetworking.m in Sources */,
 				9D4878EE1913ED8B0076C44A /* AFHTTPSessionManager.m in Sources */,
