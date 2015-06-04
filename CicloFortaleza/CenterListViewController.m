@@ -86,17 +86,22 @@
     toReturn.subtitleLabel = [[UITextView alloc] init];
     toReturn.subtitleLabel.backgroundColor = [UIColor clearColor];
     toReturn.subtitleLabel.textColor = [UIColor whiteColor];
-    toReturn.subtitleLabel.frame = CGRectMake(-3, 15, toReturn.frame.size.width-0, toReturn.frame.size.height-10);
-//    toReturn.subtitleLabel.layer.borderWidth = 2;
+    toReturn.subtitleLabel.frame = CGRectMake(-2, 15, toReturn.frame.size.width-0, toReturn.frame.size.height-10);
     toReturn.subtitleLabel.editable = NO;
     toReturn.subtitleLabel.selectable = NO;
     toReturn.subtitleLabel.scrollEnabled = NO;
+    toReturn.subtitleLabel.dataDetectorTypes = UIDataDetectorTypeAll;
     
     [toReturn addSubview:[self translucentView:toReturn.frame]];
     [toReturn addSubview:toReturn.titleLabel];
     [toReturn addSubview:toReturn.subtitleLabel];
     
     return toReturn;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"touch on index %ld", (long)indexPath.section);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

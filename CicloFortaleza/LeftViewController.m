@@ -26,6 +26,21 @@
     
     self.positionPadding = 30;
     
+    UIImage *logoImage = [UIImage imageNamed:@"logo"];
+    
+    CGFloat width = logoImage.size.width/10;
+    CGFloat height = logoImage.size.height/10;
+
+
+    CGFloat x = 0;
+    CGFloat y = ([UIScreen mainScreen].bounds.size.height/2) - (height/2);
+    
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    imageView.image = logoImage;
+    [self.view addSubview:imageView];
+    /*
+    
     [self mountTopic:@"Busca" withPosition:1];
     
     [self mountOption:@"Filtro 1" withPosition:2 withSwitch:[NSNumber numberWithInt:0]];
@@ -40,6 +55,7 @@
 
     [self mountOption:@"Felipe Alves" withPosition:8 action:^{
     }];
+     */
 }
 
 - (void)mountTopic:(NSString *)text withPosition:(int)position

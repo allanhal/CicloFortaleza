@@ -71,7 +71,7 @@
       <AdditionalOptions>
       </AdditionalOptions>
       <LocationScenarioReference
-         identifier = "../../Prac&#x327;a Portugal.gpx"
+         identifier = "../../Bitelli.gpx"
          referenceType = "0">
       </LocationScenarioReference>
    </LaunchAction>

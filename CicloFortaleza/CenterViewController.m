@@ -35,7 +35,7 @@
 
     [self mountTopLabel];
     [self mountTopTextField];
-    [self mountSearchButton];
+//    [self mountSearchButton];
     [self mountLineView];
     [self mountBottomView];
     [self mountMenuButton];
@@ -52,13 +52,16 @@
 
 - (void)mountTopLabel
 {
-    CGFloat x = 110;
-    CGFloat y = 25;
-    CGFloat width = 100;
+    CGFloat width = 140;
     CGFloat height = 20;
     
+    CGFloat x = [UIScreen mainScreen].bounds.size.width/2 - (width/2);
+    CGFloat y = 25;
+
+    
     topLabel = [[UILabel alloc] initWithFrame:CGRectMake(x, y, width, height)];
-    topLabel.text = @"CALANGA";
+//    topLabel.layer.borderWidth = 2;
+    topLabel.text = @"Ciclo Fortaleza";
     topLabel.textColor = [UIColor whiteColor];
     UIFont *labelFont = [UIFont boldSystemFontOfSize:20];
     topLabel.font = labelFont;

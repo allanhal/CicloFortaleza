@@ -180,7 +180,7 @@
 		9D980EEF1B1FFDFC0062323D /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D980EE81B1FFDFC0062323D /* mztools.c */; };
 		9D980EF01B1FFDFC0062323D /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D980EE91B1FFDFC0062323D /* ioapi.c */; };
 		9D980EF21B20041C0062323D /* Bitelli.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9D980EF11B20041C0062323D /* Bitelli.gpx */; };
-		9D980EF41B2008150062323D /* final laranja-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D980EF31B2008150062323D /* final laranja-11.png */; };
+		9D980EF41B2008150062323D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D980EF31B2008150062323D /* logo.png */; };
 		9DAD6B671916383500CFF4F0 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD6B661916383500CFF4F0 /* MBSwitch.m */; };
 		9DAD6B681916383500CFF4F0 /* MBSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD6B661916383500CFF4F0 /* MBSwitch.m */; };
 /* End PBXBuildFile section */
@@ -360,7 +360,7 @@
 		9D980EEB1B1FFDFC0062323D /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		9D980EEC1B1FFDFC0062323D /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
 		9D980EF11B20041C0062323D /* Bitelli.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Bitelli.gpx; sourceTree = "<group>"; };
-		9D980EF31B2008150062323D /* final laranja-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "final laranja-11.png"; sourceTree = "<group>"; };
+		9D980EF31B2008150062323D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		9DAD6B651916383500CFF4F0 /* MBSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSwitch.h; sourceTree = "<group>"; };
 		9DAD6B661916383500CFF4F0 /* MBSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSwitch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -670,7 +670,7 @@
 		9D48791D1913F3E70076C44A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9D980EF31B2008150062323D /* final laranja-11.png */,
+				9D980EF31B2008150062323D /* logo.png */,
 				9D48791E1913F3EF0076C44A /* bike.png */,
 				9D608FF1191F0495004A8FD9 /* baixo.png */,
 				9D608FF2191F0495004A8FD9 /* busca.png */,
@@ -945,7 +945,7 @@
 				9D4878A91913ECE20076C44A /* São Luiz.gpx in Resources */,
 				9D60901E191F0495004A8FD9 /* seta.png in Resources */,
 				9D48791A1913EF660076C44A /* Mapa Cicloviário e de Rotas Alternativas de Fortaleza.kml in Resources */,
-				9D980EF41B2008150062323D /* final laranja-11.png in Resources */,
+				9D980EF41B2008150062323D /* logo.png in Resources */,
 				9D609008191F0495004A8FD9 /* cimacima.png in Resources */,
 				9D4878B01913ED7C0076C44A /* ZAActivityBar.bundle in Resources */,
 				9D48787A1913EAD20076C44A /* Main_iPhone.storyboard in Resources */,
