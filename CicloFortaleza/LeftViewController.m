@@ -28,8 +28,8 @@
     
     UIImage *logoImage = [UIImage imageNamed:@"logo"];
     
-    CGFloat width = logoImage.size.width/10;
-    CGFloat height = logoImage.size.height/10;
+    CGFloat width = logoImage.size.width/15;
+    CGFloat height = logoImage.size.height/15;
 
 
     CGFloat x = 0;
