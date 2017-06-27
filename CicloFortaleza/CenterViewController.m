@@ -46,7 +46,15 @@
 
 - (void)mountTopView
 {
-    topView = [[UIImageView alloc] initWithImage:[ImagesUtil topo]];
+    UIImage *topoImage = [ImagesUtil topo];
+    CGFloat x = 0;
+    CGFloat y = 0;
+    CGFloat width = self.mainScreen.size.width;
+    CGFloat height = topoImage.size.height;
+    
+    topView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    [topView setImage:topoImage];
+    
     [self.view addSubview:topView];
 }
 
@@ -135,7 +143,7 @@
     UIImage *menuInferiorImage = [ImagesUtil menuInferior];
     CGFloat x = 0;
     CGFloat y = (self.mainScreen.size.height - menuInferiorImage.size.height);
-    CGFloat width = menuInferiorImage.size.width;
+    CGFloat width = self.mainScreen.size.width;
     CGFloat height = menuInferiorImage.size.height;
     
     bottomView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
@@ -201,7 +209,7 @@
     
     CGFloat x = self.mainScreen.size.width - cimacima.size.width - self.defaultPadding;
     CGFloat y = (self.mainScreen.size.height - cimacima.size.height);
-    CGFloat width = cima.size.width;
+    CGFloat width = self.mainScreen.size.width;
     CGFloat height = cima.size.height;
     
     self.tableSizeButton = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];

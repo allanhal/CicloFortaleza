@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6EF68B5F1C68E1690046F5E6 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF68B5E1C68E1690046F5E6 /* logo.png */; };
-		6EF68B601C68E1690046F5E6 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EF68B5E1C68E1690046F5E6 /* logo.png */; };
+		486CF2831F022947002A4B2F /* imagem logo preto .png in Resources */ = {isa = PBXBuildFile; fileRef = 486CF2821F022947002A4B2F /* imagem logo preto .png */; };
+		486CF2841F022947002A4B2F /* imagem logo preto .png in Resources */ = {isa = PBXBuildFile; fileRef = 486CF2821F022947002A4B2F /* imagem logo preto .png */; };
 		9D0298E9191F063000A2DDB1 /* ImagesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0298E8191F063000A2DDB1 /* ImagesUtil.m */; };
 		9D0298EA191F063000A2DDB1 /* ImagesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0298E8191F063000A2DDB1 /* ImagesUtil.m */; };
 		9D1D4FF71913FBA20074D849 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D4FEF1913FBA20074D849 /* MMDrawerBarButtonItem.m */; };
@@ -197,7 +197,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6EF68B5E1C68E1690046F5E6 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../BitTorrent Sync/Arquivos Compartilhados MAC/DropBox/Logo/USAR SOMENTE ESTE LOGO!!!/logo.png"; sourceTree = "<group>"; };
+		486CF2821F022947002A4B2F /* imagem logo preto .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imagem logo preto .png"; sourceTree = "<group>"; };
 		9D0298E7191F063000A2DDB1 /* ImagesUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesUtil.h; sourceTree = "<group>"; };
 		9D0298E8191F063000A2DDB1 /* ImagesUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesUtil.m; sourceTree = "<group>"; };
 		9D1D4FEE1913FBA20074D849 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
@@ -671,7 +671,7 @@
 		9D48791D1913F3E70076C44A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				6EF68B5E1C68E1690046F5E6 /* logo.png */,
+				486CF2821F022947002A4B2F /* imagem logo preto .png */,
 				9D48791E1913F3EF0076C44A /* bike.png */,
 				9D608FF1191F0495004A8FD9 /* baixo.png */,
 				9D608FF2191F0495004A8FD9 /* busca.png */,
@@ -927,7 +927,6 @@
 				9D609016191F0495004A8FD9 /* linha01.png in Resources */,
 				9D609020191F0495004A8FD9 /* setavazada.png in Resources */,
 				9D4F234C1914919300A55D78 /* Mapbox.bundle in Resources */,
-				6EF68B5F1C68E1690046F5E6 /* logo.png in Resources */,
 				9D980EF21B20041C0062323D /* Bitelli.gpx in Resources */,
 				9D4878A31913ECE20076C44A /* Academia Dunas.gpx in Resources */,
 				9D48791F1913F3EF0076C44A /* bike.png in Resources */,
@@ -935,6 +934,7 @@
 				9D60900C191F0495004A8FD9 /* icon01p.png in Resources */,
 				9D609010191F0495004A8FD9 /* icon02p.png in Resources */,
 				9D609022191F0495004A8FD9 /* topo.png in Resources */,
+				486CF2831F022947002A4B2F /* imagem logo preto .png in Resources */,
 				9D60901C191F0495004A8FD9 /* menuinferior.png in Resources */,
 				9D609012191F0495004A8FD9 /* icon03g.png in Resources */,
 				9D609006191F0495004A8FD9 /* cima.png in Resources */,
@@ -962,7 +962,6 @@
 			files = (
 				9D4878AA1913ECE20076C44A /* São Luiz.gpx in Resources */,
 				9D60900F191F0495004A8FD9 /* icon02g.png in Resources */,
-				6EF68B601C68E1690046F5E6 /* logo.png in Resources */,
 				9D609023191F0495004A8FD9 /* topo.png in Resources */,
 				9D60901B191F0495004A8FD9 /* menu.png in Resources */,
 				9D4878931913EAD20076C44A /* InfoPlist.strings in Resources */,
@@ -978,6 +977,7 @@
 				9D4878A41913ECE20076C44A /* Academia Dunas.gpx in Resources */,
 				9D4878B11913ED7C0076C44A /* ZAActivityBar.bundle in Resources */,
 				9D4878A61913ECE20076C44A /* Praça Portugal.gpx in Resources */,
+				486CF2841F022947002A4B2F /* imagem logo preto .png in Resources */,
 				9D4879021913EDC30076C44A /* ReadMe.txt in Resources */,
 				9D609019191F0495004A8FD9 /* lista.png in Resources */,
 				9D609015191F0495004A8FD9 /* icon03p.png in Resources */,

@@ -41,6 +41,8 @@
 
 - (void)changeTablePosition:(TablePosition)aTablePosition
 {
+    CGFloat xPadding = 10;
+    
     CGFloat x;
     CGFloat y;
     CGFloat width;
@@ -48,6 +50,7 @@
     
     CGRect mainScreen = [UIScreen mainScreen].bounds;
     
+    int mainScreenWidth = mainScreen.size.width;
     int mainScreenHeight = mainScreen.size.height;
     
     UIImage *baseImage = [ImagesUtil menuInferior];
@@ -55,44 +58,44 @@
     
     if(aTablePosition == TablePositionFull)
     {
-        x = 10;
+        x = xPadding;
         y = 70;
-        width = 300;
+        width = mainScreenWidth - (2*xPadding);
         height = (mainScreenHeight - y) - baseHeight;
     }
     else if(aTablePosition == TablePositionNone)
     {
         x = tableView.frame.origin.x;
         y = (mainScreenHeight) - baseHeight;
-        width = 300;
+        width = mainScreenWidth - (2*xPadding);
         height = 0;
     }
     else if(aTablePosition == TablePositionBottom)
     {
-        x = 10;
+        x = xPadding;
         //iPhone 5/5S
         y = 300;
         //iPhone 4/4S
         //y = 200;
-        width = 300;
+        width = mainScreenWidth - (2*xPadding);
         height = (mainScreenHeight - y) - baseHeight;
     }
     else if(aTablePosition == TablePositionTop)
     {
-        x = 10;
+        x = xPadding;
         y = 70;
-        width = 300;
+        width = mainScreenWidth - xPadding;
         height = 250;
     }
     else
     {
         //TablePositionBottom
-        x = 10;
+        x = xPadding;
         //iPhone 5/5S
         y = 300;
         //iPhone 4/4S
         //y = 200;
-        width = 300;
+        width = mainScreenWidth - (2*xPadding);
         height = (mainScreenHeight - y) - baseHeight;
     }
     
