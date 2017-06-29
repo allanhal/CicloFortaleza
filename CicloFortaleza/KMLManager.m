@@ -80,6 +80,8 @@ static NSURL *lastUrl = nil;
     //NSArray *filesAtPath = [self listFileAtPath:destinationPath];
     
     destinationPath = [destinationPath stringByAppendingString:@"/doc.kml"];
+    if(destinationPath == nil)
+        destinationPath = @"";
     return [NSURL fileURLWithPath:destinationPath];
 }
 
