@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		485E03E91F04B932003C5177 /* IconUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 485E03E81F04B932003C5177 /* IconUtil.m */; };
+		485E03EA1F04B932003C5177 /* IconUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 485E03E81F04B932003C5177 /* IconUtil.m */; };
 		486CF2831F022947002A4B2F /* imagem logo preto .png in Resources */ = {isa = PBXBuildFile; fileRef = 486CF2821F022947002A4B2F /* imagem logo preto .png */; };
 		486CF2841F022947002A4B2F /* imagem logo preto .png in Resources */ = {isa = PBXBuildFile; fileRef = 486CF2821F022947002A4B2F /* imagem logo preto .png */; };
 		9D0298E9191F063000A2DDB1 /* ImagesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0298E8191F063000A2DDB1 /* ImagesUtil.m */; };
@@ -197,6 +199,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		485E03E81F04B932003C5177 /* IconUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconUtil.m; sourceTree = "<group>"; };
+		485E03EB1F04B951003C5177 /* IconUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconUtil.h; sourceTree = "<group>"; };
 		486CF2821F022947002A4B2F /* imagem logo preto .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imagem logo preto .png"; sourceTree = "<group>"; };
 		9D0298E7191F063000A2DDB1 /* ImagesUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesUtil.h; sourceTree = "<group>"; };
 		9D0298E8191F063000A2DDB1 /* ImagesUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesUtil.m; sourceTree = "<group>"; };
@@ -705,6 +709,8 @@
 				9D0298E8191F063000A2DDB1 /* ImagesUtil.m */,
 				9D3E7C1719205C9C00C17169 /* MapChanged.h */,
 				9D3E7C1819205C9C00C17169 /* MapChanged.m */,
+				485E03EB1F04B951003C5177 /* IconUtil.h */,
+				485E03E81F04B932003C5177 /* IconUtil.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -1015,6 +1021,7 @@
 				9D69C8FA1914544B000B8A30 /* ILTranslucentView.m in Sources */,
 				9D4F238A1914B93700A55D78 /* UIControl+ALActionBlocks.m in Sources */,
 				9D1D503219140A6E0074D849 /* LeftViewController.m in Sources */,
+				485E03E91F04B932003C5177 /* IconUtil.m in Sources */,
 				9D1D4FF91913FBA20074D849 /* MMDrawerController.m in Sources */,
 				9D608FEF191EFEB7004A8FD9 /* CoordinateUtil.m in Sources */,
 				9D4878EC1913ED8B0076C44A /* AFHTTPRequestOperationManager.m in Sources */,
@@ -1106,6 +1113,7 @@
 				9D4878EB1913ED8B0076C44A /* AFHTTPRequestOperation.m in Sources */,
 				9D1D503319140A6E0074D849 /* LeftViewController.m in Sources */,
 				9D1D4FFA1913FBA20074D849 /* MMDrawerController.m in Sources */,
+				485E03EA1F04B932003C5177 /* IconUtil.m in Sources */,
 				9D4878EF1913ED8B0076C44A /* AFHTTPSessionManager.m in Sources */,
 				9D69C90A19147B1C000B8A30 /* CustomCell.m in Sources */,
 				9D3E7C1A19205C9C00C17169 /* MapChanged.m in Sources */,
@@ -1236,6 +1244,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = VK8XARDUZ8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1268,6 +1277,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = VK8XARDUZ8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -9,6 +9,7 @@
 #import "CenterListViewController.h"
 #import "CustomCell.h"
 #import "ILTranslucentView.h"
+#import "IconUtil.h"
 
 @implementation CenterListViewController
 
@@ -119,7 +120,7 @@
     if([list count] > 0 && [list count] > row)
     {
         MKPointAnnotation *pointAnnotation = [list objectAtIndex:row];
-        cell.titleLabel.text = pointAnnotation.title;
+        cell.titleLabel.text = [IconUtil realTitle:pointAnnotation.title];
         cell.subtitleLabel.text = pointAnnotation.subtitle;
         
         CLLocationCoordinate2D userLocation = [[Manager positionManager] userCoordinate];

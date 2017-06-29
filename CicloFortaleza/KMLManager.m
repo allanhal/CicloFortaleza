@@ -43,7 +43,6 @@ static NSURL *lastUrl = nil;
     NSArray *points = [toReturn points];
     for(MKPointAnnotation *annotation in points)
     {
-        NSLog(@"%@", annotation.title);
         [self insertOnTableList:annotation];
     }
     

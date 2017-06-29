@@ -9,6 +9,7 @@
 #import "CenterMapViewController.h"
 #import "ZAActivityBar.h"
 #import "CoordinateUtil.h"
+#import "IconUtil.h"
 
 @implementation CenterMapViewController
 
@@ -132,7 +133,27 @@
     if (annotation.isUserLocationAnnotation)
         return nil;
     
-    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[ImagesUtil bicicletarioPequeno]];
+
+    MarkerTypeIcon markerTypeIcon = [IconUtil parserStringToMarkerTypeIcon:annotation.title];
+    
+    RMMarker *marker;
+    
+    annotation.title = [IconUtil realTitle:annotation.title];
+    
+    switch (markerTypeIcon) {
+        case BORRACHARIA:
+            marker = [[RMMarker alloc] initWithUIImage:[ImagesUtil oficinaPequeno]];
+            break;
+        case OFICINA_LOJA:
+            marker = [[RMMarker alloc] initWithUIImage:[ImagesUtil lojaPequeno]];
+            break;
+        case BICICLETARIO:
+        case ESTACAO_COMPARTILHADA:
+        case DEFAULT:
+        default:
+            marker = [[RMMarker alloc] initWithUIImage:[ImagesUtil bicicletarioPequeno]];
+            break;
+    }
     
     marker.canShowCallout = YES;
     

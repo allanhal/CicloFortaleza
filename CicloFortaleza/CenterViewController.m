@@ -38,7 +38,7 @@
 //    [self mountSearchButton];
     [self mountLineView];
     [self mountBottomView];
-    [self mountMenuButton];
+//    [self mountMenuButton];
     [self mountUserLocationButton];
     [self mountTableSize];
     
@@ -207,7 +207,7 @@
     
     UIImage *cimacima = [ImagesUtil cimacima];
     
-    CGFloat x = self.mainScreen.size.width - cimacima.size.width - self.defaultPadding;
+    CGFloat x = self.mainScreen.size.width/2 - cima.size.width/2 - self.defaultPadding;
     CGFloat y = (self.mainScreen.size.height - cimacima.size.height);
     CGFloat width = self.mainScreen.size.width;
     CGFloat height = cima.size.height;

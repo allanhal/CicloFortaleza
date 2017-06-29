@@ -236,7 +236,7 @@
 - (void)endStyleUrl;
 
 // Corresponds to the title property on MKAnnotation
-@property (nonatomic, readonly) NSString *name; 
+@property (nonatomic, readonly) NSString *name;
 // Corresponds to the subtitle property on MKAnnotation
 @property (nonatomic, readonly) NSString *placemarkDescription;
 
@@ -913,11 +913,27 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 {
     if (!mkShape) {
         mkShape = [geometry mapkitShape];
-        mkShape.title = name;
+        mkShape.title = [NSString stringWithFormat:@"%@<>%@",styleUrl, name];
         // Skip setting the subtitle for now because they're frequently
         // too verbose for viewing on in a callout in most kml files.
-        mkShape.subtitle = placemarkDescription;
+        
+        mkShape.subtitle = [self convertHtmlToString:placemarkDescription];
     }
+}
+
+- (NSString *)convertHtmlToString:(NSString *)html
+{
+    NSString *toReturn = [[[NSAttributedString alloc] initWithData:[placemarkDescription dataUsingEncoding:NSUTF8StringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]} documentAttributes:nil error:nil] string];
+    
+    toReturn = [toReturn stringByReplacingOccurrencesOfString:@"description: " withString:@""];
+    toReturn = [toReturn stringByReplacingOccurrencesOfString:@"Description: " withString:@""];
+    toReturn = [toReturn stringByReplacingOccurrencesOfString:@"descrição: " withString:@""];
+    toReturn = [toReturn stringByReplacingOccurrencesOfString:@"Descrição: " withString:@""];
+    toReturn = [toReturn stringByReplacingOccurrencesOfString:@"Foto: " withString:@""];
+    toReturn = [toReturn stringByReplacingOccurrencesOfString:@"Foto:" withString:@""];
+    toReturn = [toReturn stringByReplacingOccurrencesOfString:@"\n\n" withString:@""];
+    
+    return toReturn;
 }
 
 - (id <MKOverlay>)overlay
