@@ -925,7 +925,7 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
 {
     NSString *toReturn = html;
     
-    /*
+    
     toReturn = [[[NSAttributedString alloc] initWithData:[html dataUsingEncoding:NSUTF8StringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]} documentAttributes:nil error:nil] string];
 
     
@@ -936,7 +936,7 @@ static void strToCoords(NSString *str, CLLocationCoordinate2D **coordsOut, NSUIn
     toReturn = [toReturn stringByReplacingOccurrencesOfString:@"Foto: " withString:@""];
     toReturn = [toReturn stringByReplacingOccurrencesOfString:@"Foto:" withString:@""];
     toReturn = [toReturn stringByReplacingOccurrencesOfString:@"\n\n" withString:@""];
-    */
+    
     return toReturn;
 }
 
