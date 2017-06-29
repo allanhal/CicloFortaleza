@@ -35,12 +35,12 @@
 
     [self mountTopLabel];
     [self mountTopTextField];
-//    [self mountSearchButton];
+    //[self mountSearchButton];
     [self mountLineView];
     [self mountBottomView];
-//    [self mountMenuButton];
+    //[self mountMenuButton];
     [self mountUserLocationButton];
-    [self mountTableSize];
+    //[self mountTableSize];
     
 }
 
@@ -175,7 +175,7 @@
     UIImage *setaVazada = [ImagesUtil setaVazada];
     UIImage *seta = [ImagesUtil seta];
     
-    CGFloat x = self.mainScreen.size.width/2 - seta.size.width/2;
+    CGFloat x = 0;
     CGFloat y = (self.mainScreen.size.height - seta.size.height);
     CGFloat width = seta.size.width;
     CGFloat height = seta.size.height;
@@ -207,7 +207,7 @@
     
     UIImage *cimacima = [ImagesUtil cimacima];
     
-    CGFloat x = self.mainScreen.size.width/2 - cima.size.width/2 - self.defaultPadding;
+    CGFloat x = 0;
     CGFloat y = (self.mainScreen.size.height - cimacima.size.height);
     CGFloat width = self.mainScreen.size.width;
     CGFloat height = cima.size.height;
